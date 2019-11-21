@@ -4,11 +4,11 @@ import AppBar from 'material-ui/AppBar'
 // import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
+import direct_comp3 from './formtext/direct_comp3.js'
 
-export class FormPersonalDetails extends Component {
+export class DirectComp3 extends Component {
     continue = e => {
         e.preventDefault();
-        //api here
         this.props.nextStep();
     }
     back = e => {
@@ -16,12 +16,13 @@ export class FormPersonalDetails extends Component {
         this.props.prevStep();
     }
     render() {
-        //const { values, handleChange } = this.props;
+        // const { values, handleChange } = this.props;
+        const directComp3Text = direct_comp3;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Enter Personal Details" />
-              
+                    <AppBar title="Direct Compensation cont." />
+                    <h4>{ directComp3Text }</h4>
                     <br/>
                     <RaisedButton 
                         label="Continue"
@@ -47,4 +48,4 @@ const styles = {
     }
 }
 
-export default FormPersonalDetails
+export default DirectComp3

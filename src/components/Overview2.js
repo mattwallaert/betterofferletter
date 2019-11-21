@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 // import TextField from 'material-ui/TextField'
-// import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
+import overview2 from './formtext/overview2.js'
 
-export class FormPersonalDetails extends Component {
+export class Overview2 extends Component {
     continue = e => {
         e.preventDefault();
-        //api here
         this.props.nextStep();
     }
     back = e => {
@@ -16,12 +15,15 @@ export class FormPersonalDetails extends Component {
         this.props.prevStep();
     }
     render() {
-        //const { values, handleChange } = this.props;
+        // const { values, handleChange } = this.props;
+        const overview2Text = overview2;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Enter Personal Details" />
-              
+                    <AppBar title="Overview cont." />
+
+                    <h4>{overview2Text}</h4>
+                    
                     <br/>
                     <RaisedButton 
                         label="Continue"
@@ -47,4 +49,4 @@ const styles = {
     }
 }
 
-export default FormPersonalDetails
+export default Overview2

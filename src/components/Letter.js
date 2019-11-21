@@ -5,10 +5,9 @@ import AppBar from 'material-ui/AppBar'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
 
-export class FormPersonalDetails extends Component {
+export class Letter extends Component {
     continue = e => {
         e.preventDefault();
-        //api here
         this.props.nextStep();
     }
     back = e => {
@@ -16,7 +15,7 @@ export class FormPersonalDetails extends Component {
         this.props.prevStep();
     }
     render() {
-        //const { values, handleChange } = this.props;
+        // const { values, handleChange } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -47,4 +46,4 @@ const styles = {
     }
 }
 
-export default FormPersonalDetails
+export default Letter
