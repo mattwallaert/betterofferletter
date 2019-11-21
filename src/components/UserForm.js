@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import FormUserDetails from './FormUserDetails';
-import FormPersonalDetails from './FormPersonalDetails';
-import Confirm from './Confirm';
-import Success from './Success';
+import Overview1 from './Overview1';
+import Overview2 from './Overview2';
+import DirectComp1 from './DirectComp1';
+import DirectComp2 from './DirectComp2';
+import DirectComp3 from './DirectComp3';
+import AnnualBonus from './AnnualBonus';
+import EquityOrStock from './EquityOrStock';
+import Benefits from './Benefits';
+import OnboardingPay from './OnboardingPay';
+import Optional from './Optional';
+import Letter from './Letter';
 
 export class UserForm extends Component {
     state = {
@@ -45,7 +52,7 @@ export class UserForm extends Component {
         switch(step) {
             case 1:
                 return (
-                    <FormUserDetails
+                    <Overview1 //Overview1
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
@@ -53,23 +60,85 @@ export class UserForm extends Component {
                 )
             case 2:
                 return (
-                    <FormPersonalDetails
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    handleChange={this.handleChange}
-                    values={values}
-                />
+                    <Overview2 //Overview2
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        handleChange={this.handleChange}
+                        values={values}
+                    />
                 )
             case 3:
                 return (
-                    <Confirm
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    values={values}
-                />
+                    <DirectComp1 //DC
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
                 )
             case 4:
-                return <Success />
+                return (
+                    <DirectComp2 //DC
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 5:
+                return (
+                    <DirectComp3 //DC
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 6:
+                return (
+                    <AnnualBonus
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 7:
+                return (
+                    <EquityOrStock 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 8:
+                return (
+                    <Benefits 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 9:
+                return (
+                    <OnboardingPay
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 10:
+                return (
+                    <Optional
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
+            case 11:
+                return (
+                    <Letter 
+                        nextStep={this.nextStep}
+                        prevStep={this.prevStep}
+                        values={values}
+                    />
+                )
 
             default:
                 // do nothing
