@@ -19,7 +19,13 @@ export class OnboardingPay extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Enter Personal Details" />
+                    <AppBar title="Relocation/Onboarding Payment" />
+
+                    <h4>Now for onboarding payment.</h4>  
+                    
+                    <h4>This should not be based on a benchmark but rather on the amount of money needed to help your new hire be initially productive.</h4>
+    
+                    <h4>How much are you offering to assist with onboarding?</h4>
               
                     <br/>
                     <RaisedButton 

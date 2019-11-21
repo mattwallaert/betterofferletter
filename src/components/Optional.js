@@ -19,7 +19,23 @@ export class Optional extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Enter Personal Details" />
+                    <AppBar title="Optional" />
+
+                    <h4>Finally, a page of optional information.</h4>
+                    <h4>Anything you don’t complete will be left as a variable in the letter text.</h4>
+                    <h4>As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</h4>
+
+                    <h4>What is the date of the offer?</h4>
+
+                    <h4>What is the first name of the candidate?</h4>
+
+                    <h4>What is the name of the company?</h4>
+
+                    <h4>What is the hiring manager’s first name?</h4>
+
+                    <h4>What is the hiring manager’s phone number?</h4>
+
+                    <h4>What is the hiring manager’s email address?</h4>
               
                     <br/>
                     <RaisedButton 
