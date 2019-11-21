@@ -45,7 +45,7 @@ export class UserForm extends Component {
         switch(step) {
             case 1:
                 return (
-                    <FormUserDetails
+                    <FormUserDetails //Overview1
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
                         values={values}
@@ -53,7 +53,7 @@ export class UserForm extends Component {
                 )
             case 2:
                 return (
-                    <FormPersonalDetails
+                    <FormPersonalDetails //Overview2
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
@@ -62,14 +62,56 @@ export class UserForm extends Component {
                 )
             case 3:
                 return (
-                    <Confirm
+                    <Confirm //DC
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     values={values}
                 />
                 )
             case 4:
-                return <Success />
+                return (<Success //AB
+                />
+                )
+            case 5:
+                return (
+                    <EquityOrStock 
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    values={values}
+                />
+                )
+            case 6:
+                return (
+                    <Benefits 
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    values={values}
+                />
+                )
+            case 7:
+                return (
+                    <OnboardingPayment
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    values={values}
+                />
+                )
+            case 8:
+                return (
+                    <Optional
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    values={values}
+                />
+                )
+            case 9:
+                return (
+                    <Letter 
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    values={values}
+                />
+                )
 
             default:
                 // do nothing
