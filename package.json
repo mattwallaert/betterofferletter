@@ -2,7 +2,7 @@
   "homepage": "https://mattwallaert.github.io/betterofferletter/",
   "name": "betterofferletter",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@material-ui/core": "^4.8.1",
     "@types/material-ui": "^0.21.7",
