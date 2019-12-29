@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import { UserForm } from './components/UserForm';
@@ -12,3 +13,19 @@ function App() {
 }
 
 export default App;
+=======
+import React from 'react';
+import './App.css';
+import { UserForm } from './components/UserForm';
+
+
+function App() {
+  return (
+    <div className="App">
+      <UserForm />
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> 7c541481d9173b1c4301079d44964d034bb615af
