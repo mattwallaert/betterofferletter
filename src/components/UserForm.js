@@ -37,6 +37,8 @@ export class UserForm extends Component {
         equity_or_stock_slide: false,
         benefits_slide: false,
         onboarding_pay_slide: false,
+        //OV1
+        // overview_check: false,
         // DC1
         pct_slider: 0,
         //DC2
