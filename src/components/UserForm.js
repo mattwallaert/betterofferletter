@@ -148,6 +148,11 @@ export class UserForm extends Component {
     
 
     // Handle check
+
+    handleCheck = place => e => {
+        this.setState({ ...this.state, [place]: e.target.checked })
+    }
+
     handleSlideCheck = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked });
         var array = [...this.state.step]
@@ -296,6 +301,7 @@ export class UserForm extends Component {
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
                                 handleChange={this.handleChange}
+                                handleCheck={this.handleCheck}
                                 values={values}
                             />
                         } />
