@@ -46,7 +46,8 @@ export class DirectComp1 extends Component {
                     <h4>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the 
                         average hire for this role?</h4>  
                     <h4>Remember, the offer should be firmly tied to the business value the hire will create 
-                        and you should be prepared to justify the comparison to the skills and experience expected by the market.</h4>
+                        and you should be prepared to </h4>
+                    <h4>justify the comparison to the skills and experience expected by the market.</h4>
 
                     {/* (Slider from -25% to +25%) */}
                     <div>
@@ -64,7 +65,7 @@ export class DirectComp1 extends Component {
                         </Grid > */}
                         <Grid item xs={2}>
                         <Slider
-                        
+                            // className={classes.root}
                             value={values.pct_slider}
                             onChange={handleSliderChange}
                             step={1}
