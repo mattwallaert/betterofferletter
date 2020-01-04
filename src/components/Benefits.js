@@ -8,6 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { withStyles } from '@material-ui/core/styles';
 
 export class Benefits extends Component {
     
@@ -21,7 +22,7 @@ export class Benefits extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleBenefitsCheck, handleChange } = this.props;
+        const { values, handleBenefitsCheck, handleChange, classes } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -37,7 +38,7 @@ export class Benefits extends Component {
     
                     {/* <p><input type="checkbox" name="health-insurance" /> Health Insurance</p> */}
 
-                    <FormGroup row>
+                    <FormGroup className={classes.root}>
                         <FormControlLabel
                             control={
                             <Checkbox
@@ -168,7 +169,15 @@ export class Benefits extends Component {
 const styles = {
     button: {
         margin: 15
+    },
+
+    root: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: "center"
+        
     }
 }
 
-export default Benefits
+export default withStyles(styles)(Benefits)

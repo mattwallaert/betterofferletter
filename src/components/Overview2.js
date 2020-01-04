@@ -7,11 +7,12 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { withStyles } from '@material-ui/core/styles';
 
 // import overview2 from './formtext/overview2.js'
 
 export class Overview2 extends Component {
-   
+
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -21,8 +22,8 @@ export class Overview2 extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleSlideCheck } = this.props;
-        
+        const { values, handleSlideCheck, classes } = this.props;
+
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -31,11 +32,11 @@ export class Overview2 extends Component {
                     <h1>Overview cont.</h1>
 
                     <h1>First up, let’s determine the components of your offer.</h1>
-                        {/* Checkboxes add slides to queue */}
-                        <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
-                       
+                    {/* Checkboxes add slides to queue */}
+                    <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
 
-                    <FormGroup row>
+
+                    <FormGroup className={classes.root}>
                         <FormControlLabel
                             control={
                                 <Checkbox
@@ -68,24 +69,24 @@ export class Overview2 extends Component {
                         />
                         <FormControlLabel
                             control={
-                                <Checkbox 
+                                <Checkbox
                                     checked={values.onboarding_pay_slide}
-                                    onChange={handleSlideCheck('onboarding_pay_slide' )}
+                                    onChange={handleSlideCheck('onboarding_pay_slide')}
                                     // value='/onboarding_pay'
                                     color="primary"
                                 />
                             } label="Relocation/Onboarding Payment"
                         />
-                    </FormGroup>
+                    </FormGroup >
 
                     <br />
-                    <RaisedButton 
+                    <RaisedButton
                         label="Back"
                         primary={false}
                         style={styles.button}
                         onClick={this.back}
                     />
-                    <RaisedButton 
+                    <RaisedButton
                         label="Continue"
                         primary={true}
                         style={styles.button}
@@ -100,7 +101,20 @@ export class Overview2 extends Component {
 const styles = {
     button: {
         margin: 15
-    }
+    },
+
+    root: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: "center"
+        
+    },
+
+    row: {
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
 }
 
-export default Overview2
+export default withStyles(styles)(Overview2)
