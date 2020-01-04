@@ -11,6 +11,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import Switch from '@material-ui/core/Switch';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 
 export class AnnualBonus extends Component {
@@ -23,7 +24,7 @@ export class AnnualBonus extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleChange, handleCheck } = this.props;
+        const { values, handleChange, handleCheck, classes } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -57,14 +58,15 @@ export class AnnualBonus extends Component {
                             label="Perform Bonus"
                         /> */}
 
-                    <Typography component="div">
-                        <Grid component="label" container alignItems="default" spacing={1}>
+                    <Typography component="div" >
+                        <Grid component="label" container alignItems="center" spacing={1} className={classes.root}>
                             <Grid item>Company Performance</Grid>
                             <Grid item>
                                 <Switch
                                     checked={values.perform_bonus}
                                     onChange={handleCheck('perform_bonus')}
                                     color="primary"
+                                    
                                 //   value="checkedC"
                                 />
                             </Grid>
@@ -119,7 +121,10 @@ export class AnnualBonus extends Component {
 const styles = {
     button: {
         margin: 15
+    },
+    root: {
+        justifyContent: "center"
     }
 }
 
-export default AnnualBonus
+export default withStyles(styles)(AnnualBonus)
