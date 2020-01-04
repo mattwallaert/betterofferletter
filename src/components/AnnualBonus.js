@@ -59,7 +59,7 @@ export class AnnualBonus extends Component {
                         /> */}
 
                     <Typography component="div" >
-                        <Grid component="label" container alignItems="center" spacing={1} className={classes.root}>
+                        <Grid component="label" container className={classes.root}>
                             <Grid item>Company Performance</Grid>
                             <Grid item>
                                 <Switch
@@ -123,7 +123,8 @@ const styles = {
         margin: 15
     },
     root: {
-        justifyContent: "center"
+        justifyContent: "center",
+        spacing: 1
     }
 }
 

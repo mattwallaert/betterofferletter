@@ -11,16 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import Input from "@material-ui/core/Input";
-// import VolumeUp from "@material-ui/icons/VolumeUp";
 
-// const useStyles = makeStyles({
-//     root: {
-//       width: 250,
-//     },
-//     input: {
-//       width: 42,
-//     },
-//   });
 
 export class DirectComp1 extends Component {
 
@@ -50,22 +41,22 @@ export class DirectComp1 extends Component {
                     <h4>justify the comparison to the skills and experience expected by the market.</h4>
 
                     {/* (Slider from -25% to +25%) */}
-                    <div>
-                    {/* <div className={classes.root}> */}
+                    
                     <Typography id="input-slider" gutterBottom>
                         Slider(%) from -25% - 25%
                     </Typography>
                     <Grid 
                         container 
-                        spacing={2} 
+                        // spacing={2} 
                         justify="center"
+                        xs= 'auto'
                         >
                         {/* <Grid item>
                         <VolumeUp />
                         </Grid > */}
-                        <Grid item xs={2}>
+                        <Grid item >
                         <Slider
-                            // className={classes.root}
+                            className={classes.root}
                             value={values.pct_slider}
                             onChange={handleSliderChange}
                             step={1}
@@ -74,7 +65,7 @@ export class DirectComp1 extends Component {
                             aria-labelledby="input-slider"
                         />
                         </Grid>
-                        <Grid item>
+                        <Grid item >
                         <Input
                             className={classes.input}
                             value={values.pct_slider}
@@ -91,7 +82,6 @@ export class DirectComp1 extends Component {
                         />
                         </Grid>
                     </Grid>
-                    </div>
   
 
                     <br/>
@@ -135,9 +125,11 @@ const styles = {
     },
     root: {
         width: 250,
+        
     },
     input: {
         width: 42,
+        
     },
 }
 
