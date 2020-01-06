@@ -249,7 +249,7 @@ export class UserForm extends Component {
                     </div>
                     <Switch>
 
-                        <Route exact path="/overview/1" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/overview/1'} render={() =>
                             <Overview1 //Overview1
                                 nextStep={this.nextStep}
                                 handleChange={this.handleChange}
@@ -257,7 +257,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/overview/2" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/overview/2'} render={() =>
                             <Overview2 //Overview2
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -267,7 +267,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/direct_comp/1" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/direct_comp/1'} render={() =>
                             <DirectComp1
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -278,7 +278,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/direct_comp/2" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/direct_comp/2'} render={() =>
                             <DirectComp2 //DC
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -287,7 +287,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/direct_comp/3" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/direct_comp/3'} render={() =>
                             <DirectComp3 //DC
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -296,7 +296,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/annual_bonus" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/annual_bonus'} render={() =>
                             <AnnualBonus
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -306,7 +306,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/equity_or_stock" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/equity_or_stock'} render={() =>
                             <EquityOrStock
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -315,7 +315,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/benefits" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/benefits'} render={() =>
                             <Benefits
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -325,7 +325,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/onboarding_pay" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/onboarding_pay'} render={() =>
                             <OnboardingPay
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -334,7 +334,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/optional" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/optional'} render={() =>
                             <Optional
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
@@ -343,7 +343,7 @@ export class UserForm extends Component {
                             />
                         } />
 
-                        <Route exact path="/letter" render={() =>
+                        <Route exact path={process.env.PUBLIC_URL + '/letter'} render={() =>
                             <Letter
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
