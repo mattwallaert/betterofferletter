@@ -49,16 +49,16 @@ export class DirectComp1 extends Component {
                         container 
                         // spacing={2} 
                         justify="center"
-                        xs= 'auto'
+                        // xs = 'auto'
                         >
                         {/* <Grid item>
                         <VolumeUp />
                         </Grid > */}
-                        <Grid item >
+                        <Grid item>
                         <Slider
                             className={classes.root}
                             value={values.pct_slider}
-                            onChange={handleSliderChange}
+                            onChange={handleSliderChange('pct_slider')}
                             step={1}
                             min={-25}
                             max={25}
@@ -112,13 +112,6 @@ export class DirectComp1 extends Component {
     }
 }
 
-// DirectComp1.propTypes = {
-//     classes: PropTypes.object.isRequired,
-//   };
-
-
-  
-
 const styles = {
     button: {
         margin: 15
@@ -132,11 +125,5 @@ const styles = {
         
     },
 }
-
-
-
-
-
-  
 
 export default withStyles(styles)(DirectComp1);
