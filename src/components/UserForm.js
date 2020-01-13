@@ -133,8 +133,8 @@ export class UserForm extends Component {
     }
 
     // Handle slider change
-    handleSliderChange = (e, newValue) => {
-        this.setState({ pct_slider: newValue });
+    handleSliderChange = place => (e, newValue) => {
+        this.setState({ [place]: newValue });
     }
 
     handleBlur = () => {
@@ -314,6 +314,7 @@ export class UserForm extends Component {
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
                                 handleChange={this.handleChange}
+                                handleSliderChange={this.handleSliderChange}
                                 values={values}
                             />
                         } />
