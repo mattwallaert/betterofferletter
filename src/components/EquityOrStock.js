@@ -11,29 +11,39 @@ import Typography from '@material-ui/core/Typography';
 // Buttons
 import Button from '@material-ui/core/Button'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
+//Checkbox
+import Checkbox from '@material-ui/core/Checkbox';
 
 export class EquityOrStock extends Component {
-    state={
+    state = {
         public: false,
         private: false,
+        ifUnpricedCheck: false,
     }
 
     handlePublicClick = e => {
-    e.preventDefault();
+        e.preventDefault();
         this.setState({
             public: !this.state.salary,
             private: false
         })
-       
+
     }
 
     handlePrivateClick = e => {
         e.preventDefault();
-            this.setState({
-                private: !this.state.hourly,
-                public: false
-            })    
-      }
+        this.setState({
+            private: !this.state.hourly,
+            public: false
+        })
+    }
+
+    handleIfUnpricedCheck = e => {
+        this.setState({
+            ifUnpricedCheck: e.target.checked,
+        })
+        console.log(e.target.value)
+    }
 
     continue = e => {
         e.preventDefault();
@@ -88,63 +98,82 @@ export class EquityOrStock extends Component {
                     <h4> Is the company public or private? </h4>
 
                     <ButtonGroup
-                            variant="contained"
-                            color="inherit"
-                            aria-label="full-width contained primary button group"
-                            >
-                                <Button 
-                                onClick={this.handlePublicClick}
-                                >Public</Button>
-                                
-                                
-                                
-                                <Button onClick={this.handlePrivateClick}>Private</Button>       
-                        </ButtonGroup><br/>
+                        variant="contained"
+                        color="inherit"
+                        aria-label="full-width contained primary button group"
+                    >
+                        <Button
+                            onClick={this.handlePublicClick}
+                        >Public</Button>
+
+
+
+                        <Button onClick={this.handlePrivateClick}>Private</Button>
+                    </ButtonGroup><br />
 
                     Note: Button for public or private(co_public/co_private)
 
-                    {this.state.public && 
+                    {this.state.public &&
                         <div>
 
-                    <h4> -Public- What is the current price of a share of stock? </h4>
+                            <h4> -Public- What is the current price of a share of stock? </h4>
 
-                    <TextField
-                        hintText="Stock Share Price"
-                        floatingLabelText="Stock Share Price"
-                        onChange={handleChange('if_public_price')}
-                        defaultValue={values.if_public_price}
-                    />
+                            <TextField
+                                hintText="Stock Share Price"
+                                floatingLabelText="Stock Share Price"
+                                onChange={handleChange('if_public_price')}
+                                defaultValue={values.if_public_price}
+                            />
 
-                    <h4> -Public- How many shares of stock are you offering in total? </h4>
+                            <h4> -Public- How many shares of stock are you offering in total? </h4>
 
-                    <TextField
-                        hintText="Stock Share Offer"
-                        floatingLabelText="Stock Share Offer"
-                        onChange={handleChange('if_public_shares')}
-                        defaultValue={values.if_public_shares}
-                    />
-                    </div>}
+                            <TextField
+                                hintText="Stock Share Offer"
+                                floatingLabelText="Stock Share Offer"
+                                onChange={handleChange('if_public_shares')}
+                                defaultValue={values.if_public_shares}
+                            />
+                        </div>}
 
-                    {this.state.private && 
-                        
+                    {this.state.private &&
+
                         <div>
 
-                    <h4> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment) </h4>
+                            <h4> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment)
 
-                    Note: TextField (if_private_value) with disable check box (if_unpriced)
+                            <Checkbox
+                                checked={this.state.ifUnpricedCheck}
+                                onChange={this.handleIfUnpricedCheck}
+                                // value= 'overview_check'
+                                color="primary"
+                                label="Unpriced Check"
+                            />
+                            </h4>
 
-                    <h4> What percentage of the current outstanding shares are you offering in total? </h4>
+                            Note: TextField (if_private_value) with disable check box (if_unpriced)
 
-                    <TextField
-                        hintText="Outstanding Share Offer"
-                        floatingLabelText="Outstanding Share Offer"
-                        onChange={handleChange('pct_share_offer')}
-                        defaultValue={values.pct_share_offer}
-                    />
+                            <TextField
+                                hintText="If Private Value"
+                                floatingLabelText="If Private Value"
+                                onChange={handleChange('if_private_value')}
+                                defaultValue={values.if_private_value}
+                                disabled={this.state.ifUnpricedCheck}
+                            />
 
-                    </div>}
+                            <h4> What percentage of the current outstanding shares are you offering in total? </h4>
 
-                    <h4> *Do not estimate a future value; your employees have the same risk potential as your investors and should be compensated on the same terms. CHECKBOX “We have not yet received a priced investment.” </h4>
+                            <TextField
+                                hintText="Outstanding Share Offer"
+                                floatingLabelText="Outstanding Share Offer"
+                                onChange={handleChange('pct_share_offer')}
+                                defaultValue={values.pct_share_offer}
+                            />
+
+                        </div>}
+
+                    <h4> *Do not estimate a future value; your employees have the same risk potential as your investors 
+                        and should be compensated on the same terms. 
+                        CHECKBOX “We have not yet received a priced investment.” </h4>
 
                     ((Display Value and Value As Salary))
 
