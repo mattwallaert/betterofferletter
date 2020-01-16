@@ -19,6 +19,7 @@ export class EquityOrStock extends Component {
         public: false,
         private: false,
         ifUnpricedCheck: false,
+        ifUnpricedCheckConfirm: false
     }
 
     handlePublicClick = e => {
@@ -38,11 +39,18 @@ export class EquityOrStock extends Component {
         })
     }
 
-    handleIfUnpricedCheck = e => {
+    handleCheck = place => e => {
         this.setState({
-            ifUnpricedCheck: e.target.checked,
+            [place]: e.target.checked,
         })
         console.log(e.target.value)
+    }
+
+    confirmUnpriced = () => {
+        if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm)
+        {
+            return true
+        }
     }
 
     continue = e => {
@@ -142,12 +150,12 @@ export class EquityOrStock extends Component {
                             <h4> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment)
 
                             <Checkbox
-                                checked={this.state.ifUnpricedCheck}
-                                onChange={this.handleIfUnpricedCheck}
-                                // value= 'overview_check'
-                                color="primary"
-                                label="Unpriced Check"
-                            />
+                                    checked={this.state.ifUnpricedCheck}
+                                    onChange={this.handleCheck('ifUnpricedCheck')}
+                                    // value= 'overview_check'
+                                    color="primary"
+                                    label="Unpriced Check"
+                                />
                             </h4>
 
                             Note: TextField (if_private_value) with disable check box (if_unpriced)
@@ -171,8 +179,17 @@ export class EquityOrStock extends Component {
 
                         </div>}
 
-                    <h4> *Do not estimate a future value; your employees have the same risk potential as your investors 
-                        and should be compensated on the same terms. 
+                    <h4> *Do not estimate a future value; your employees have the same risk potential as your investors
+                        and should be compensated on the same terms.</h4>
+
+                    <h4>
+                        <Checkbox
+                            checked={this.state.ifUnpricedCheckConfirm}
+                            onChange={this.handleCheck('ifUnpricedCheckConfirm')}
+                            // value= 'overview_check'
+                            color="primary"
+                            label="Unpriced Check Confirm"
+                        />
                         CHECKBOX “We have not yet received a priced investment.” </h4>
 
                     ((Display Value and Value As Salary))
@@ -189,6 +206,7 @@ export class EquityOrStock extends Component {
                         primary={true}
                         style={styles.button}
                         onClick={this.continue}
+                        disabled={!this.confirmUnpriced()}
                     />
                 </React.Fragment>
             </MuiThemeProvider>
