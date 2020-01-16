@@ -13,7 +13,7 @@ export class Overview1 extends Component {
         overviewCheck: false
     }
 
-    handleOverviewClick = e => {
+    handleOverviewCheck = e => {
         this.setState({
             overviewCheck: e.target.checked,
 
@@ -40,8 +40,9 @@ export class Overview1 extends Component {
                     <p>“I am committed to increasing pay equity through a transparent and direct compensation process.”
 
                     <Checkbox
-                            checked={this.state.overview_check}
-                            onChange={this.handleOverviewClick}
+                            checked={this.state.overviewCheck}
+                            // checked={this.handleOverviewCheck}
+                            onChange={this.handleOverviewCheck}
                             // value= 'overview_check'
                             color="primary"
                             label="Overview Check"
