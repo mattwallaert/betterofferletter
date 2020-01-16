@@ -8,6 +8,9 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { withStyles } from '@material-ui/core/styles';
 import Slider from "@material-ui/core/Slider";
 import Typography from '@material-ui/core/Typography';
+// Buttons
+import Button from '@material-ui/core/Button'
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 
 export class EquityOrStock extends Component {
     state={
@@ -84,7 +87,24 @@ export class EquityOrStock extends Component {
 
                     <h4> Is the company public or private? </h4>
 
+                    <ButtonGroup
+                            variant="contained"
+                            color="inherit"
+                            aria-label="full-width contained primary button group"
+                            >
+                                <Button 
+                                onClick={this.handlePublicClick}
+                                >Public</Button>
+                                
+                                
+                                
+                                <Button onClick={this.handlePrivateClick}>Private</Button>       
+                        </ButtonGroup><br/>
+
                     Note: Button for public or private(co_public/co_private)
+
+                    {this.state.public && 
+                        <div>
 
                     <h4> -Public- What is the current price of a share of stock? </h4>
 
@@ -103,6 +123,11 @@ export class EquityOrStock extends Component {
                         onChange={handleChange('if_public_shares')}
                         defaultValue={values.if_public_shares}
                     />
+                    </div>}
+
+                    {this.state.private && 
+                        
+                        <div>
 
                     <h4> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment) </h4>
 
@@ -116,6 +141,8 @@ export class EquityOrStock extends Component {
                         onChange={handleChange('pct_share_offer')}
                         defaultValue={values.pct_share_offer}
                     />
+
+                    </div>}
 
                     <h4> *Do not estimate a future value; your employees have the same risk potential as your investors and should be compensated on the same terms. CHECKBOX “We have not yet received a priced investment.” </h4>
 
