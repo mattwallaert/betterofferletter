@@ -47,10 +47,12 @@ export class EquityOrStock extends Component {
     }
 
     confirmUnpriced = () => {
-        if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm)
-        {
+        if (this.state.public === true) {
             return true
         }
+        else if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm){
+            return true
+        } 
     }
 
     continue = e => {
@@ -119,8 +121,6 @@ export class EquityOrStock extends Component {
                         <Button onClick={this.handlePrivateClick}>Private</Button>
                     </ButtonGroup><br />
 
-                    Note: Button for public or private(co_public/co_private)
-
                     {this.state.public &&
                         <div>
 
@@ -157,8 +157,6 @@ export class EquityOrStock extends Component {
                                     label="Unpriced Check"
                                 />
                             </h4>
-
-                            Note: TextField (if_private_value) with disable check box (if_unpriced)
 
                             <TextField
                                 hintText="If Private Value"
