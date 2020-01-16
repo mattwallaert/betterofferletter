@@ -10,6 +10,28 @@ import Slider from "@material-ui/core/Slider";
 import Typography from '@material-ui/core/Typography';
 
 export class EquityOrStock extends Component {
+    state={
+        public: false,
+        private: false,
+    }
+
+    handlePublicClick = e => {
+    e.preventDefault();
+        this.setState({
+            public: !this.state.salary,
+            private: false
+        })
+       
+    }
+
+    handlePrivateClick = e => {
+        e.preventDefault();
+            this.setState({
+                private: !this.state.hourly,
+                public: false
+            })    
+      }
+
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
