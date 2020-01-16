@@ -43,7 +43,6 @@ export class EquityOrStock extends Component {
         this.setState({
             [place]: e.target.checked,
         })
-        console.log(e.target.value)
     }
 
     confirmUnpriced = () => {
