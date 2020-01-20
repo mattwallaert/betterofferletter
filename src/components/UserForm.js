@@ -198,11 +198,6 @@ export class UserForm extends Component {
         
     };
 
-    // handlePerfomBonusSlide = place => e => {
-    //     this.setState({ ...this.state, [place]: e.target.checked })
-    // }
-
-
     // Fix setState Delay
     componentDidUpdate(prevProps, prevState) {
         // Hourly
