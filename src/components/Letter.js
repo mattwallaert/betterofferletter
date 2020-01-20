@@ -32,15 +32,11 @@ export class Letter extends Component {
 
                         <Document>
                             <Page style={styles.body}>
-                                <Text style={styles.header} fixed>
+                                <Text style={styles.date} fixed>
                                     ~ {values.offer_date} ~
                                 </Text>
-                                <Text style={styles.title}>{values.nhire_first_name}</Text>
-                                {/* <Text style={styles.author}>Miguel de Cervantes</Text> */}
-                                {/* <Text style={styles.subtitle}>
-                                    Capítulo I: Que trata de la condición y ejercicio del famoso hidalgo D.
-                                    Quijote de la Mancha
-                                </Text> */}
+                                <Text style={styles.newHireName}>{values.nhire_first_name}</Text>
+                                
                                 <Text style={styles.text}>
                                     The success of {values.co_name} depends on the close collaboration of the talented people on our team.  And so I’m happy to invite you to join us as (nhire_title), reporting to (hman_first_name).
                                     Before I share the details of your offer, I want to help you understand how we arrive at compensation here at {values.co_name}.
@@ -143,6 +139,18 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'grey',
     },
+    date: {
+        fontSize: 12,
+        marginBottom: 20,
+        color: 'grey',
+        textAlign: 'right',
+    },
+    newHireName: {
+        fontSize: 24,
+        textAlign: 'left',
+        fontFamily: 'Oswald',
+        margin: 12,
+    }
 });
 
 export default (Letter)
