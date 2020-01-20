@@ -53,6 +53,7 @@ export class UserForm extends Component {
         bench_hourly: 0,
         offer_hourly: 0,
         //AB
+        compOrNhirePerform: 'Company Performance',
         bench_bonus: 0,
         perform_bonus: false,
         comp_max_bonus: '',
@@ -149,8 +150,13 @@ export class UserForm extends Component {
 
     // Handle check
 
-    handleCheck = place => e => {
+    handleSwitch = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked })
+        if (e.target.checked === false) {
+            this.setState({ compOrNhirePerform: 'Company Performance'})
+        } else {
+            this.setState({ compOrNhirePerform: 'New Hire Performance'})
+        }
     }
 
     handleSlideCheck = place => e => {
@@ -191,6 +197,10 @@ export class UserForm extends Component {
         }
         
     };
+
+    // handlePerfomBonusSlide = place => e => {
+    //     this.setState({ ...this.state, [place]: e.target.checked })
+    // }
 
 
     // Fix setState Delay
@@ -304,7 +314,7 @@ export class UserForm extends Component {
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
                                 handleChange={this.handleChange}
-                                handleCheck={this.handleCheck}
+                                handleSwitch={this.handleSwitch}
                                 values={values}
                             />
                         } />

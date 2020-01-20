@@ -24,7 +24,7 @@ export class AnnualBonus extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleChange, handleCheck, classes } = this.props;
+        const { values, handleChange, handleSwitch, classes } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -52,7 +52,7 @@ export class AnnualBonus extends Component {
 
                     {/* <Checkbox
                             checked={values.perform_bonus}
-                            onChange={handleCheck('perform_bonus')}
+                            onChange={handleSwitch('perform_bonus')}
                             // value= 'perform_bonus'
                             color="primary"
                             label="Perform Bonus"
@@ -64,7 +64,7 @@ export class AnnualBonus extends Component {
                             <Grid item>
                                 <Switch
                                     checked={values.perform_bonus}
-                                    onChange={handleCheck('perform_bonus')}
+                                    onChange={handleSwitch('perform_bonus')}
                                     color="primary"
                                     
                                 //   value="checkedC"
