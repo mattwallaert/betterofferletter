@@ -186,6 +186,7 @@ export class EquityOrStock extends Component {
                             // value= 'overview_check'
                             color="primary"
                             label="Unpriced Check Confirm"
+                            disabled={!this.state.public === true}
                         />
                         CHECKBOX “We have not yet received a priced investment.” </h4>
 
