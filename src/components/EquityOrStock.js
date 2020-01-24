@@ -172,6 +172,7 @@ export class EquityOrStock extends Component {
                                 floatingLabelText="Outstanding Share Offer"
                                 onChange={handleChange('pct_share_offer')}
                                 defaultValue={values.pct_share_offer}
+                                disabled={this.state.ifUnpricedCheck}
                             />
 
                             <h4> *Do not estimate a future value; your employees have the same risk potential as your investors
