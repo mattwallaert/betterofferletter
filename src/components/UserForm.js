@@ -239,6 +239,17 @@ export class UserForm extends Component {
                 benchBonusOffer: bonusOffer
             })
         }
+        // EoS Private
+        const originalPrivateValue = this.state.if_private_value
+        const pctActualPrivateShare = this.state.pct_share_offer * 0.01
+        const pctPrivateShare = pctActualPrivateShare * originalPrivateValue
+        const sharePrivateValue = Number(pctPrivateShare)
+        const sharePrivateValueWithYears = Number(sharePrivateValue / this.state.vest_years).toFixed(2)
+        if (this.state.privateValueAsSalary !== sharePrivateValueWithYears) {
+            this.setState({
+                privateValueAsSalary: sharePrivateValueWithYears
+            })
+        }
     }
 
     render() {
