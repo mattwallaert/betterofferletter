@@ -60,7 +60,7 @@ export class UserForm extends Component {
         comp_max_bonus: '',
         nhire_max_bonus: '',
         //EoS
-        vest_years: 0,
+        vest_years: 1,
         vest_rate_mos: 1,
         co_public: false,
         co_private: false,
@@ -244,12 +244,14 @@ export class UserForm extends Component {
         const pctActualPrivateShare = this.state.pct_share_offer * 0.01
         const pctPrivateShare = pctActualPrivateShare * originalPrivateValue
         const sharePrivateValue = Number(pctPrivateShare)
-        const sharePrivateValueWithYears = Number(sharePrivateValue / this.state.vest_years).toFixed(2)
+        const sharePrivateValueWithYears = (sharePrivateValue / this.state.vest_years).toFixed(2)
         if (this.state.privateValueAsSalary !== sharePrivateValueWithYears) {
             this.setState({
                 privateValueAsSalary: sharePrivateValueWithYears
             })
         }
+        // EoS Public
+        const
     }
 
     render() {
