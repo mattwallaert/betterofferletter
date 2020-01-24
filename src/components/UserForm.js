@@ -251,7 +251,15 @@ export class UserForm extends Component {
             })
         }
         // EoS Public
-        const
+        const originalPublicPrice = Number(this.state.if_public_price)
+        const publicShareOffer = Number(this.state.if_public_shares)
+        const totalPublicShares = originalPublicPrice * publicShareOffer
+        const totalPublicSharesWithYears = (totalPublicShares / this.state.vest_years).toFixed(2)
+        if (this.state.publicValueAsSalary !== totalPublicSharesWithYears) {
+            this.setState({
+                publicValueAsSalary: totalPublicSharesWithYears
+            })
+        }
     }
 
     render() {
