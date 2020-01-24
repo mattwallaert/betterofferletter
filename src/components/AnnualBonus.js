@@ -66,7 +66,7 @@ export class AnnualBonus extends Component {
                                     checked={values.perform_bonus}
                                     onChange={handleSwitch('perform_bonus')}
                                     color="primary"
-                                    
+
                                 //   value="checkedC"
                                 />
                             </Grid>
@@ -74,26 +74,34 @@ export class AnnualBonus extends Component {
                         </Grid>
                     </Typography>
 
-
-                    <h4>In order to earn the maximum bonus, the company needs to ___
+                    {!values.perform_bonus &&
+                        <div>
+                            <h4>In order to earn the maximum bonus, the company needs to ___
                         (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</h4>
 
-                    <TextField
-                        hintText="Maximum Bonus Company Needs"
-                        floatingLabelText="Maximum Bonus Company"
-                        onChange={handleChange('comp_max_bonus')}
-                        defaultValue={values.comp_max_bonus}
-                    />
+                            <TextField
+                                hintText="Maximum Bonus Company Needs"
+                                floatingLabelText="Maximum Bonus Company"
+                                onChange={handleChange('comp_max_bonus')}
+                                defaultValue={values.comp_max_bonus}
+                            />
+                        </div>
+                    }
 
-                    <h4>In order to earn the maximum bonus, the new hire needs to ___
+                    {values.perform_bonus &&
+                        <div>
+
+                            <h4>In order to earn the maximum bonus, the new hire needs to ___
                         (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</h4>
 
-                    <TextField
-                        hintText="Maximum Bonus New Hire Needs"
-                        floatingLabelText="Maximum Bonus New Hire"
-                        onChange={handleChange('nhire_max_bonus')}
-                        defaultValue={values.nhire_max_bonus}
-                    />
+                            <TextField
+                                hintText="Maximum Bonus New Hire Needs"
+                                floatingLabelText="Maximum Bonus New Hire"
+                                onChange={handleChange('nhire_max_bonus')}
+                                defaultValue={values.nhire_max_bonus}
+                            />
+                        </div>
+                    }
 
                     <br />
 
