@@ -69,6 +69,8 @@ export class UserForm extends Component {
         if_private_value: 0, //option for blank
         if_unpriced: false,
         pct_share_offer: 0,
+        privateValueAsSalary: 0,
+        publicValueAsSalary: 0,
         //B
         benefits: [],
         health_insurance: false,
