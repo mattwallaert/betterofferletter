@@ -55,6 +55,7 @@ export class UserForm extends Component {
         //AB
         compOrNhirePerform: 'Company Performance',
         bench_bonus: 0,
+        benchBonusOffer: 0,
         perform_bonus: false,
         comp_max_bonus: '',
         nhire_max_bonus: '',
@@ -224,6 +225,16 @@ export class UserForm extends Component {
         if (this.state.offer_salary !== salaryOffer) {
             this.setState({
                 offer_salary: salaryOffer
+            })
+        }
+        // Bonus Offer
+        const originalBonusBench = this.state.bench_bonus
+        const pctActualBonus = this.state.pct_slider * 0.01
+        const pctBonus = pctActualBonus * originalBonusBench
+        const bonusOffer = Number(originalBonusBench) + Number(pctBonus.toFixed(2))
+        if (this.state.benchBonusOffer !== bonusOffer) {
+            this.setState({
+                benchBonusOffer: bonusOffer
             })
         }
     }
