@@ -49,7 +49,7 @@ export class UserForm extends Component {
         bench_salary: '',
         offer_salary: 0,
         hour_pay: '',
-        hour_week: '',
+        hoursPerMo: '',
         bench_hourly: 0,
         offer_hourly: 0,
         //AB
@@ -201,7 +201,7 @@ export class UserForm extends Component {
     // Fix setState Delay
     componentDidUpdate(prevProps, prevState) {
         // Hourly
-        const product = this.state.hour_pay * this.state.hour_week
+        const product = this.state.hour_pay * this.state.hoursPerMo
         if (this.state.bench_hourly !== product) {
             this.setState({
                 bench_hourly: product

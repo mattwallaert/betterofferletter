@@ -102,15 +102,15 @@ export class DirectComp3 extends Component {
                                     value={values.hour_pay}
                                     // defaultValue=''
                                 />
-                                <li>2a. How many hours per week?</li>
+                                <li>2a. How many hours per month?</li>
         
                                 <TextField 
                                     type="number"
-                                    id="hour_week"
-                                    hintText="Hours per Week?"
-                                    floatingLabelText="Hours per Week"
-                                    onChange={handleChange('hour_week')}
-                                    value={values.hour_week}
+                                    id="hoursPerMo"
+                                    hintText="Hours per Month?"
+                                    floatingLabelText="Hours per Month"
+                                    onChange={handleChange('hoursPerMo')}
+                                    value={values.hoursPerMo}
                                     // defaultValue=''
                                 />
         
