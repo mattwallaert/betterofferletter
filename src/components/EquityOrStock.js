@@ -49,7 +49,7 @@ export class EquityOrStock extends Component {
         if (this.state.public === true) {
             return true
         }
-        else if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm) {
+        else if (this.state.ifUnpricedCheck) {
             return true
         }
     }
