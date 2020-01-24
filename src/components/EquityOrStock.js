@@ -49,9 +49,9 @@ export class EquityOrStock extends Component {
         if (this.state.public === true) {
             return true
         }
-        else if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm){
+        else if (this.state.ifUnpricedCheck && this.state.ifUnpricedCheckConfirm) {
             return true
-        } 
+        }
     }
 
     continue = e => {
@@ -174,12 +174,14 @@ export class EquityOrStock extends Component {
                                 defaultValue={values.pct_share_offer}
                             />
 
+                            <h4> *Do not estimate a future value; your employees have the same risk potential as your investors
+                                and should be compensated on the same terms.</h4>
+
+
                         </div>}
 
-                    <h4> *Do not estimate a future value; your employees have the same risk potential as your investors
-                        and should be compensated on the same terms.</h4>
 
-                    <h4>
+                    {/* <h4>
                         <Checkbox
                             checked={this.state.ifUnpricedCheckConfirm}
                             onChange={this.handleCheck('ifUnpricedCheckConfirm')}
@@ -188,7 +190,7 @@ export class EquityOrStock extends Component {
                             label="Unpriced Check Confirm"
                             disabled={!this.state.public === true}
                         />
-                        CHECKBOX “We have not yet received a priced investment.” </h4>
+                        CHECKBOX “We have not yet received a priced investment.” </h4> */}
 
                     ((Display Value and Value As Salary))
 
