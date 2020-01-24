@@ -105,7 +105,7 @@ export class AnnualBonus extends Component {
 
                     <br />
 
-                    ((Display Benchmark Mean Bonus and Your Offer))
+                    
                     <h4>Benchmark = { values.bench_bonus }, Your Offer = { values.benchBonusOffer }</h4>
 
                     <br />
