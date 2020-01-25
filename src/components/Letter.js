@@ -19,7 +19,7 @@ export class Letter extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values } = this.props;
+        const { values, printBenefits } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -33,18 +33,18 @@ export class Letter extends Component {
                         <Document>
                             <Page style={styles.body}>
                                 <Text style={styles.date} fixed>
-                                    ~ {values.offer_date} ~
+                                    ~ ({values.offer_date}) ~
                                 </Text>
-                                <Text style={styles.newHireName}>{values.nhire_first_name}</Text>
+                                <Text style={styles.newHireName}>({values.nhire_first_name})</Text>
 
                                 <Text style={styles.text}>
-                                    The success of {values.co_name} depends on the close collaboration of the talented people on our team. 
-                                     And so I’m happy to invite you to join us as (nhire_title), reporting to (hman_first_name).
+                                    The success of ({values.co_name}) depends on the close collaboration of the talented people on our team. 
+                                     And so I’m happy to invite you to join us as ({values.nhire_title}), reporting to ({values.hman_first_name}).
                                 </Text>
 
                                 <Text style={styles.text}>
                                     Before I share the details of your offer, I want to help you understand how we arrive at compensation 
-                                    here at {values.co_name}.
+                                    here at ({values.co_name}).
                                 </Text>
 
                                 <Text style={styles.text}>
@@ -56,7 +56,7 @@ export class Letter extends Component {
                                 <Text style={styles.text}>
                                     Next, we look at normalized compensation data for roles similar to the one they will take on.  
                                     This data comes from salary databases, government benchmarks, and open job postings both at 
-                                    {values.co_name} and in the wider market.
+                                    ({values.co_name}) and in the wider market.
                                 </Text>
 
                                 <Text style={styles.text}>
@@ -64,30 +64,30 @@ export class Letter extends Component {
                                 </Text>
 
                                 <Text style={styles.text}>
-                                    Given the information available to us, we have assessed your seniority as (seniority)% of the average 
-                                    person in this role, which has a median market salary of $XXX,XXX.  Collectively, that means our offer 
-                                    is an annual salary of $XXX,XXX.
+                                    Given the information available to us, we have assessed your seniority as ({values.pct_slider})% of the average 
+                                    person in this role, which has a median market salary of $({values.bench_salary}). Collectively, that means our offer 
+                                    is an annual salary of $({values.offer_salary}).
                                 </Text>
 
                                 <Text style={styles.text}>
-                                    {values.co_name} strives to be data-driven and fair in our salaries and to do that, we need your help.  
+                                    ({values.co_name}) strives to be data-driven and fair in our salaries and to do that, we need your help.  
                                     If you feel that we have either misunderstood your expertise or the market, we are open to data that 
                                     helps us understand our error.  Feel free to forward along any additional information we may have 
                                     overlooked, like expertise not captured in your interviews or on your resume, other salary offers 
                                     that we can use to normalize against, or anything you feel is relevant.  To avoid biasing me as 
-                                    your hiring manager, please send additional materials to (comp_person_name) at (comp_person_email) 
+                                    your hiring manager, please send additional materials to ({values.comp_person_name}) at ({values.comp_person_email}) 
                                     for review.
                                 </Text>
 
                                 <Text style={styles.text}>
                                     (OPTIONAL) To support you transition into the role, we would also like to make a one-time onboarding 
-                                    payment of $X,XXX.  This is not merit-based but rather situational, and it is our hope that you would 
+                                    payment of $({values.onboard_assist}).  This is not merit-based but rather situational, and it is our hope that you would 
                                     use this money to help you smooth your transition into the new position and hit the ground running.
                                 </Text>
 
                                 <Text style={styles.text}>
                                     (OPTIONAL) In addition to your pay, you will be eligible for a range of other benefits. In general terms,
-                                     these include (BENEFITS); we’re happy to chat through the details at any time.
+                                     these include ({printBenefits()}); we’re happy to chat through the details at any time.
                                 </Text>
 
                                 <Text style={styles.text}>

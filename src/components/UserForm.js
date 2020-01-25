@@ -97,24 +97,25 @@ export class UserForm extends Component {
 
     }
 
-    
-    
-    componentDidMount(){
+
+
+    componentDidMount() {
         const links = this.state.step
         history.push(links[0])
     }
 
     //Go forward to next step
-    
+
     nextStep = () => {
         const links = this.state.step
         // compare links array with history.location.pathname
         const nextLink = () => {
-        for (var i = 0; i < links.length; i++) {
-            if (links[i] === history.location.pathname)
+            for (var i = 0; i < links.length; i++) {
+                if (links[i] === history.location.pathname)
 
-                return links[i + 1]
-        }}
+                    return links[i + 1]
+            }
+        }
         history.push(nextLink())
     }
 
@@ -149,56 +150,56 @@ export class UserForm extends Component {
         }
     }
 
-    
+
 
     // Handle check
 
     handleSwitch = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked })
         if (e.target.checked === false) {
-            this.setState({ compOrNhirePerform: 'Company Performance'})
+            this.setState({ compOrNhirePerform: 'Company Performance' })
         } else {
-            this.setState({ compOrNhirePerform: 'New Hire Performance'})
+            this.setState({ compOrNhirePerform: 'New Hire Performance' })
         }
     }
 
     handleSlideCheck = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked });
         var array = [...this.state.step]
-        var slide = '/'+ place.replace('_slide', '')
+        var slide = '/' + place.replace('_slide', '')
         var index = array.indexOf(slide)
         console.log(slide)
         // console.log(e.target.checked)
-        if (e.target.checked === false && index > -1 ){
-            
+        if (e.target.checked === false && index > -1) {
+
             array.splice(index, 1);
             console.log(e.target.checked)
-            this.setState({step: array})
+            this.setState({ step: array })
         } else {
             array.splice(-2, 0, slide);
             console.log(e.target.checked)
-            this.setState({step: array})
+            this.setState({ step: array })
         }
     };
 
     handleBenefitsCheck = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked });
         var array = [...this.state.benefits]
-        var slide = place
-        var index = array.indexOf(slide)
-        console.log(slide)
+        var benefit = place
+        var index = array.indexOf(benefit)
+        console.log(benefit)
         // console.log(e.target.checked)
-        if (e.target.checked === false && index > -1 ){
-            
+        if (e.target.checked === false && index > -1) {
+
             array.splice(index, 1);
             console.log(e.target.checked)
-            this.setState({benefits: array})
+            this.setState({ benefits: array })
         } else {
-            array.splice(-2, 0, slide);
+            array.splice(-2, 0, benefit);
             console.log(e.target.checked)
-            this.setState({benefits: array})
+            this.setState({ benefits: array })
         }
-        
+
     };
 
     // Fix setState Delay
@@ -262,15 +263,25 @@ export class UserForm extends Component {
         }
     }
 
+    // Handle benefit array map
+    printBenefits = () => {
+        const convertBenefits = this.state.benefits.map((item, i) => {
+           return item.replace(/_/gi, ' ')
+        })
+        const stringValues = convertBenefits.join(', ')
+        return stringValues
+        
+    }
+
     render() {
         const { ...state } = this.state
         const values = { ...state }
 
         return (
 
-            <Router 
-            history={history}
-            basename={process.env.PUBLIC_URL}
+            <Router
+                history={history}
+                basename={process.env.PUBLIC_URL}
             >
                 <div>
                     <div >
@@ -390,6 +401,7 @@ export class UserForm extends Component {
                             <Letter
                                 nextStep={this.nextStep}
                                 prevStep={this.prevStep}
+                                printBenefits={this.printBenefits}
                                 values={values}
                             />
                         } />
