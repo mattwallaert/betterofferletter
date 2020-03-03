@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Switch, Route, NavLink } from 'react-router-dom'
 import history from "../services/history"
+import Intro from './Intro';
 import Overview1 from './Overview1';
 import Overview2 from './Overview2';
 import DirectComp1 from './DirectComp1';
@@ -285,6 +286,7 @@ export class UserForm extends Component {
             >
                 <div>
                     <div >
+                        <NavLink to="/intro">  OV1    |</NavLink>
                         <NavLink to="/overview/1">  OV1    |</NavLink>
                         <NavLink to="/overview/2">  OV2     |</NavLink>
 
@@ -302,6 +304,11 @@ export class UserForm extends Component {
                     </div>
                     <Switch>
 
+                        <Route exact path="/intro" render={() =>
+                            <Intro
+                               
+                            />
+                        } />
                         <Route exact path="/overview/1" render={() =>
                             <Overview1 //Overview1
                                 nextStep={this.nextStep}
