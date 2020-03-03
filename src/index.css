@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* INTRO */
+
+.yellowBody {
+  background-color: #fdce16 ;
+  width: 90%;
+  height: 90%;
+}
