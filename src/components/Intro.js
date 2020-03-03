@@ -2,8 +2,16 @@ import React from 'react'
 
 const Intro = () => {
     return (
-        <div className = 'yellowBody'>
-            <p>Hello World</p>
+        <div style={{
+            backgroundColor: '#fdce16',
+            width: window.innerWidth,
+            height: window.innerHeight,
+            justifyContent: 'center'
+            
+          }}
+        
+        >
+            <p>Better Offer Letter</p>
         </div>
     )
 }
