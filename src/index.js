@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-//OTF
+//Gilroy Medium
 
-import './assets/gilroy-bold-cufonfonts'
+import './assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff2'
+import './assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff'
+import './assets/gilroy-bold-cufonfonts/GilroyMediumFiles/Gilroy-Medium.ttf'
+
+// import './assets/gilroy-bold-cufonfonts/Gilroy-Heavy.ttf'
+// import './assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf'
+// import './assets/gilroy-bold-cufonfonts/Gilroy-Medium.ttf'
+// import './assets/gilroy-bold-cufonfonts/Gilroy-Regular.ttf'
+// import './assets/gilroy-extrabold.otf'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

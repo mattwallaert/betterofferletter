@@ -1,23 +1,26 @@
 /* OTF */
 
 @font-face {
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local('Gilroy'),
-    local('Gilroy-Medium'),
-    url(./assets/gilroy-bold-cufonfonts/Gilroy-Medium.ttf) format('ttf'),
+  font-family: 'Gilroy-Medium';
+  src: local('Gilroy-Medium'),
+       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff') format('woff'), /* Modern Browsers */
+       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/Gilroy-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: 
+       url('./assets/gilroy-extrabold.otf') format('opentype'),
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 400;
   src:
     local('Gilroy'),
     local('Gilroy-Light'),
-    url(./assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf) format('ttf'),
+    url(./assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf) format('truetype'),
 }
 
 @font-face {
@@ -27,7 +30,7 @@
   src:
     local('Gilroy'),
     local('Gilroy-Bold'),
-    url(./assets/gilroy-bold-cufonfonts/Gilroy-Bold.ttf) format('ttf'),
+    url(./assets/gilroy-bold-cufonfonts/Gilroy-Bold.ttf) format('truetype'),
 }
 
 @font-face {
@@ -37,8 +40,8 @@
   src:
     local('Gilroy'),
     local('Gilroy-extrabold'),
-    url(./assets/gilroy-extrabold.otf) format('otf'),
-}
+    url(./assets/gilroy-extrabold.otf) format('opentype'),
+} */
 
 /*  */
 
@@ -56,7 +59,18 @@ code {
     monospace;
 }
 
+/* p {
+  font-family: Gilroy-Medium;
+} */
+
+
+
 /* INTRO */
+
+.intro {
+  font-family: Gilroy-Medium, cursive;
+  font-size: 1200%
+}
 
 .yellowBody {
   background-color: #fdce16 ;

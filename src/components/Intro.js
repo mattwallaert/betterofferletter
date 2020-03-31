@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 const Intro = () => {
     return (
-        <div style={{
+        <div 
+        className='intro'
+        style={{
             backgroundColor: '#fdce16',
             width: window.innerWidth,
             height: window.innerHeight,
