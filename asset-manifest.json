@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/betterofferletter/static/css/main.5e4e9510.chunk.css",
-    "main.js": "/betterofferletter/static/js/main.0e5c6c02.chunk.js",
-    "main.js.map": "/betterofferletter/static/js/main.0e5c6c02.chunk.js.map",
+    "main.css": "/betterofferletter/static/css/main.cfd13c8e.chunk.css",
+    "main.js": "/betterofferletter/static/js/main.d72be46a.chunk.js",
+    "main.js.map": "/betterofferletter/static/js/main.d72be46a.chunk.js.map",
     "runtime-main.js": "/betterofferletter/static/js/runtime-main.ee17983b.js",
     "runtime-main.js.map": "/betterofferletter/static/js/runtime-main.ee17983b.js.map",
-    "static/js/2.5fce53c2.chunk.js": "/betterofferletter/static/js/2.5fce53c2.chunk.js",
-    "static/js/2.5fce53c2.chunk.js.map": "/betterofferletter/static/js/2.5fce53c2.chunk.js.map",
+    "static/js/2.2b2cb138.chunk.js": "/betterofferletter/static/js/2.2b2cb138.chunk.js",
+    "static/js/2.2b2cb138.chunk.js.map": "/betterofferletter/static/js/2.2b2cb138.chunk.js.map",
     "index.html": "/betterofferletter/index.html",
-    "precache-manifest.7b990d6f4a346bd95727557347ef1d35.js": "/betterofferletter/precache-manifest.7b990d6f4a346bd95727557347ef1d35.js",
+    "precache-manifest.7f39523d8d85be38281c880c4e163e0f.js": "/betterofferletter/precache-manifest.7f39523d8d85be38281c880c4e163e0f.js",
     "service-worker.js": "/betterofferletter/service-worker.js",
-    "static/css/main.5e4e9510.chunk.css.map": "/betterofferletter/static/css/main.5e4e9510.chunk.css.map"
+    "static/css/main.cfd13c8e.chunk.css.map": "/betterofferletter/static/css/main.cfd13c8e.chunk.css.map",
+    "static/media/Gilroy-Medium.ttf": "/betterofferletter/static/media/Gilroy-Medium.d8ee4539.ttf",
+    "static/media/index.css": "/betterofferletter/static/media/gilroy-extrabold.01bee965.otf",
+    "static/media/gilroy-medium.woff": "/betterofferletter/static/media/gilroy-medium.d8999a5d.woff",
+    "static/media/gilroy-medium.woff2": "/betterofferletter/static/media/gilroy-medium.ebec3116.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.ee17983b.js",
-    "static/js/2.5fce53c2.chunk.js",
-    "static/css/main.5e4e9510.chunk.css",
-    "static/js/main.0e5c6c02.chunk.js"
+    "static/js/2.2b2cb138.chunk.js",
+    "static/css/main.cfd13c8e.chunk.css",
+    "static/js/main.d72be46a.chunk.js"
   ]
 }
