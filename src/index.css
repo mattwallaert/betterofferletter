@@ -1,47 +1,13 @@
 /* OTF */
 
-@font-face {
-  font-family: 'Gilroy-Medium';
-  src: local('Gilroy-Medium'),
-       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/gilroy-medium.woff') format('woff'), /* Modern Browsers */
-       url('./assets/gilroy-bold-cufonfonts/GilroyMediumFiles/Gilroy-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: 'gilroy-extrabold';
-  src: 
-       url('./assets/gilroy-extrabold.otf') format('opentype'),
-}
-
-/* @font-face {
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local('Gilroy'),
-    local('Gilroy-Light'),
-    url(./assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf) format('truetype'),
-}
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'gilroyextrabold';
+  src: url('./fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('./fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 700;
-  src:
-    local('Gilroy'),
-    local('Gilroy-Bold'),
-    url(./assets/gilroy-bold-cufonfonts/Gilroy-Bold.ttf) format('truetype'),
 }
-
-@font-face {
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 700;
-  src:
-    local('Gilroy'),
-    local('Gilroy-extrabold'),
-    url(./assets/gilroy-extrabold.otf) format('opentype'),
-} */
 
 /*  */
 
@@ -59,6 +25,10 @@ code {
     monospace;
 }
 
+h1 {
+  /* text-align: center; */
+}
+
 /* p {
   font-family: Gilroy-Medium;
 } */
@@ -68,12 +38,20 @@ code {
 /* INTRO */
 
 .intro {
-  font-family: Gilroy-Medium, cursive;
-  font-size: 1200%
+  font-family: gilroyextrabold, 'Courier New', Courier, monospace;
+  font-size: 400%;
+  display: inline-block;
+  
+  
 }
 
-.yellowBody {
+.yellow-square-container {
   background-color: #fdce16 ;
-  width: 90%;
-  height: 90%;
+  text-align: center;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+ 
 }
