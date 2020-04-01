@@ -103,6 +103,7 @@ export class UserForm extends Component {
     componentDidMount() {
         const links = this.state.step
         history.push(links[0])
+        // history.push("/intro")
     }
 
     //Go forward to next step
@@ -286,7 +287,7 @@ export class UserForm extends Component {
             >
                 <div>
                     <div >
-                        <NavLink to="/intro">  OV1    |</NavLink>
+                        <NavLink to="/intro">  Intro    |</NavLink>
                         <NavLink to="/overview/1">  OV1    |</NavLink>
                         <NavLink to="/overview/2">  OV2     |</NavLink>
 
@@ -306,7 +307,6 @@ export class UserForm extends Component {
 
                         <Route exact path="/intro" render={() =>
                             <Intro
-                               
                             />
                         } />
                         <Route exact path="/overview/1" render={() =>
