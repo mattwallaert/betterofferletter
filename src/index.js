@@ -9,6 +9,11 @@ import * as serviceWorker from './serviceWorker';
 import './fonts/gilroy-extrabold-webfont.woff2'
 import './fonts/gilroy-extrabold-webfont.woff'
 
+//Gilroy Medium
+
+import './fonts/gilroy-medium-webfont.woff2'
+import './fonts/gilroy-medium-webfont.woff'
+
 // import './assets/gilroy-bold-cufonfonts/Gilroy-Heavy.ttf'
 // import './assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf'
 // import './assets/gilroy-bold-cufonfonts/Gilroy-Medium.ttf'

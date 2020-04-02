@@ -9,6 +9,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'gilroy-medium';
+  src: url('./fonts/gilroy-medium-webfont.woff2') format('woff2'),
+       url('./fonts/gilroy-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 /*  */
 
 html {
@@ -44,25 +53,29 @@ code {
 }
 
 h1 {
-  /* font-family: gilroyextrabold, 'Courier New', Courier, monospace;
-  font-size: 900%;
-  display: inline-block; */
-
-  
-  
+  font-family: gilroyextrabold, 'Courier New', Courier, monospace;
+  font-size: 9vw;
 }
 
-/* p {
-  font-family: Gilroy-Medium;
-} */
+h2 {
+  font-family: gilroyextrabold, 'Courier New', Courier, monospace;
+  font-size: 3vw;
+}
+
+p {
+  font-family: gilroy-medium, cursive, 'Courier New', Courier, monospace;
+  font-size: 1.5vw;
+  /* text-align: center; */
+  /* left: -50%; */
+  margin: 0 15%;
+  /* margin-right: -50%; */
+}
 
 
 
 /* INTRO */
 
 .intro {
-  font-family: gilroyextrabold, 'Courier New', Courier, monospace;
-  font-size: 4vw;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -70,17 +83,15 @@ h1 {
   margin-right: -50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  
-  
 }
 
-.yellow-square-container {
-  background-color: #fdce16 ;
-  text-align: center;
-  padding: 0;
-  display: block;
-  margin: 0 auto;
-  max-height: 100%;
-  max-width: 100%;
+.ov1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
