@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import RaisedButton from 'material-ui/RaisedButton'
 // import TextField from 'material-ui/TextField'
 // For Slider
@@ -30,15 +30,15 @@ export class DirectComp1 extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Direct Compensation" />
+                <div className='ov1'>
 
-                    <h1>Direct Compensation</h1>
+                    <h2>DIRECT COMPENSATION</h2>
 
-                    <h4>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the 
-                        average hire for this role?</h4>  
-                    <h4>Remember, the offer should be firmly tied to the business value the hire will create 
-                        and you should be prepared to </h4>
-                    <h4>justify the comparison to the skills and experience expected by the market.</h4>
+                    <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the 
+                        average hire for this role?</p>  
+                    <p>Remember, the offer should be firmly tied to the business value the hire will create 
+                        and you should be prepared to </p>
+                    <p>justify the comparison to the skills and experience expected by the market.</p>
 
                     {/* (Slider from -25% to +25%) */}
                     
@@ -106,6 +106,7 @@ export class DirectComp1 extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

@@ -33,7 +33,7 @@ export class Overview1 extends Component {
                     {/* <AppBar title="Overview" /> */}
                     
 
-                    <h2>ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION.</h2>
+                    <h2>ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
                     <br />
                     <p>OfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
                     Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.

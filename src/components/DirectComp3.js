@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 
@@ -48,9 +48,9 @@ export class DirectComp3 extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Direct Compensation cont." />
-                    <h1>Direct Compensation cont.</h1>
-                        <h4>Is this position salaried or hourly?</h4><br/>
+                <div className='ov1'>
+                    <h2>Direct Compensation cont.</h2>
+                        <p>Is this position salaried or hourly?</p><br/>
 
                         <ButtonGroup
                             variant="contained"
@@ -71,7 +71,7 @@ export class DirectComp3 extends Component {
                         { this.state.salary && 
                             <div>
                                 <br/>
-                                <li>1. Salary: Great.  What is the benchmark salary?</li>
+                                <p>1. Salary: Great.  What is the benchmark salary?</p>
                                         
                                 <TextField 
                                     type="number"
@@ -82,8 +82,8 @@ export class DirectComp3 extends Component {
                                     // defaultValue=''
                                 />
 
-                                {/* <h4>Result = (Display Benchmark and Your Offer)</h4> */}
-                        <h4>Benchmark = {values.bench_salary}, Your Offer = {values.offer_salary}</h4>
+                                {/* <p>Result = (Display Benchmark and Your Offer)</p> */}
+                        <p>Benchmark = {values.bench_salary}, Your Offer = {values.offer_salary}</p>
 
                                 Note: benchmark value and adjusted value based on slider(offer_salary)
                             </div> }
@@ -91,7 +91,7 @@ export class DirectComp3 extends Component {
                         {/* Hourly */}
                         { this.state.hourly && 
                             <div>
-                                <li>2. Hourly: Great.  How much per hour?</li>
+                                <p>2. Hourly: Great.  How much per hour?</p>
                             
                                 <TextField 
                                     type="number"
@@ -102,7 +102,7 @@ export class DirectComp3 extends Component {
                                     value={values.hour_pay}
                                     // defaultValue=''
                                 />
-                                <li>2a. How many hours per month?</li>
+                                <p>2a. How many hours per month?</p>
         
                                 <TextField 
                                     type="number"
@@ -114,9 +114,9 @@ export class DirectComp3 extends Component {
                                     // defaultValue=''
                                 />
         
-                                <h4>Result = (Display Benchmark and Your Offer)</h4>
+                                <p>Result = (Display Benchmark and Your Offer)</p>
                                
-                        <h4>Benchmark = { values.bench_hourly }, Your Offer = { values.offer_hourly }</h4>
+                        <p>Benchmark = { values.bench_hourly }, Your Offer = { values.offer_hourly }</p>
                             </div> }
 
                         {/* /Conditional Render */}
@@ -134,6 +134,7 @@ export class DirectComp3 extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

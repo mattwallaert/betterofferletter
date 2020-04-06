@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -19,15 +19,15 @@ export class Optional extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Optional" />
+                <div className='ov1'>
 
-                    <h1>Optional</h1>
+                    <h2>Optional</h2>
 
-                    <h4>Finally, a page of optional information.</h4>
-                    <h4>Anything you don’t complete will be left as a variable in the letter text.</h4>
-                    <h4>As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</h4>
+                    <p>Finally, a page of optional information.</p>
+                    <p>Anything you don’t complete will be left as a variable in the letter text.</p>
+                    <p>As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</p>
 
-                    <h4>What is the date of the offer?</h4>
+                    <p>What is the date of the offer?</p>
 
                     <TextField 
                         hintText="Offer Date"
@@ -36,7 +36,7 @@ export class Optional extends Component {
                         defaultValue={values.offer_date}
                     />
                     
-                    <h4>What is the first name of the candidate?</h4>
+                    <p>What is the first name of the candidate?</p>
                     
                     <TextField 
                         hintText="Candidate Name"
@@ -45,7 +45,7 @@ export class Optional extends Component {
                         defaultValue={values.nhire_first_name}
                     />
                     
-                    <h4>What would be the title of the candidate?</h4>
+                    {/* <p>What would be the title of the candidate?</p>
                     
                     <TextField 
                         hintText="Candidate Title"
@@ -54,7 +54,7 @@ export class Optional extends Component {
                         defaultValue={values.nhire_title}
                     />
                     
-                    <h4>What is the name of the company?</h4>
+                    <p>What is the name of the company?</p>
 
                     <TextField 
                         hintText="Company Name"
@@ -63,7 +63,7 @@ export class Optional extends Component {
                         defaultValue={values.co_name}
                     />
                     
-                    <h4>What is the hiring manager’s first name?</h4>
+                    <p>What is the hiring manager’s first name?</p>
 
                     
                     <TextField 
@@ -73,7 +73,7 @@ export class Optional extends Component {
                         defaultValue={values.hman_first_name}
                     />
                     
-                    <h4>What is the hiring manager’s phone number?</h4>
+                    <p>What is the hiring manager’s phone number?</p>
 
                     <TextField 
                         hintText="Hiring Manager's Phone Number"
@@ -83,14 +83,14 @@ export class Optional extends Component {
                     />
                     
                     
-                    <h4>What is the hiring manager’s email address?</h4>
+                    <p>What is the hiring manager’s email address?</p>
               
                     <TextField 
                         hintText="Hiring Manager's Email"
                         floatingLabelText="Hiring Manager's Email"
                         onChange={handleChange('hman_email')}
                         defaultValue={values.hman_email}
-                    />
+                    /> */}
                     
                     <br/>
                     <RaisedButton 
@@ -105,6 +105,7 @@ export class Optional extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

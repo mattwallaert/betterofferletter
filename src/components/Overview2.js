@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 // import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 // Checkboxes
@@ -27,11 +27,8 @@ export class Overview2 extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Overview cont." />
-
-                    <h1>Overview cont.</h1>
-
-                    <h1>First up, let’s determine the components of your offer.</h1>
+                <div className='ov1'>
+                    <h2>First up, let’s determine the components of your offer.</h2>
                     {/* Checkboxes add slides to queue */}
                     <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
 
@@ -92,6 +89,7 @@ export class Overview2 extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

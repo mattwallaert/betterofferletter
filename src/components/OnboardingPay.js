@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -19,15 +19,15 @@ export class OnboardingPay extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Relocation/Onboarding Payment" />
+                <div className='ov1'>
 
-                    <h1>Relocation/Onboarding Payment</h1>
+                    <h2>Relocation/Onboarding Payment</h2>
 
-                    <h4>Now for onboarding payment.</h4>  
+                    <p>Now for onboarding payment.</p>  
                     
-                    <h4>This should not be based on a benchmark but rather on the amount of money needed to help your new hire be initially productive.</h4>
+                    <p>This should not be based on a benchmark but rather on the amount of money needed to help your new hire be initially productive.</p>
     
-                    <h4>How much are you offering to assist with onboarding?</h4>
+                    <p>How much are you offering to assist with onboarding?</p>
 
                     <TextField 
                         hintText="Onboarding Assistance"
@@ -50,6 +50,7 @@ export class OnboardingPay extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

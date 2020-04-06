@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -21,14 +21,16 @@ export class DirectComp2 extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Direct Compensation cont." />
-
-                    <h1>Direct Compensation cont.</h1>
+                <div className='ov1'>
                     
-                        <h4>In order to create a fair process and avoid biasing the hiring manager, you need to name someone that the candidate can submit additional information to 
-                            if they believe the benchmark or experience assessment are incorrect.</h4>  
-                        <h4>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</h4>
-                        <h4>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</h4>
+                    
+                        <h2>In order to create a fair process</h2> 
+                            
+                            <p>avoid biasing the hiring manager, you need to name someone that the candidate can submit additional information to 
+                            if they believe the benchmark or experience assessment are incorrect.</p>  
+                        <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
+                        <br/>
+                        <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
                         <TextField 
                             hintText="Compensation Manager Full Name"
@@ -37,7 +39,7 @@ export class DirectComp2 extends Component {
                             defaultValue={values.comp_person_name}
                         /> 
 
-                        <h4>What is their email? (email validation)</h4>
+                        <p>What is their email? (email validation)</p>
 
                         <TextField 
                             hintText="Compensation Manager Email"
@@ -59,6 +61,7 @@ export class DirectComp2 extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

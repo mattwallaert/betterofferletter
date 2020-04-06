@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -26,15 +26,13 @@ export class Benefits extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Benefits" />
+                    <h2>Benefits</h2>
 
-                    <h1>Benefits</h1>
-
-                    <h4>Now for benefits.  While the full list of benefits may be too long to include in an offer letter,
-                    it is important to make sure your new hire has a general idea of what is available.</h4>
-                    <h4>
+                    <p>Now for benefits.  While the full list of benefits may be too long to include in an offer letter,
+                    it is important to make sure your new hire has a general idea of what is available.</p>
+                    <p>
                         Check all that apply.
-                    </h4>
+                    </p>
     
                     {/* <p><input type="checkbox" name="health-insurance" /> Health Insurance</p> */}
 

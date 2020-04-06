@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -69,13 +69,13 @@ export class EquityOrStock extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Equity or Stock" />
+                <div className='ov1'>
 
-                    <h1>Equity or Stock</h1>
+                    <h2>EQUITY OR STOCK</h2>
 
-                    <h4> Now for equity. </h4>
+                    <p> Now for equity. </p>
 
-                    <h4> Over how many years will the equity vest? </h4>
+                    <p> Over how many years will the equity vest? </p>
 
                     <TextField
                         hintText="Years of Equity Vest"
@@ -84,7 +84,7 @@ export class EquityOrStock extends Component {
                         defaultValue={values.vest_years}
                     />
 
-                    <h4> How often will it vest? 1 month, 3 months, 6 months, 12 months </h4>
+                    <p> How often will it vest? 1 month, 3 months, 6 months, 12 months </p>
 
                     <Typography >
                         Vest in months
@@ -104,7 +104,7 @@ export class EquityOrStock extends Component {
 
                     {/* Note: 4 buttons, 1 for each option (vest_rate_mos) */}
 
-                    <h4> Is the company public or private? </h4>
+                    <p> Is the company public or private? </p>
 
                     <ButtonGroup
                         variant="contained"
@@ -123,7 +123,7 @@ export class EquityOrStock extends Component {
                     {this.state.public &&
                         <div>
 
-                            <h4> -Public- What is the current price of a share of stock? </h4>
+                            <p> -Public- What is the current price of a share of stock? </p>
 
                             <TextField
                                 hintText="Stock Share Price"
@@ -132,7 +132,7 @@ export class EquityOrStock extends Component {
                                 defaultValue={values.if_public_price}
                             />
 
-                            <h4> -Public- How many shares of stock are you offering in total? </h4>
+                            <p> -Public- How many shares of stock are you offering in total? </p>
 
                             <TextField
                                 hintText="Stock Share Offer"
@@ -146,7 +146,7 @@ export class EquityOrStock extends Component {
 
                         <div>
 
-                            <h4> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment)
+                            <p> -Private  What is the last priced, post-money valuation of the company?* (We have not yet received a priced investment)
 
                             <Checkbox
                                     checked={this.state.ifUnpricedCheck}
@@ -155,7 +155,7 @@ export class EquityOrStock extends Component {
                                     color="primary"
                                     label="Unpriced Check"
                                 />
-                            </h4>
+                            </p>
 
                             <TextField
                                 hintText="If Private Value"
@@ -165,7 +165,7 @@ export class EquityOrStock extends Component {
                                 disabled={this.state.ifUnpricedCheck}
                             />
 
-                            <h4> What percentage of the current outstanding shares are you offering in total? </h4>
+                            <p> What percentage of the current outstanding shares are you offering in total? </p>
 
                             <TextField
                                 hintText="Outstanding Share Offer"
@@ -175,14 +175,14 @@ export class EquityOrStock extends Component {
                                 disabled={this.state.ifUnpricedCheck}
                             />
 
-                            <h4> *Do not estimate a future value; your employees have the same risk potential as your investors
-                                and should be compensated on the same terms.</h4>
+                            <p> *Do not estimate a future value; your employees have the same risk potential as your investors
+                                and should be compensated on the same terms.</p>
 
 
                         </div>}
 
 
-                    {/* <h4>
+                    {/* <p>
                         <Checkbox
                             checked={this.state.ifUnpricedCheckConfirm}
                             onChange={this.handleCheck('ifUnpricedCheckConfirm')}
@@ -191,13 +191,13 @@ export class EquityOrStock extends Component {
                             label="Unpriced Check Confirm"
                             disabled={!this.state.public === true}
                         />
-                        CHECKBOX “We have not yet received a priced investment.” </h4> */}
+                        CHECKBOX “We have not yet received a priced investment.” </p> */}
 
                     ((Display Value and Value As Salary))
-                    <h4>Value = {this.state.public && values.if_public_price}
+                    <p>Value = {this.state.public && values.if_public_price}
                         {this.state.private && values.if_private_value},
                     Value as Salary = {this.state.public && values.publicValueAsSalary}
-                        {this.state.private && values.privateValueAsSalary} </h4>
+                        {this.state.private && values.privateValueAsSalary} </p>
 
                     <br />
                     <RaisedButton
@@ -213,6 +213,7 @@ export class EquityOrStock extends Component {
                         onClick={this.continue}
                         disabled={!this.confirmUnpriced()}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )

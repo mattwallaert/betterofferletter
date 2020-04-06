@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
+// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -28,11 +28,11 @@ export class AnnualBonus extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <AppBar title="Annual Bonus" />
+                <div className='ov1'>
 
-                    <h1>Annual Bonus</h1>
+                    <h2>ANNUAL BONUS</h2>
 
-                    <h4> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </h4>
+                    <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
                     <TextField
                         hintText="Maximum Potential Yearly Bonus"
@@ -41,7 +41,7 @@ export class AnnualBonus extends Component {
                         defaultValue={values.bench_bonus}
                     />
 
-                    <h4> Is it based on company performance or the potential hires performance? </h4>
+                    <p> Is it based on company performance or the potential hires performance? </p>
 
                     {/* <TextField 
                         hintText="Potential Hires Performance"
@@ -76,8 +76,8 @@ export class AnnualBonus extends Component {
 
                     {!values.perform_bonus &&
                         <div>
-                            <h4>In order to earn the maximum bonus, the company needs to ___
-                        (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</h4>
+                            <p>In order to earn the maximum bonus, the company needs to ___
+                        (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</p>
 
                             <TextField
                                 hintText="Maximum Bonus Company Needs"
@@ -91,8 +91,8 @@ export class AnnualBonus extends Component {
                     {values.perform_bonus &&
                         <div>
 
-                            <h4>In order to earn the maximum bonus, the new hire needs to ___
-                        (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</h4>
+                            <p>In order to earn the maximum bonus, the new hire needs to ___
+                        (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</p>
 
                             <TextField
                                 hintText="Maximum Bonus New Hire Needs"
@@ -106,7 +106,7 @@ export class AnnualBonus extends Component {
                     <br />
 
                     
-                    <h4>Benchmark = { values.bench_bonus }, Your Offer = { values.benchBonusOffer }</h4>
+                    <p>Benchmark = { values.bench_bonus }, Your Offer = { values.benchBonusOffer }</p>
 
                     <br />
                     <RaisedButton
@@ -121,6 +121,7 @@ export class AnnualBonus extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                 </React.Fragment>
             </MuiThemeProvider>
         )
