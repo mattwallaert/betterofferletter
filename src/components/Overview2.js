@@ -27,7 +27,7 @@ export class Overview2 extends Component {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                <div className='ov1'>
+                <div className='ov1' style = {{background: "#fdce16"}}>
                     <h2>First up, let’s determine the components of your offer.</h2>
                     {/* Checkboxes add slides to queue */}
                     <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>

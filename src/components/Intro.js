@@ -4,7 +4,7 @@ const Intro = () => {
     return (
             <div
                 className='intro'
-                style = {{background: "Purple"}}
+                style = {{background: "#fdce16"}}
                 >
                 <h1>BETTER OFFER LETTER</h1>
                 
