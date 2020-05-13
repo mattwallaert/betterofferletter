@@ -73,6 +73,19 @@ export class UserForm extends Component {
         privateValueAsSalary: 0,
         publicValueAsSalary: 0,
         //B
+        benefitOptions: [
+            "Health Insurance", 
+            "Dental Insurance", 
+            "Vision Insurance", 
+            "Pre-Tax Spending Accounts",
+            "Retirement Matching",
+            "Tuition Reimbursement",
+            "Childcare Benefits",
+            "Wellness Benefits",
+            "Free Lunch",
+            "Student Loan Assistance"
+        ],
+        otherBenefits: ["test", "res2"],
         benefits: [],
         health_insurance: false,
         dental_insurance: false,
@@ -201,6 +214,24 @@ export class UserForm extends Component {
             console.log(e.target.checked)
             this.setState({ benefits: array })
         }
+
+    };
+    handleAddOtherBenefits = e => {
+        this.setState(prevState => ({
+            otherBenefits: [...prevState.otherBenefits, e.target.value]
+          }));
+        //   var array = [...this.state.benefits]
+        //   var benefit = 1
+        //   var index = array.indexOf(benefit)
+         
+        //   if (index > -1) {
+  
+        //       array.splice(index, 1);
+        //       this.setState({ benefits: array })
+        //   } else {
+        //       array.splice(-2, 0, benefit);
+        //       this.setState({ benefits: array })
+        //   }
 
     };
 
@@ -382,6 +413,7 @@ export class UserForm extends Component {
                                 prevStep={this.prevStep}
                                 handleChange={this.handleChange}
                                 handleBenefitsCheck={this.handleBenefitsCheck}
+                                handleAddOtherBenefits={this.handleAddOtherBenefits}
                                 values={values}
                             />
                         } />
