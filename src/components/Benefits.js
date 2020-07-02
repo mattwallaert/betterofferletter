@@ -25,16 +25,18 @@ export class Benefits extends Component {
         this.props.prevStep();
     }
 
+    
+
+
     otherBenefitsMap = () => {
         return (
             this.props.values.otherBenefits.map((item, key) =>
-
                 <FormControlLabel
                     key={key}
                     control={
                         <Checkbox
                             checked={true}
-                            // onChange={handleAddOtherBenefits}
+                            // onChange={}
                             color="primary"
                         />
                     } label={`${item}`}
@@ -43,14 +45,18 @@ export class Benefits extends Component {
         )
     }
 
+    
+
+    handleSaveButtonChange = () => {
+        // this.props.values.other_benefit
+    }
+
 
 
 
 
     render() {
-        const { values, handleBenefitsCheck, handleChange, handleAddOtherBenefits, classes } = this.props;
-        // const {otherBenefits} = values.otherBenefits
-        // const {otherBenefitsMap} = this.props
+        const { values, handleBenefitsCheck, classes, handleOtherBenefitsChange, handleAddOtherBenefits, handleChange } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
@@ -173,14 +179,14 @@ export class Benefits extends Component {
                     <TextField
                         hintText="Other Benefit"
                         floatingLabelText="Other Benefit"
-                        onChange={handleChange('handleAddOtherBenefits', values.other_benefit)}
+                        onChange={handleChange('other_benefit')}
                         defaultValue={values.other_benefit}
                     />
                     <Button
                         variant="contained"
                         color="primary"
                         size="small"
-                        // onChange={this.handleSaveButtonChange}
+                        onClick={handleAddOtherBenefits}
                         className={classes.button}
                         startIcon={<SaveIcon />}
                     >

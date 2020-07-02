@@ -166,7 +166,6 @@ export class UserForm extends Component {
     }
 
 
-
     // Handle check
 
     handleSwitch = place => e => {
@@ -216,24 +215,14 @@ export class UserForm extends Component {
         }
 
     };
-    handleAddOtherBenefits = e => {
-        this.setState(prevState => ({
-            otherBenefits: [...prevState.otherBenefits, e.target.value]
-          }));
-        //   var array = [...this.state.benefits]
-        //   var benefit = 1
-        //   var index = array.indexOf(benefit)
-         
-        //   if (index > -1) {
-  
-        //       array.splice(index, 1);
-        //       this.setState({ benefits: array })
-        //   } else {
-        //       array.splice(-2, 0, benefit);
-        //       this.setState({ benefits: array })
-        //   }
 
+    handleAddOtherBenefits = () => {
+            this.setState({
+                otherBenefits: [...this.state.otherBenefits, this.state.other_benefit]
+            })
     };
+   
+    
 
     // Fix setState Delay
     componentDidUpdate(prevProps, prevState) {
@@ -294,6 +283,8 @@ export class UserForm extends Component {
                 publicValueAsSalary: totalPublicSharesWithYears
             })
         }
+        //Benefits
+
     }
 
     // Handle benefit array map
