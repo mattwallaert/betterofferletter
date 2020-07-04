@@ -56,7 +56,7 @@ export class Benefits extends Component {
 
 
     render() {
-        const { values, handleBenefitsCheck, classes, handleOtherBenefitsChange, handleAddOtherBenefits, handleChange } = this.props;
+        const { values, handleBenefitsCheck, classes, handleAddOtherBenefits, handleChange } = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>

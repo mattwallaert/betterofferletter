@@ -23,11 +23,17 @@ export class Overview2 extends Component {
     }
     render() {
         const { values, handleSlideCheck, classes } = this.props;
-
+        const myStyle = {
+            background: "#fdce16",
+            width: "100%",
+            height: "100%",
+            marginTop: "30px"
+        }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                <div className='ov1' style = {{background: "#fdce16"}}>
+                <div className='ov1' style = {myStyle}>
+                    <div className="ov1-SubCategory">
                     <h2>First up, let’s determine the components of your offer.</h2>
                     {/* Checkboxes add slides to queue */}
                     <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
@@ -89,6 +95,8 @@ export class Overview2 extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                        
+                    </div>
                     </div>
                 </React.Fragment>
             </MuiThemeProvider>
