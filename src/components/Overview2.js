@@ -9,8 +9,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles } from '@material-ui/core/styles';
 
-import Triangle1 from '../images/Shape 1.png'
-import Triangle2 from '../images/Shape 2.png'
+import Triangle1 from '../images/shapes/Shape1.png'
+import Triangle2 from '../images/shapes/Shape2.png'
+import Line1 from '../images/lines/Line1.png'
+import Line2 from '../images/lines/Line2.png'
 
 // import overview2 from './formtext/overview2.js'
 
@@ -33,7 +35,21 @@ export class Overview2 extends Component {
                 height: "100%"
             },
             box: {
-            //    background: "blue"
+                //    background: "blue"
+
+            },
+
+
+            image1: {
+
+                top: 0,
+                left: 0,
+
+            },
+            image2: {
+
+                top: 30,
+                left: 30,
 
             }
         }
@@ -42,10 +58,11 @@ export class Overview2 extends Component {
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-                            <h2>First up, let’s determine the components of your offer.</h2>
+                            <h2>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
+                            <img src={Line2} alt="Shape 1" />
                             {/* Checkboxes add slides to queue */}
                             <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
-                            
+
                             <FormGroup className={classes.root}>
                                 <FormControlLabel
                                     control={
@@ -104,10 +121,10 @@ export class Overview2 extends Component {
                             />
                         </div> {/* BOX 1*/}
                         <div className="ov1-SubCategory" style={myStyle.box}>
-
-                        <img src={Triangle1} alt="Shape 1"/>
-                        <img src={Triangle2} alt="Shape 2"/>
-
+                            {/* <div style= {image1}> */}
+                            <img style={myStyle.image1} src={Triangle1} alt="Shape 1" />
+                            <img style={myStyle.image2} src={Triangle2} alt="Shape 2" />
+                            {/* </div> */}
                         </div> {/*BOX 2*/}
                     </div>
                 </React.Fragment>
@@ -123,9 +140,10 @@ const styles = {
 
     root: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         flexWrap: 'wrap',
-        justifyContent: "center"
+        justifyContent: "center",
+        alignContent: "center"
 
     },
 

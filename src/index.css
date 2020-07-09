@@ -123,6 +123,7 @@ p {
 }
 
 .ov1-SubCategory {
-  flex-direction: column;
+  /* align-self: auto; */
+  flex-grow: 4;
   
 }
