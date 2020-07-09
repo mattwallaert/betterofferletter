@@ -20,6 +20,10 @@ import './fonts/gilroy-medium-webfont.woff'
 // import './assets/gilroy-bold-cufonfonts/Gilroy-Regular.ttf'
 // import './fonts/Gilroy-ExtraBold.otf'
 
+//IMAGES
+
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

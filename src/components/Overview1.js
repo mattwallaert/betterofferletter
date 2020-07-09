@@ -26,41 +26,50 @@ export class Overview1 extends Component {
     render() {
         // const overviewText = overview;
         // const { values, handleBenefitsCheck, handleChange } = this.props;
+        const myStyle = {
+            // background: "#fdce16",
+            width: "100%",
+            height: "100%",
+            // marginTop: "30px",
+            // justify: "center"
+
+        }
         return (
             <MuiThemeProvider >
                 <React.Fragment>
-                    <div className='ov1'>
-                    {/* <AppBar title="Overview" /> */}
-                    
+                    <div className='ov1' style={myStyle}>
+                        {/* <AppBar title="Overview" /> */}
+                        <div className="ov1-SubCategory" >
 
-                    <h2>ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
-                    <br />
-                    <p>OfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
-                    Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
+                            <h2>ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
+                            <br />
+                            <p>OfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
+                            Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
                     In order to continue, please certify that the following is true. </p>
-                    <br/>
+                            <br />
 
-                    <p>“I am committed to increasing pay equity through a transparent and direct compensation process.”
+                            <p>“I am committed to increasing pay equity through a transparent and direct compensation process.”
 
                     <Checkbox
-                            checked={this.state.overviewCheck}
-                            // checked={this.handleOverviewCheck}
-                            onChange={this.handleOverviewCheck}
-                            // value= 'overview_check'
-                            color="primary"
-                            label="Overview Check"
-                        />
-                    </p>
+                                    checked={this.state.overviewCheck}
+                                    // checked={this.handleOverviewCheck}
+                                    onChange={this.handleOverviewCheck}
+                                    // value= 'overview_check'
+                                    color="primary"
+                                    label="Overview Check"
+                                />
+                            </p>
 
-                    <br />
+                            <br />
 
-                    <RaisedButton
-                        label="GET STARTED"
-                        primary={true}
-                        style={styles.button}
-                        onClick={this.continue}
-                        disabled={!this.state.overviewCheck}
-                    />
+                            <RaisedButton
+                                label="GET STARTED"
+                                primary={true}
+                                style={styles.button}
+                                onClick={this.continue}
+                                disabled={!this.state.overviewCheck}
+                            />
+                        </div>
                     </div>
                 </React.Fragment>
             </MuiThemeProvider>
@@ -70,7 +79,7 @@ export class Overview1 extends Component {
 
 const styles = {
     button: {
-        margin: 15
+        margin: 15,
     }
 }
 

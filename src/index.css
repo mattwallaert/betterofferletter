@@ -103,14 +103,26 @@ p {
 }
 
 .ov1 {
-  margin: 0;
+  /* width: "100%"; */
+  /* height: "100%"; */
+  /* margin: 0; */
+  
+  /* top: 50%; */
+  /* left: 50%; */
+  /* margin-right: -50%; */
+  /* -ms-transform: translate(-50%, -50%); */
+  /* transform: translate(-50%, -50%); */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  /* justify-content: space-around; */
+  /* align-items: stretch; */
 
   
 }
 
+.ov1-SubCategory {
+  flex-direction: column;
+  
+}
