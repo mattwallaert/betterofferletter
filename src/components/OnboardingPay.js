@@ -16,10 +16,23 @@ export class OnboardingPay extends Component {
     }
     render() {
         const { values, handleChange } = this.props;
+        const myStyle = {
+            container: {
+                // background: "#fdce16",
+                width: "100%",
+                height: "100%"
+            },
+            box: {
+                //    background: "blue"
+
+            },
+        }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                <div className='ov1'>
+                <div className='ov1' style={myStyle.container}>
+                        <div className="ov1-SubCategory" style={myStyle.box}>
+
 
                     <h2>Relocation/Onboarding Payment</h2>
 
@@ -50,6 +63,7 @@ export class OnboardingPay extends Component {
                         style={styles.button}
                         onClick={this.continue}
                     />
+                    </div>
                     </div>
                 </React.Fragment>
             </MuiThemeProvider>
