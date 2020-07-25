@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
 // import direct_comp2 from './formtext/direct_comp2.js'
+import Line2 from '../images/lines/Line2.png'
 
 export class DirectComp2 extends Component {
     continue = e => {
@@ -37,6 +38,7 @@ export class DirectComp2 extends Component {
 
 
                             <h2>IN ORDER TO CREATE A FAIR PROCESS</h2>
+                            <img src={Line2} alt="Shape 1" />
 
                             <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
