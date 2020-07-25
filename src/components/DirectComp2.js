@@ -36,9 +36,9 @@ export class DirectComp2 extends Component {
                         <div className="ov1-SubCategory" style={myStyle.box}>
 
 
-                            <h2>In order to create a fair process</h2>
+                            <h2>IN ORDER TO CREATE A FAIR PROCESS</h2>
 
-                            <p>avoid biasing the hiring manager, you need to name someone that the candidate can submit additional information to
+                            <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
                             <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
                             <br />
