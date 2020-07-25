@@ -46,6 +46,22 @@ export class DirectComp2 extends Component {
                             <br />
                             <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
+                        <br />
+                        <RaisedButton
+                            label="Back"
+                            primary={false}
+                            style={styles.button}
+                            onClick={this.back}
+                        />
+                        <RaisedButton
+                            label="Continue"
+                            primary={true}
+                            style={styles.button}
+                            onClick={this.continue}
+                        />
+                        </div>
+                        <div className="ov1-SubCategory" style={myStyle.box}>
+
                             <TextField
                                 hintText="Compensation Manager Full Name"
                                 floatingLabelText="Compensation Manager Full Name"
@@ -61,24 +77,10 @@ export class DirectComp2 extends Component {
                                 onChange={handleChange('comp_person_email')}
                                 defaultValue={values.comp_person_email}
                             />
-
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                primary={true}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
                         </div>
                     </div>
                 </React.Fragment>
-            </MuiThemeProvider>
+            </MuiThemeProvider >
         )
     }
 }
@@ -86,7 +88,15 @@ export class DirectComp2 extends Component {
 const styles = {
     button: {
         margin: 15
-    }
+    },
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        justifyContent: "center",
+        alignContent: "center"
+
+    },
 }
 
 export default DirectComp2
