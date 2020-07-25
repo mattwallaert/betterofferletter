@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField'
 // import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
 // import direct_comp2 from './formtext/direct_comp2.js'
+import Line2 from '../images/lines/Line2.png'
 
 export class DirectComp2 extends Component {
     continue = e => {
@@ -36,13 +37,30 @@ export class DirectComp2 extends Component {
                         <div className="ov1-SubCategory" style={myStyle.box}>
 
 
-                            <h2>In order to create a fair process</h2>
+                            <h2>IN ORDER TO CREATE A FAIR PROCESS</h2>
+                            <img src={Line2} alt="Shape 1" />
 
-                            <p>avoid biasing the hiring manager, you need to name someone that the candidate can submit additional information to
+                            <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
                             <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
                             <br />
                             <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
+
+                        <br />
+                        <RaisedButton
+                            label="Back"
+                            primary={false}
+                            style={styles.button}
+                            onClick={this.back}
+                        />
+                        <RaisedButton
+                            label="Continue"
+                            primary={true}
+                            style={styles.button}
+                            onClick={this.continue}
+                        />
+                        </div>
+                        <div className="ov1-SubCategory" style={myStyle.box}>
 
                             <TextField
                                 hintText="Compensation Manager Full Name"
@@ -59,24 +77,10 @@ export class DirectComp2 extends Component {
                                 onChange={handleChange('comp_person_email')}
                                 defaultValue={values.comp_person_email}
                             />
-
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                primary={true}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
                         </div>
                     </div>
                 </React.Fragment>
-            </MuiThemeProvider>
+            </MuiThemeProvider >
         )
     }
 }
@@ -84,7 +88,15 @@ export class DirectComp2 extends Component {
 const styles = {
     button: {
         margin: 15
-    }
+    },
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        justifyContent: "center",
+        alignContent: "center"
+
+    },
 }
 
 export default DirectComp2
