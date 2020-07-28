@@ -58,9 +58,12 @@ export class Overview2 extends Component {
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
+                            <div>
                             <h2>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
+                            </div>
                             <img src={Line2} alt="Shape 1" />
                             {/* Checkboxes add slides to queue */}
+                            
                             <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
 
                             <FormGroup className={classes.root}>
