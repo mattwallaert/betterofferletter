@@ -38,28 +38,24 @@ export class Overview2 extends Component {
                 //    background: "blue"
 
             },
-
-
-            image1: {
-
-                top: 0,
-                left: 0,
-
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start"
             },
-            image2: {
-
-                top: 30,
-                left: 30,
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
 
             }
+
         }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-                            <div>
-                            <h2>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
+                            <div style={myStyle.h2Container}>
+                            <h2 style={myStyle.h2Box}>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
                             </div>
                             <img src={Line2} alt="Shape 1" />
                             {/* Checkboxes add slides to queue */}
