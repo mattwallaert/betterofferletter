@@ -9,13 +9,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles } from '@material-ui/core/styles';
 
-// import Triangle1 from '../images/shapes/Shape1.png'
-// import Triangle2 from '../images/shapes/Shape2.png'
+// Shapes
 import Triangle3 from '../images/shapes/Shape3_crop.png'
-// import Line1 from '../images/lines/Line1.png'
 import Line2 from '../images/lines/Line2.png'
 
-// import overview2 from './formtext/overview2.js'
 
 export class Overview2 extends Component {
 
