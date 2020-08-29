@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import Input from "@material-ui/core/Input";
+import Line3 from '../images/lines/Line3.png'
 
 
 export class DirectComp1 extends Component {
@@ -36,6 +37,15 @@ export class DirectComp1 extends Component {
                 //    background: "blue"
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
+            }
         }
 
         return (
@@ -43,30 +53,31 @@ export class DirectComp1 extends Component {
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-
-                            <h2>DIRECT COMPENSATION</h2>
+                            <div className="h2Container" style={myStyle.h2Container}>
+                                <h2 className="h2Box" style={myStyle.h2Box}>DIRECT COMPENSATION</h2>
+                            </div>
+                            <img src={Line3} alt="Line 3" />
 
                             <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the
-                        average hire for this role?</p>
+                                average hire for this role?</p>
                             <p>Remember, the offer should be firmly tied to the business value the hire will create
-                        and you should be prepared to </p>
+                                and you should be prepared to </p>
                             <p>justify the comparison to the skills and experience expected by the market.</p>
 
                             {/* (Slider from -25% to +25%) */}
 
-                            <Typography id="input-slider" gutterBottom>
+                            <Typography 
+                            id="input-slider" 
+                            gutterBottom
+                            style= {{lineHeight: 3}}                     
+                            >
                                 Slider(%) from -25% - 25%
-                    </Typography>
+                            </Typography>
                             <Grid
                                 container
-                                // spacing={2} 
                                 justify="center"
-                            // xs = 'auto'
                             >
-                                {/* <Grid item>
-                        <VolumeUp />
-                        </Grid > */}
-                                <Grid item>
+                                <Grid item >
                                     <Slider
                                         className={classes.root}
                                         value={values.pct_slider}
@@ -132,6 +143,7 @@ const styles = {
     },
     root: {
         width: 250,
+        color: '#fdce16'
 
     },
     input: {
