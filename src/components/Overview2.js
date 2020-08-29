@@ -9,8 +9,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles } from '@material-ui/core/styles';
 
-import Triangle1 from '../images/shapes/Shape1.png'
-import Triangle2 from '../images/shapes/Shape2.png'
+// import Triangle1 from '../images/shapes/Shape1.png'
+// import Triangle2 from '../images/shapes/Shape2.png'
+import Triangle3 from '../images/shapes/Shape3_crop.png'
 // import Line1 from '../images/lines/Line1.png'
 import Line2 from '../images/lines/Line2.png'
 
@@ -54,12 +55,12 @@ export class Overview2 extends Component {
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-                            <div style={myStyle.h2Container}>
-                            <h2 style={myStyle.h2Box}>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
+                            <div className="h2Container" style={myStyle.h2Container}>
+                                <h2 className="h2Box" style={myStyle.h2Box}>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
                             </div>
-                            <img src={Line2} alt="Shape 1" />
+                            <img src={Line2} alt="Line 2" />
                             {/* Checkboxes add slides to queue */}
-                            
+
                             <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
 
                             <FormGroup className={classes.root}>
@@ -119,12 +120,13 @@ export class Overview2 extends Component {
                                 onClick={this.continue}
                             />
                         </div> {/* BOX 1*/}
+
                         <div className="ov1-SubCategory" style={myStyle.box}>
                             {/* <div style= {image1}> */}
-                            <img style={myStyle.image1} src={Triangle1} alt="Shape 1" />
-                            <img style={myStyle.image2} src={Triangle2} alt="Shape 2" />
+                            <img style={myStyle.image2} src={Triangle3} alt="Shape3" />
                             {/* </div> */}
                         </div> {/*BOX 2*/}
+
                     </div>
                 </React.Fragment>
             </MuiThemeProvider>
