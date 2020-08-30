@@ -29,16 +29,25 @@ export class DirectComp2 extends Component {
                 //    background: "blue"
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
+            }
         }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-
-
-                            <h2>IN ORDER TO CREATE A FAIR PROCESS</h2>
-                            <img src={Line2} alt="Shape 1" />
+                            <div className="h2Container" style={myStyle.h2Container}>
+                                <h2 className="h2Box" style={myStyle.h2Box}>IN ORDER TO CREATE A FAIR PROCESS</h2>
+                            </div>                            
+                            <img src={Line2} alt="Line 2" />
 
                             <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
@@ -46,21 +55,22 @@ export class DirectComp2 extends Component {
                             <br />
                             <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
-                        <br />
-                        <RaisedButton
-                            label="Back"
-                            primary={false}
-                            style={styles.button}
-                            onClick={this.back}
-                        />
-                        <RaisedButton
-                            label="Continue"
-                            primary={true}
-                            style={styles.button}
-                            onClick={this.continue}
-                        />
+                            <br />
+                            <RaisedButton
+                                label="Back"
+                                primary={false}
+                                style={styles.button}
+                                onClick={this.back}
+                            />
+                            <RaisedButton
+                                label="Continue"
+                                primary={true}
+                                style={styles.button}
+                                onClick={this.continue}
+                            />
                         </div>
                         <div className="ov1-SubCategory" style={myStyle.box}>
+                          
 
                             <TextField
                                 hintText="Compensation Manager Full Name"
@@ -77,6 +87,7 @@ export class DirectComp2 extends Component {
                                 onChange={handleChange('comp_person_email')}
                                 defaultValue={values.comp_person_email}
                             />
+                           
                         </div>
                     </div>
                 </React.Fragment>

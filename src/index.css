@@ -125,5 +125,5 @@ p {
 .ov1-SubCategory {
   /* align-self: auto; */
   flex-grow: 4;
-  
+  width: 100%;
 }

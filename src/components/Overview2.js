@@ -38,10 +38,11 @@ export class Overview2 extends Component {
             },
             h2Container: {
                 display: "flex",
-                alignContent: "flex-start"
+                alignContent: "flex-start",
+                justifyContent: "start"
             },
             h2Box: {
-                width: "530px",
+                width: "575px",
                 marginBottom: 0
 
             }
@@ -53,7 +54,10 @@ export class Overview2 extends Component {
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
                             <div className="h2Container" style={myStyle.h2Container}>
-                                <h2 className="h2Box" style={myStyle.h2Box}>FIRST UP, LET’S DETERMINE THE COMPONENTS OF YOUR OFFER</h2>
+                                <h2 className="h2Box" style={myStyle.h2Box}>
+                                    FIRST UP, LET’S DETERMINE 
+                                    THE COMPONENTS OF 
+                                    YOUR OFFER</h2>
                             </div>
                             <img src={Line2} alt="Line 2" />
                             {/* Checkboxes add slides to queue */}
