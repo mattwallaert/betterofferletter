@@ -8,6 +8,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { Page, Text, Document, StyleSheet, Font } from '@react-pdf/renderer';
 import { PDFViewer } from '@react-pdf/renderer';
 // import styled from '@react-pdf/styled-components';
+import Line4 from '../images/lines/Line4.png'
 
 export class Letter extends Component {
     continue = e => {
@@ -58,12 +59,22 @@ export class Letter extends Component {
             container: {
                 // background: "#fdce16",
                 width: "100%",
-                height: "100%"
+                height: "100%",
+                flexDirection: 'column'
             },
             box: {
                 //    background: "blue"
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
+            }
         }
         return (
             <MuiThemeProvider>
@@ -71,7 +82,13 @@ export class Letter extends Component {
 
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-                            {/* <h2>LETTER</h2> */}
+                            <div className="h2Container" style={myStyle.h2Container}>
+                                <h2 className="h2Box" style={myStyle.h2Box}>LETTER</h2>
+                            </div>
+                            <div>
+                                <img src={Line4} alt="Line 2" />
+                            </div>
+                            
                             <PDFViewer
                                 height={650}
                                 width={800}
