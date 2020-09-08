@@ -83,7 +83,8 @@ export class EquityOrStock extends Component {
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
 
-                            <h2>EQUITY OR STOCK</h2>
+                            <h2>EQUITY OR STOCK</h2> 
+                            {/* reformat */}
 
                             <p> Now for equity. </p>
 
