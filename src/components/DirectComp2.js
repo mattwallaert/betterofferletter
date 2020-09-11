@@ -6,6 +6,8 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 // import direct_comp2 from './formtext/direct_comp2.js'
 import Line2 from '../images/lines/Line2.png'
+// import Button from '@material-ui/core/Button';
+
 
 export class DirectComp2 extends Component {
     continue = e => {
@@ -37,13 +39,19 @@ export class DirectComp2 extends Component {
             h2Box: {
                 width: "530px",
                 marginBottom: 0
+            },
+            boxContainer: {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
             }
         }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
+                        <div className="ov1-SubCategory" style={myStyle.boxContainer}>
                             <div className="h2Container" style={myStyle.h2Container}>
                                 <h2 className="h2Box" style={myStyle.h2Box}>IN ORDER TO CREATE A FAIR PROCESS</h2>
                             </div>                            
@@ -64,12 +72,14 @@ export class DirectComp2 extends Component {
                             />
                             <RaisedButton
                                 label="Continue"
-                                primary={true}
+                                // primary={true}
+                                // color="black"
+                                colorOverrides={'black'}
                                 style={styles.button}
                                 onClick={this.continue}
                             />
                         </div>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
+                        <div className="ov1-SubCategory" style={myStyle.boxContainer}>
                           
 
                             <TextField
@@ -98,7 +108,9 @@ export class DirectComp2 extends Component {
 
 const styles = {
     button: {
-        margin: 15
+        margin: 15,
+        // color: black
+        backgroundColor: "blue"
     },
     root: {
         display: 'flex',
