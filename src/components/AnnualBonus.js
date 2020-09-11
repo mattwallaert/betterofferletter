@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-// import AppBar from 'material-ui/AppBar'
 import TextField from 'material-ui/TextField'
-// import {List, ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
-// import Checkbox from '@material-ui/core/Checkbox';
-//Switch
-// import FormGroup from '@material-ui/core/FormGroup';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+// import Switch from '@material-ui/core/Switch';
+// import Grid from '@material-ui/core/Grid';
+// import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+// Shapes
+import Line5 from '../images/lines/Line5.png'
+import { Link } from 'react-router-dom';
 
 
 export class AnnualBonus extends Component {
+    state = {
+        company: false,
+        newHire: false,
+    }
+
+    handleCompanyClick = e => {
+        e.preventDefault();
+        this.setState({
+            company: !this.state.company,
+            newHire: false
+        })
+
+    }
+
+    handleNewHireClick = e => {
+        e.preventDefault();
+        this.setState({
+            newHire: !this.state.newHire,
+            company: false
+        })
+    }
+
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -24,7 +43,7 @@ export class AnnualBonus extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleChange, handleSwitch, classes } = this.props;
+        const { values, handleChange } = this.props;
         const myStyle = {
             container: {
                 background: "#fdce16",
@@ -35,14 +54,31 @@ export class AnnualBonus extends Component {
                 //    background: "blue"
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
+            },
+            boxContainer: {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
+            }
         }
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <div className='ov1' style={myStyle.container}>
                         <div className="ov1-SubCategory" style={myStyle.box}>
-
-                            <h2>ANNUAL BONUS</h2>
+                            <div className="h2Container" style={myStyle.h2Container}>
+                                <h2 className="h2Box" style={myStyle.h2Box}>ANNUAL BONUS</h2>
+                            </div>
+                            <img src={Line5} alt="Line 5" />
 
                             <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
@@ -55,22 +91,17 @@ export class AnnualBonus extends Component {
 
                             <p> Is it based on company performance or the potential hires performance? </p>
 
-                            {/* <TextField 
-                        hintText="Potential Hires Performance"
-                        floatingLabelText="Hires Performance"
-                        onChange={handleChange('perform_bonus')}
-                        defaultValue={values.perform_bonus}
-                    /> */}
+                        <Link
+                        onClick={this.handleCompanyClick}
+                        >
+                        Company Performance</Link>
+                        <Link
+                        onClick={this.handleNewHireClick}
+                        >
+                        New Hire Performance
+                        </Link>
 
-                            {/* <Checkbox
-                            checked={values.perform_bonus}
-                            onChange={handleSwitch('perform_bonus')}
-                            // value= 'perform_bonus'
-                            color="primary"
-                            label="Perform Bonus"
-                        /> */}
-
-                            <Typography component="div" >
+                            {/* <Typography component="div" >
                                 <Grid component="label" container className={classes.root}>
                                     <Grid item>Company Performance</Grid>
                                     <Grid item>
@@ -84,9 +115,10 @@ export class AnnualBonus extends Component {
                                     </Grid>
                                     <Grid item>New Hire Performance</Grid>
                                 </Grid>
-                            </Typography>
+                            </Typography> */}
 
-                            {!values.perform_bonus &&
+                            {/* {!values.perform_bonus && */}
+                            {this.state.company &&
                                 <div>
                                     <p>In order to earn the maximum bonus, the company needs to ___
                         (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</p>
@@ -100,7 +132,8 @@ export class AnnualBonus extends Component {
                                 </div>
                             }
 
-                            {values.perform_bonus &&
+                            {/* {values.perform_bonus && */}
+                            {this.state.newHire &&
                                 <div>
 
                                     <p>In order to earn the maximum bonus, the new hire needs to ___
