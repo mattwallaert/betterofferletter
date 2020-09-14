@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/betterofferletter/static/css/main.d7f7da2d.chunk.css",
-    "main.js": "/betterofferletter/static/js/main.35719bb7.chunk.js",
-    "main.js.map": "/betterofferletter/static/js/main.35719bb7.chunk.js.map",
-    "runtime-main.js": "/betterofferletter/static/js/runtime-main.ee17983b.js",
-    "runtime-main.js.map": "/betterofferletter/static/js/runtime-main.ee17983b.js.map",
-    "static/js/2.a4a861c6.chunk.js": "/betterofferletter/static/js/2.a4a861c6.chunk.js",
-    "static/js/2.a4a861c6.chunk.js.map": "/betterofferletter/static/js/2.a4a861c6.chunk.js.map",
+    "main.css": "/betterofferletter/static/css/main.09cfa396.chunk.css",
+    "main.js": "/betterofferletter/static/js/main.8366f3c8.chunk.js",
+    "main.js.map": "/betterofferletter/static/js/main.8366f3c8.chunk.js.map",
+    "runtime-main.js": "/betterofferletter/static/js/runtime-main.5776e4a8.js",
+    "runtime-main.js.map": "/betterofferletter/static/js/runtime-main.5776e4a8.js.map",
+    "static/js/2.f864c88c.chunk.js": "/betterofferletter/static/js/2.f864c88c.chunk.js",
+    "static/js/2.f864c88c.chunk.js.map": "/betterofferletter/static/js/2.f864c88c.chunk.js.map",
     "index.html": "/betterofferletter/index.html",
-    "precache-manifest.239cb20feea0179c76c8e7147ca18705.js": "/betterofferletter/precache-manifest.239cb20feea0179c76c8e7147ca18705.js",
+    "precache-manifest.8c29011c6d6bb74d831ba6a23b921159.js": "/betterofferletter/precache-manifest.8c29011c6d6bb74d831ba6a23b921159.js",
     "service-worker.js": "/betterofferletter/service-worker.js",
-    "static/css/main.d7f7da2d.chunk.css.map": "/betterofferletter/static/css/main.d7f7da2d.chunk.css.map",
+    "static/css/main.09cfa396.chunk.css.map": "/betterofferletter/static/css/main.09cfa396.chunk.css.map",
     "static/media/Shape3_crop.png": "/betterofferletter/static/media/Shape3_crop.f0341f85.png",
     "static/media/gilroy-extrabold-webfont.woff": "/betterofferletter/static/media/gilroy-extrabold-webfont.9b6b642d.woff",
     "static/media/gilroy-extrabold-webfont.woff2": "/betterofferletter/static/media/gilroy-extrabold-webfont.af2f1d96.woff2",
@@ -18,9 +18,9 @@
     "static/media/gilroy-medium-webfont.woff2": "/betterofferletter/static/media/gilroy-medium-webfont.300732a5.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.ee17983b.js",
-    "static/js/2.a4a861c6.chunk.js",
-    "static/css/main.d7f7da2d.chunk.css",
-    "static/js/main.35719bb7.chunk.js"
+    "static/js/runtime-main.5776e4a8.js",
+    "static/js/2.f864c88c.chunk.js",
+    "static/css/main.09cfa396.chunk.css",
+    "static/js/main.8366f3c8.chunk.js"
   ]
 }
