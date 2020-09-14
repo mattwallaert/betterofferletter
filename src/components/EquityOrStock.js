@@ -211,19 +211,20 @@ export class EquityOrStock extends Component {
                         {this.state.private && values.privateValueAsSalary} </p>
 
                     <br />
-                    <Button
-                        label="Back"
-                        primary={false}
-                        style={styles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={styles.button}
                         onClick={this.back}
-                    />
-                    <Button
-                        label="Continue"
-                        primary={true}
-                        style={styles.button}
+                    > Back
+                    </Button>
+                    <Button                        
+                        variant="contained"
+                        color="secondary"
+                        className={styles.button}
                         onClick={this.continue}
-                        disabled={!this.confirmUnpriced()}
-                    />
+                    > Continue
+                    </Button>
                 </div>
             </div>
 
@@ -233,7 +234,9 @@ export class EquityOrStock extends Component {
 
 const styles = theme => ({
     button: {
-        margin: 15
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
     },
     root: {
         width: 250,

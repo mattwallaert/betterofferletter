@@ -60,13 +60,14 @@ export class Overview1 extends Component {
 
                     <br />
 
-                    <Button
-                        label="GET STARTED"
-                        primary={true}
-                        style={styles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={styles.button}
                         onClick={this.continue}
                         disabled={!this.state.overviewCheck}
-                    />
+                    > GET STARTED
+                    </Button>
                 </div>
             </div>
 
@@ -74,10 +75,13 @@ export class Overview1 extends Component {
     }
 }
 
-const styles = {
+const styles = theme => ({
     button: {
-        margin: 15,
-    }
-}
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
+    },
+})
+
 
 export default Overview1

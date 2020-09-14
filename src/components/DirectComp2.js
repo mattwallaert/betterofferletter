@@ -62,20 +62,20 @@ export class DirectComp2 extends Component {
                     <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
                     <br />
-                    <Button
-                        label="Back"
-                        primary={false}
-                        style={styles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={styles.button}
                         onClick={this.back}
-                    />
-                    <Button
-                        label="Continue"
-                        // primary={true}
-                        // color="black"
-                        colorOverrides={'black'}
-                        style={styles.button}
+                    > Back
+                    </Button>
+                    <Button                        
+                        variant="contained"
+                        color="secondary"
+                        className={styles.button}
                         onClick={this.continue}
-                    />
+                    > Continue
+                    </Button>
                 </div>
                 <div className="ov1-SubCategory" style={myStyle.boxContainer}>
 
@@ -103,11 +103,11 @@ export class DirectComp2 extends Component {
     }
 }
 
-const styles = {
+const styles = theme => ({
     button: {
-        margin: 15,
-        // color: black
-        backgroundColor: "blue"
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
     },
     root: {
         display: 'flex',
@@ -117,6 +117,6 @@ const styles = {
         alignContent: "center"
 
     },
-}
+})
 
 export default DirectComp2

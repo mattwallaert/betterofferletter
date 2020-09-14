@@ -50,18 +50,20 @@ export class OnboardingPay extends Component {
                     />
 
                     <br />
-                    <Button
-                        label="Back"
-                        primary={false}
-                        style={styles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={styles.button}
                         onClick={this.back}
-                    />
-                    <Button
-                        label="Continue"
-                        primary={true}
-                        style={styles.button}
+                    > Back
+                    </Button>
+                    <Button                        
+                        variant="contained"
+                        color="secondary"
+                        className={styles.button}
                         onClick={this.continue}
-                    />
+                    > Continue
+                    </Button>
                 </div>
             </div>
 
@@ -69,10 +71,12 @@ export class OnboardingPay extends Component {
     }
 }
 
-const styles = {
+const styles = theme => ({
     button: {
-        margin: 15
-    }
-}
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
+    },
+})
 
 export default OnboardingPay

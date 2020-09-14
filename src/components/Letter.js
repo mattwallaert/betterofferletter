@@ -197,18 +197,20 @@ export class Letter extends Component {
                         </Document>
                     </PDFViewer>
                     <br />
-                    <Button
-                        label="Back"
-                        primary={false}
-                        style={ButtonStyles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={ButtonStyles.button}
                         onClick={this.back}
-                    />
-                    <Button
-                        label="Continue"
-                        primary={true}
-                        style={ButtonStyles.button}
+                    > Back
+                    </Button>
+                    {/* <Button                        
+                        variant="contained"
+                        color="secondary"
+                        className={ButtonStyles.button}
                         onClick={this.continue}
-                    />
+                    > Continue
+                    </Button> */}
                 </div>
             </div>
 
@@ -216,12 +218,14 @@ export class Letter extends Component {
     }
 }
 
-const ButtonStyles = {
+const ButtonStyles = theme => ({
     button: {
-        margin: 15
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
     },
 
-}
+})
 
 Font.register({
     family: 'Oswald',

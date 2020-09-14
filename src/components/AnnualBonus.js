@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField'
 // import RaisedButton from 'material-ui/RaisedButton'
 import Button from '@material-ui/core/Button'; // v1.x
@@ -56,7 +55,7 @@ export class AnnualBonus extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleChange, classes } = this.props;
+        const { values, handleChange } = this.props;
         const myStyle = {
             container: {
                 background: "#fdce16",
@@ -102,7 +101,6 @@ export class AnnualBonus extends Component {
                     <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
                     <TextField
-                        // style={classes.textField}
                         color='secondary'
                         hintText="Maximum Potential Yearly Bonus"
                         floatingLabelText="Yearly Bonus"
@@ -171,18 +169,20 @@ export class AnnualBonus extends Component {
                     <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>
 
                     <br />
-                    <Button
-                        label="Back"
-                        primary={false}
-                        style={styles.button}
+                    <Button                        
+                        variant="contained"
+                        color="primary"
+                        className={styles.button}
                         onClick={this.back}
-                    />
-                    <Button
-                        label="Continue"
-                        primary={true}
-                        style={styles.button}
+                    > Back
+                    </Button>
+                    <Button                        
+                        variant="contained"
+                        color="secondary"
+                        className={styles.button}
                         onClick={this.continue}
-                    />
+                    > Continue
+                    </Button>
                 </div>
             </div>
 
@@ -191,10 +191,11 @@ export class AnnualBonus extends Component {
     }
 }
 
-const styles = {
+const styles = theme => ({
     button: {
-        margin: 15,
-        backgroundColor: "black"
+        '& > *': {
+            margin: theme.spacing(.1),
+        },
     },
     root: {
         justifyContent: "center",
@@ -204,17 +205,7 @@ const styles = {
         color: 'black'
     },
 
-}
+})
 
-const theme = createMuiTheme({
-    // palette: {
-    //   primary: {
-    //     main: purple[500],
-    //   },
-    //   secondary: {
-    //     main: green[500],
-    //   },
-    // },
-});
 
 export default withStyles(styles)(AnnualBonus)
