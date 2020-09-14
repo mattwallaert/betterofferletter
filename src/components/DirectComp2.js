@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // import AppBar from 'material-ui/AppBar'
-import TextField from 'material-ui/TextField'
+import TextField from '@material-ui/core/TextField'
 // import {List, ListItem} from 'material-ui/List'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
 // import direct_comp2 from './formtext/direct_comp2.js'
 import Line2 from '../images/lines/Line2.png'
 // import Button from '@material-ui/core/Button';
@@ -48,60 +47,58 @@ export class DirectComp2 extends Component {
             }
         }
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.boxContainer}>
-                            <div className="h2Container" style={myStyle.h2Container}>
-                                <h2 className="h2Box" style={myStyle.h2Box}>IN ORDER TO CREATE A FAIR PROCESS</h2>
-                            </div>                            
-                            <img src={Line2} alt="Line 2" />
 
-                            <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
-                            if they believe the benchmark or experience assessment are incorrect.</p>
-                            <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
-                            <br />
-                            <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
-
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                // primary={true}
-                                // color="black"
-                                colorOverrides={'black'}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
-                        </div>
-                        <div className="ov1-SubCategory" style={myStyle.boxContainer}>
-                          
-
-                            <TextField
-                                hintText="Compensation Manager Full Name"
-                                floatingLabelText="Compensation Manager Full Name"
-                                onChange={handleChange('comp_person_name')}
-                                defaultValue={values.comp_person_name}
-                            />
-
-                            <p>What is their email? (email validation)</p>
-
-                            <TextField
-                                hintText="Compensation Manager Email"
-                                floatingLabelText="Compensation Manager Email"
-                                onChange={handleChange('comp_person_email')}
-                                defaultValue={values.comp_person_email}
-                            />
-                           
-                        </div>
+            <div className='ov1' style={myStyle.container}>
+                <div className="ov1-SubCategory" style={myStyle.boxContainer}>
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>IN ORDER TO CREATE A FAIR PROCESS</h2>
                     </div>
-                </React.Fragment>
-            </MuiThemeProvider >
+                    <img src={Line2} alt="Line 2" />
+
+                    <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
+                            if they believe the benchmark or experience assessment are incorrect.</p>
+                    <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
+                    <br />
+                    <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
+
+                    <br />
+                    <Button
+                        label="Back"
+                        primary={false}
+                        style={styles.button}
+                        onClick={this.back}
+                    />
+                    <Button
+                        label="Continue"
+                        // primary={true}
+                        // color="black"
+                        colorOverrides={'black'}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
+                </div>
+                <div className="ov1-SubCategory" style={myStyle.boxContainer}>
+
+
+                    <TextField
+                        hintText="Compensation Manager Full Name"
+                        floatingLabelText="Compensation Manager Full Name"
+                        onChange={handleChange('comp_person_name')}
+                        defaultValue={values.comp_person_name}
+                    />
+
+                    <p>What is their email? (email validation)</p>
+
+                    <TextField
+                        hintText="Compensation Manager Email"
+                        floatingLabelText="Compensation Manager Email"
+                        onChange={handleChange('comp_person_email')}
+                        defaultValue={values.comp_person_email}
+                    />
+
+                </div>
+            </div>
+
         )
     }
 }

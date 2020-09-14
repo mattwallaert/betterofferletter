@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
+import { createMuiTheme } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField'
+// import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'; // v1.x
 // import Switch from '@material-ui/core/Switch';
 // import Grid from '@material-ui/core/Grid';
 // import Typography from '@material-ui/core/Typography';
@@ -21,6 +22,8 @@ export class AnnualBonus extends Component {
         e.preventDefault();
         e.target.style.color = 'white';
         e.target.style.cursor = 'pointer';
+        // e.target.style.fontWeight = 'bold';
+
     }
     handleHoverOff = e => {
         e.preventDefault();
@@ -53,7 +56,7 @@ export class AnnualBonus extends Component {
         this.props.prevStep();
     }
     render() {
-        const { values, handleChange } = this.props;
+        const { values, handleChange, classes } = this.props;
         const myStyle = {
             container: {
                 background: "#fdce16",
@@ -87,111 +90,131 @@ export class AnnualBonus extends Component {
             }
         }
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
-                            <div className="h2Container" style={myStyle.h2Container}>
-                                <h2 className="h2Box" style={myStyle.h2Box}>ANNUAL BONUS</h2>
-                            </div>
-                            <img src={Line5} alt="Line 5" />
 
-                            <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
-                            <TextField
-                                hintText="Maximum Potential Yearly Bonus"
-                                floatingLabelText="Yearly Bonus"
-                                onChange={handleChange('bench_bonus')}
-                                defaultValue={values.bench_bonus}
-                            />
+            <div className='ov1' style={myStyle.container}>
+                <div className="ov1-SubCategory" style={myStyle.box}>
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>ANNUAL BONUS</h2>
+                    </div>
+                    <img src={Line5} alt="Line 5" />
 
-                            <p> Is it based on company performance or the potential hires performance? </p>
-                            <br />
+                    <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
-                            <div style={myStyle.boxContainerLink}>
+                    <TextField
+                        // style={classes.textField}
+                        color='secondary'
+                        hintText="Maximum Potential Yearly Bonus"
+                        floatingLabelText="Yearly Bonus"
+                        onChange={handleChange('bench_bonus')}
+                        defaultValue={values.bench_bonus}
+                    />
 
-                                <p
-                                    onMouseOver={this.handleHoverOn}
-                                    onMouseLeave={this.handleHoverOff}
-                                    onClick={this.handleCompanyClick}
-                                >
-                                    COMPANY PERFORMANCE</p>
+                    <p> Is it based on company performance or the potential hires performance? </p>
+                    <br />
 
-                                <p
-                                    onMouseOver={this.handleHoverOn}
-                                    onMouseLeave={this.handleHoverOff}
-                                    onClick={this.handleNewHireClick}
-                                >
-                                    NEW HIRE PERFORMANCE</p>
+                    <div style={myStyle.boxContainerLink}>
 
-                                {/* <a href="#" onMouseOver="this.style.color='red'"
+                        <p
+                            style={{ fontWeight: "bold" }}
+                            onMouseOver={this.handleHoverOn}
+                            onMouseLeave={this.handleHoverOff}
+                            onClick={this.handleCompanyClick}
+                        >
+                            COMPANY PERFORMANCE</p>
+
+                        <p
+                            style={{ fontWeight: "bold" }}
+                            onMouseOver={this.handleHoverOn}
+                            onMouseLeave={this.handleHoverOff}
+                            onClick={this.handleNewHireClick}
+                        >
+                            NEW HIRE PERFORMANCE</p>
+
+                        {/* <a href="#" onMouseOver="this.style.color='red'"
                                     onMouseOut="this.style.color='green'" >GeeksforGeeks</a> */}
-                            </div>
-                            <br />
+                    </div>
+                    <br />
 
-                            {this.state.company &&
-                                <div>
-                                    <p>In order to earn the maximum bonus, the company needs to ___
+                    {this.state.company &&
+                        <div>
+                            <p>In order to earn the maximum bonus, the company needs to ___
                         (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</p>
 
-                                    <TextField
-                                        hintText="Maximum Bonus Company Needs"
-                                        floatingLabelText="Maximum Bonus Company"
-                                        onChange={handleChange('comp_max_bonus')}
-                                        defaultValue={values.comp_max_bonus}
-                                    />
-                                </div>
-                            }
-
-                            {this.state.newHire &&
-                                <div>
-
-                                    <p>In order to earn the maximum bonus, the new hire needs to ___
-                        (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</p>
-
-                                    <TextField
-                                        hintText="Maximum Bonus New Hire Needs"
-                                        floatingLabelText="Maximum Bonus New Hire"
-                                        onChange={handleChange('nhire_max_bonus')}
-                                        defaultValue={values.nhire_max_bonus}
-                                    />
-                                </div>
-                            }
-
-                            <br />
-
-
-                            <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>
-
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                primary={true}
-                                style={styles.button}
-                                onClick={this.continue}
+                            <TextField
+                                hintText="Maximum Bonus Company Needs"
+                                floatingLabelText="Maximum Bonus Company"
+                                onChange={handleChange('comp_max_bonus')}
+                                defaultValue={values.comp_max_bonus}
                             />
                         </div>
-                    </div>
-                </React.Fragment>
-            </MuiThemeProvider>
+                    }
+
+                    {this.state.newHire &&
+                        <div>
+
+                            <p>In order to earn the maximum bonus, the new hire needs to ___
+                        (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</p>
+
+                            <TextField
+                                hintText="Maximum Bonus New Hire Needs"
+                                floatingLabelText="Maximum Bonus New Hire"
+                                onChange={handleChange('nhire_max_bonus')}
+                                defaultValue={values.nhire_max_bonus}
+                            />
+                        </div>
+                    }
+
+                    <br />
+
+
+                    <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>
+
+                    <br />
+                    <Button
+                        label="Back"
+                        primary={false}
+                        style={styles.button}
+                        onClick={this.back}
+                    />
+                    <Button
+                        label="Continue"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
+                </div>
+            </div>
+
+
         )
     }
 }
 
 const styles = {
     button: {
-        margin: 15
+        margin: 15,
+        backgroundColor: "black"
     },
     root: {
         justifyContent: "center",
         spacing: 1
-    }
+    },
+    textField: {
+        color: 'black'
+    },
+
 }
+
+const theme = createMuiTheme({
+    // palette: {
+    //   primary: {
+    //     main: purple[500],
+    //   },
+    //   secondary: {
+    //     main: green[500],
+    //   },
+    // },
+});
 
 export default withStyles(styles)(AnnualBonus)

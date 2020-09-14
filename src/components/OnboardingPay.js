@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 // import AppBar from 'material-ui/AppBar'
-import TextField from 'material-ui/TextField'
+import TextField from '@material-ui/core/TextField'
 // import {List, ListItem} from 'material-ui/List'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
 
 export class OnboardingPay extends Component {
     continue = e => {
@@ -28,45 +28,43 @@ export class OnboardingPay extends Component {
             },
         }
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
+
+            <div className='ov1' style={myStyle.container}>
+                <div className="ov1-SubCategory" style={myStyle.box}>
 
 
                     <h2>Relocation/Onboarding Payment</h2>
 
-                    <p>Now for onboarding payment.</p>  
-                    
+                    <p>Now for onboarding payment.</p>
+
                     <p>This should not be based on a benchmark but rather on the amount of money needed to help your new hire be initially productive.</p>
-    
+
                     <p>How much are you offering to assist with onboarding?</p>
 
-                    <TextField 
+                    <TextField
                         hintText="Onboarding Assistance"
                         floatingLabelText="Onboarding Assistance"
                         onChange={handleChange('onboard_assist')}
                         defaultValue={values.onboard_assist}
                         type='number'
                     />
-              
-                    <br/>
-                    <RaisedButton 
+
+                    <br />
+                    <Button
                         label="Back"
                         primary={false}
                         style={styles.button}
                         onClick={this.back}
                     />
-                    <RaisedButton 
+                    <Button
                         label="Continue"
                         primary={true}
                         style={styles.button}
                         onClick={this.continue}
                     />
-                    </div>
-                    </div>
-                </React.Fragment>
-            </MuiThemeProvider>
+                </div>
+            </div>
+
         )
     }
 }

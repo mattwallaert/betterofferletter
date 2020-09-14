@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // import AppBar from 'material-ui/AppBar'
 // import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
 // Checkboxes
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -49,88 +48,86 @@ export class Overview2 extends Component {
 
         }
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
-                            <div className="h2Container" style={myStyle.h2Container}>
-                                <h2 className="h2Box" style={myStyle.h2Box}>
-                                    FIRST UP, LET’S DETERMINE 
-                                    THE COMPONENTS OF 
+
+            <div className='ov1' style={myStyle.container}>
+                <div className="ov1-SubCategory" style={myStyle.box}>
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>
+                            FIRST UP, LET’S DETERMINE
+                            THE COMPONENTS OF
                                     YOUR OFFER</h2>
-                            </div>
-                            <img src={Line2} alt="Line 2" />
-                            {/* Checkboxes add slides to queue */}
-
-                            <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
-
-                            <FormGroup className={classes.root}>
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            checked={values.annual_bonus_slide}
-                                            onChange={handleSlideCheck('annual_bonus_slide')}
-                                            // value='/annual_bonus'
-                                            color="primary"
-                                        />
-                                    } label="Annual Bonus"
-                                />
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            checked={values.equity_or_stock_slide}
-                                            onChange={handleSlideCheck('equity_or_stock_slide')}
-                                            // value='/equity_or_stock'
-                                            color="primary"
-                                        />
-                                    } label="Equity or Stock"
-                                />
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            checked={values.benefits_slide}
-                                            onChange={handleSlideCheck('benefits_slide')}
-                                            // value='/benefits'
-                                            color="primary"
-                                        />
-                                    } label="Benefits"
-                                />
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            checked={values.onboarding_pay_slide}
-                                            onChange={handleSlideCheck('onboarding_pay_slide')}
-                                            // value='/onboarding_pay'
-                                            color="primary"
-                                        />
-                                    } label="Relocation/Onboarding Payment"
-                                />
-                            </FormGroup >
-
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                primary={true}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
-                        </div> {/* BOX 1*/}
-
-                        <div className="ov1-SubCategory" style={myStyle.box}>
-                            {/* <div style= {image1}> */}
-                            <img style={myStyle.image2} src={Triangle3} alt="Shape3" />
-                            {/* </div> */}
-                        </div> {/*BOX 2*/}
-
                     </div>
-                </React.Fragment>
-            </MuiThemeProvider>
+                    <img src={Line2} alt="Line 2" />
+                    {/* Checkboxes add slides to queue */}
+
+                    <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
+
+                    <FormGroup className={classes.root}>
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={values.annual_bonus_slide}
+                                    onChange={handleSlideCheck('annual_bonus_slide')}
+                                    // value='/annual_bonus'
+                                    color="primary"
+                                />
+                            } label="Annual Bonus"
+                        />
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={values.equity_or_stock_slide}
+                                    onChange={handleSlideCheck('equity_or_stock_slide')}
+                                    // value='/equity_or_stock'
+                                    color="primary"
+                                />
+                            } label="Equity or Stock"
+                        />
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={values.benefits_slide}
+                                    onChange={handleSlideCheck('benefits_slide')}
+                                    // value='/benefits'
+                                    color="primary"
+                                />
+                            } label="Benefits"
+                        />
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={values.onboarding_pay_slide}
+                                    onChange={handleSlideCheck('onboarding_pay_slide')}
+                                    // value='/onboarding_pay'
+                                    color="primary"
+                                />
+                            } label="Relocation/Onboarding Payment"
+                        />
+                    </FormGroup >
+
+                    <br />
+                    <Button
+                        label="Back"
+                        primary={false}
+                        style={styles.button}
+                        onClick={this.back}
+                    />
+                    <Button
+                        label="Continue"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
+                </div> {/* BOX 1*/}
+
+                <div className="ov1-SubCategory" style={myStyle.box}>
+                    {/* <div style= {image1}> */}
+                    <img style={myStyle.image2} src={Triangle3} alt="Shape3" />
+                    {/* </div> */}
+                </div> {/*BOX 2*/}
+
+            </div>
+
         )
     }
 }

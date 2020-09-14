@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 // import AppBar from 'material-ui/AppBar'
-import TextField from 'material-ui/TextField'
+import TextField from '@material-ui/core/TextField'
 // import {List, ListItem} from 'material-ui/List'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
 
 export class Optional extends Component {
     continue = e => {
@@ -28,36 +28,35 @@ export class Optional extends Component {
             },
         }
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <div className='ov1' style={myStyle.container}>
-                        <div className="ov1-SubCategory" style={myStyle.box}>
 
-                            <h2>Optional</h2>
+            <div className='ov1' style={myStyle.container}>
+                <div className="ov1-SubCategory" style={myStyle.box}>
 
-                            <p>Finally, a page of optional information.</p>
-                            <p>Anything you don’t complete will be left as a variable in the letter text.</p>
-                            <p>As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</p>
+                    <h2>Optional</h2>
 
-                            <p>What is the date of the offer?</p>
+                    <p>Finally, a page of optional information.</p>
+                    <p>Anything you don’t complete will be left as a variable in the letter text.</p>
+                    <p>As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</p>
 
-                            <TextField
-                                hintText="Offer Date"
-                                floatingLabelText="Offer Date"
-                                onChange={handleChange('offer_date')}
-                                defaultValue={values.offer_date}
-                            />
+                    <p>What is the date of the offer?</p>
 
-                            <p>What is the first name of the candidate?</p>
+                    <TextField
+                        hintText="Offer Date"
+                        floatingLabelText="Offer Date"
+                        onChange={handleChange('offer_date')}
+                        defaultValue={values.offer_date}
+                    />
 
-                            <TextField
-                                hintText="Candidate Name"
-                                floatingLabelText="Candidate Name"
-                                onChange={handleChange('nhire_first_name')}
-                                defaultValue={values.nhire_first_name}
-                            />
+                    <p>What is the first name of the candidate?</p>
 
-                            {/* <p>What would be the title of the candidate?</p>
+                    <TextField
+                        hintText="Candidate Name"
+                        floatingLabelText="Candidate Name"
+                        onChange={handleChange('nhire_first_name')}
+                        defaultValue={values.nhire_first_name}
+                    />
+
+                    {/* <p>What would be the title of the candidate?</p>
                     
                     <TextField 
                         hintText="Candidate Title"
@@ -104,23 +103,22 @@ export class Optional extends Component {
                         defaultValue={values.hman_email}
                     /> */}
 
-                            <br />
-                            <RaisedButton
-                                label="Back"
-                                primary={false}
-                                style={styles.button}
-                                onClick={this.back}
-                            />
-                            <RaisedButton
-                                label="Continue"
-                                primary={true}
-                                style={styles.button}
-                                onClick={this.continue}
-                            />
-                        </div>
-                    </div>
-                </React.Fragment>
-            </MuiThemeProvider>
+                    <br />
+                    <Button
+                        label="Back"
+                        primary={false}
+                        style={styles.button}
+                        onClick={this.back}
+                    />
+                    <Button
+                        label="Continue"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
+                </div>
+            </div>
+
         )
     }
 }
