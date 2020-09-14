@@ -169,16 +169,16 @@ export class AnnualBonus extends Component {
                     <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>
 
                     <br />
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         className={styles.button}
                         onClick={this.back}
                     > Back
                     </Button>
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="secondary"
+                        color="primary"
                         className={styles.button}
                         onClick={this.continue}
                     > Continue

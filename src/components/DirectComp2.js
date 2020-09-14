@@ -62,16 +62,16 @@ export class DirectComp2 extends Component {
                     <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
                     <br />
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         className={styles.button}
                         onClick={this.back}
                     > Back
                     </Button>
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="secondary"
+                        color="primary"
                         className={styles.button}
                         onClick={this.continue}
                     > Continue

@@ -199,15 +199,15 @@ export class Letter extends Component {
                     <br />
                     <Button                        
                         variant="contained"
-                        color="primary"
-                        className={ButtonStyles.button}
+                        color="secondary"
+                        className={styles.button}
                         onClick={this.back}
-                    > Back
+                        > Back
                     </Button>
                     {/* <Button                        
                         variant="contained"
-                        color="secondary"
-                        className={ButtonStyles.button}
+                        color="primary"
+                        className={styles.button}
                         onClick={this.continue}
                     > Continue
                     </Button> */}

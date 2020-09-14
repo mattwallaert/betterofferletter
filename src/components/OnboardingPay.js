@@ -50,16 +50,16 @@ export class OnboardingPay extends Component {
                     />
 
                     <br />
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         className={styles.button}
                         onClick={this.back}
                     > Back
                     </Button>
-                    <Button                        
+                    <Button
                         variant="contained"
-                        color="secondary"
+                        color="primary"
                         className={styles.button}
                         onClick={this.continue}
                     > Continue
