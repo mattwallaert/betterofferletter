@@ -81,7 +81,7 @@ export class DirectComp1 extends Component {
                                     <Slider
                                         className={classes.root}
                                         value={values.pct_slider}
-                                        onChange={handleSliderChange('pct_slider')}
+                                        onChange={handleSliderChange('pct_slider')}                               
                                         step={1}
                                         min={-25}
                                         max={25}
@@ -108,13 +108,6 @@ export class DirectComp1 extends Component {
 
 
                             <br />
-
-                            {/* <TextField 
-                        hintText="Enter Slider Value"
-                        floatingLabelText="Percent Slider"
-                        onChange={handleChange('pct_slider')}
-                        value={values.pct_slider}
-                    /> */}
 
                             <br />
                             <RaisedButton
@@ -143,7 +136,11 @@ const styles = {
     },
     root: {
         width: 250,
-        color: '#fdce16'
+        color: '#fdce16',
+        // color: 'black'
+        
+        
+
 
     },
     input: {
