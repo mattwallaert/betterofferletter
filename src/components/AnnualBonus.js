@@ -8,13 +8,23 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { withStyles } from '@material-ui/core/styles';
 // Shapes
 import Line5 from '../images/lines/Line5.png'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 export class AnnualBonus extends Component {
     state = {
         company: false,
         newHire: false,
+    }
+
+    handleHoverOn = e => {
+        e.preventDefault();
+        e.target.style.color = 'white';
+        e.target.style.cursor = 'pointer';
+    }
+    handleHoverOff = e => {
+        e.preventDefault();
+        e.target.style.color = 'black';
     }
 
     handleCompanyClick = e => {
@@ -68,6 +78,12 @@ export class AnnualBonus extends Component {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center"
+            },
+            boxContainerLink: {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
             }
         }
         return (
@@ -90,34 +106,29 @@ export class AnnualBonus extends Component {
                             />
 
                             <p> Is it based on company performance or the potential hires performance? </p>
+                            <br />
 
-                        <Link
-                        onClick={this.handleCompanyClick}
-                        >
-                        Company Performance</Link>
-                        <Link
-                        onClick={this.handleNewHireClick}
-                        >
-                        New Hire Performance
-                        </Link>
+                            <div style={myStyle.boxContainerLink}>
 
-                            {/* <Typography component="div" >
-                                <Grid component="label" container className={classes.root}>
-                                    <Grid item>Company Performance</Grid>
-                                    <Grid item>
-                                        <Switch
-                                            checked={values.perform_bonus}
-                                            onChange={handleSwitch('perform_bonus')}
-                                            color="primary"
+                                <p
+                                    onMouseOver={this.handleHoverOn}
+                                    onMouseLeave={this.handleHoverOff}
+                                    onClick={this.handleCompanyClick}
+                                >
+                                    COMPANY PERFORMANCE</p>
 
-                                        //   value="checkedC"
-                                        />
-                                    </Grid>
-                                    <Grid item>New Hire Performance</Grid>
-                                </Grid>
-                            </Typography> */}
+                                <p
+                                    onMouseOver={this.handleHoverOn}
+                                    onMouseLeave={this.handleHoverOff}
+                                    onClick={this.handleNewHireClick}
+                                >
+                                    NEW HIRE PERFORMANCE</p>
 
-                            {/* {!values.perform_bonus && */}
+                                {/* <a href="#" onMouseOver="this.style.color='red'"
+                                    onMouseOut="this.style.color='green'" >GeeksforGeeks</a> */}
+                            </div>
+                            <br />
+
                             {this.state.company &&
                                 <div>
                                     <p>In order to earn the maximum bonus, the company needs to ___
@@ -132,7 +143,6 @@ export class AnnualBonus extends Component {
                                 </div>
                             }
 
-                            {/* {values.perform_bonus && */}
                             {this.state.newHire &&
                                 <div>
 
