@@ -58,8 +58,6 @@ export class Letter extends Component {
         const myStyle = {
             container: {
                 // background: "#fdce16",
-                width: "100%",
-                height: "100%",
                 flexDirection: 'column'
             },
             box: {
@@ -89,7 +87,7 @@ export class Letter extends Component {
                     </div>
 
                     <PDFViewer
-                        height={650}
+                        height={'75%'}
                         width={800}
                     >
 

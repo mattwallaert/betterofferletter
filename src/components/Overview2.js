@@ -28,20 +28,26 @@ export class Overview2 extends Component {
         const myStyle = {
             container: {
                 background: "#fdce16",
-                width: "100%",
-                height: "100%"
+                textAlign: 'left',
             },
             box: {
-                //    background: "blue"
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                // justifyItems: "center"
 
             },
             h2Container: {
+                // marginBottom: 0,
+                flexDirection: 'column',
+                // textAlign: 'left',
                 display: "flex",
                 alignContent: "flex-start",
-                justifyContent: "start"
+                justifyContent: "start",
+                width: '79%'
             },
             h2Box: {
-                width: "575px",
+                // width: "575px",
                 marginBottom: 0
 
             }
@@ -55,12 +61,18 @@ export class Overview2 extends Component {
                         <h2 className="h2Box" style={myStyle.h2Box}>
                             FIRST UP, LET’S DETERMINE
                             THE COMPONENTS OF
-                                    YOUR OFFER</h2>
+                            YOUR OFFER</h2>
                     </div>
+
+                    <div
+                    style={{marginLeft: '9%'}}
+                    >
                     <img src={Line2} alt="Line 2" />
                     {/* Checkboxes add slides to queue */}
 
-                    <li>(Non optional) Direct Compensation (hourly or salaried wages)</li>
+                    <p
+                    style={{color: 'white'}}
+                    >(Non optional) Direct Compensation (hourly or salaried wages)</p>
 
                     <FormGroup className={classes.root}>
                         <FormControlLabel
@@ -104,27 +116,32 @@ export class Overview2 extends Component {
                             } label="Relocation/Onboarding Payment"
                         />
                     </FormGroup >
+                    </div>
 
                     <br />
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
+                    <div
+                    style= {{ transform: 'translate(200%, 0%)' }}
+                    >
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
                     </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
                     </Button>
+                    </div>
                 </div> {/* BOX 1*/}
 
                 <div className="ov1-SubCategory" style={myStyle.box}>
                     {/* <div style= {image1}> */}
-                    <img style={myStyle.image2} src={Triangle3} alt="Shape3" />
+                    <img src={Triangle3} alt="Shape3" />
                     {/* </div> */}
                 </div> {/*BOX 2*/}
 
@@ -146,7 +163,8 @@ const styles = theme => ({
         flexDirection: 'column',
         flexWrap: 'wrap',
         justifyContent: "center",
-        alignContent: "center"
+        fontFamily: 'gilroy-medium'
+        // alignContent: "center",
 
     },
 

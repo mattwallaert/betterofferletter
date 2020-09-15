@@ -34,7 +34,9 @@ export class DirectComp1 extends Component {
                 height: "100%"
             },
             box: {
-                //    background: "blue"
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
 
             },
             h2Container: {
@@ -43,7 +45,7 @@ export class DirectComp1 extends Component {
                 justifyContent: "center"
             },
             h2Box: {
-                width: "530px",
+                // width: "530px",
                 marginBottom: 0
             }
         }
@@ -55,26 +57,34 @@ export class DirectComp1 extends Component {
                     <div className="h2Container" style={myStyle.h2Container}>
                         <h2 className="h2Box" style={myStyle.h2Box}>DIRECT COMPENSATION</h2>
                     </div>
+
                     <img src={Line3} alt="Line 3" />
 
-                    <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the
-                                average hire for this role?</p>
-                    <p>Remember, the offer should be firmly tied to the business value the hire will create
-                                and you should be prepared to </p>
-                    <p>justify the comparison to the skills and experience expected by the market.</p>
+                    <div
+                    style={{width: '56%'}}
+                    >
 
+                        <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the
+                                average hire for this role?</p>
+                        <p>Remember, the offer should be firmly tied to the business value the hire will create
+                            and you should be prepared to justify the comparison to the skills and experience expected by the market.</p>
+                    </div>
                     {/* (Slider from -25% to +25%) */}
 
                     <Typography
                         id="input-slider"
                         gutterBottom
-                        style={{ lineHeight: 3 }}
+                        style={{ 
+                            lineHeight: 3,
+                            fontFamily: "gilroy-medium"
+                        }}
                     >
                         Slider(%) from -25% - 25%
                             </Typography>
                     <Grid
                         container
                         justify="center"
+                        spacing={3}
                     >
                         <Grid item >
                             <Slider
@@ -94,6 +104,7 @@ export class DirectComp1 extends Component {
                                 margin="dense"
                                 onChange={handleChange('pct_slider')}
                                 onBlur={handleBlur}
+                                
                                 inputProps={{
                                     step: 5,
                                     min: -25,
@@ -109,20 +120,22 @@ export class DirectComp1 extends Component {
                     <br />
 
                     <br />
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
+                    <div>
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
                     </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
                     </Button>
+                    </div>
                 </div>
             </div>
 

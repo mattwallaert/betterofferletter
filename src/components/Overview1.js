@@ -31,7 +31,7 @@ export class Overview1 extends Component {
 
             },
             box: {
-                fontSize: '5vw',
+                // fontSize: '5vw',
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
