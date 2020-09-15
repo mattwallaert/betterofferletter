@@ -23,20 +23,23 @@ export class DirectComp2 extends Component {
         const myStyle = {
             container: {
                 background: "#fdce16",
-                width: "100%",
-                height: "100%"
+                textAlign: 'left',
             },
             box: {
-                //    background: "blue"
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
 
             },
             h2Container: {
+                flexDirection: 'column',
                 display: "flex",
                 alignContent: "flex-start",
-                justifyContent: "center"
+                justifyContent: "start",
+                width: '79%'
             },
             h2Box: {
-                width: "530px",
+
                 marginBottom: 0
             },
             boxContainer: {
@@ -53,48 +56,66 @@ export class DirectComp2 extends Component {
                     <div className="h2Container" style={myStyle.h2Container}>
                         <h2 className="h2Box" style={myStyle.h2Box}>IN ORDER TO CREATE A FAIR PROCESS</h2>
                     </div>
-                    <img src={Line2} alt="Line 2" />
+                    <div
+                        style={{ marginLeft: '11%' }}
+                    >
+                        <img src={Line2} alt="Line 2" />
 
-                    <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
+                        <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
-                    <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
-                    <br />
-                    <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
+                        <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
+                        
+                        <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
+                    </div>
                     <br />
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
+                    <div
+                        style={{ transform: 'translate(200%, 0%)' }}
+                    >
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
                     </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
                     </Button>
+                    </div>
                 </div>
                 <div className="ov1-SubCategory" style={myStyle.boxContainer}>
 
-
+                    <p>First and last name?</p>
                     <TextField
-                        hintText="Compensation Manager Full Name"
-                        floatingLabelText="Compensation Manager Full Name"
+                        style={{ 
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
+                        id="Compensation Manager Full Name"
+                        label="Compensation Manager Full Name"
                         onChange={handleChange('comp_person_name')}
                         defaultValue={values.comp_person_name}
                     />
+                    <img src={Line2} alt="Line 2" />
 
                     <p>What is their email? (email validation)</p>
 
                     <TextField
-                        hintText="Compensation Manager Email"
-                        floatingLabelText="Compensation Manager Email"
+                        style={{ 
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
+                        id="Compensation Manager Email"
+                        label="Compensation Manager Email"
                         onChange={handleChange('comp_person_email')}
                         defaultValue={values.comp_person_email}
                     />
+                    <img src={Line2} alt="Line 2" />
 
                 </div>
             </div>
