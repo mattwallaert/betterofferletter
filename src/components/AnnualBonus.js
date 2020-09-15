@@ -57,20 +57,24 @@ export class AnnualBonus extends Component {
         const myStyle = {
             container: {
                 background: "#fdce16",
-                width: "100%",
-                height: "100%"
+                textAlign: 'left',
             },
             box: {
-                //    background: "blue"
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+
 
             },
             h2Container: {
+                flexDirection: 'column',
                 display: "flex",
                 alignContent: "flex-start",
-                justifyContent: "center"
+                justifyContent: "start",
+                width: '79%'
             },
             h2Box: {
-                width: "530px",
+
                 marginBottom: 0
             },
             boxContainer: {
@@ -83,7 +87,15 @@ export class AnnualBonus extends Component {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                width: '64%'
+            },
+            boxContainerLink2: {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                width: '80%'
             }
         }
         return (
@@ -94,29 +106,35 @@ export class AnnualBonus extends Component {
                     <div className="h2Container" style={myStyle.h2Container}>
                         <h2 className="h2Box" style={myStyle.h2Box}>ANNUAL BONUS</h2>
                     </div>
-                    <img src={Line5} alt="Line 5" />
 
-                    <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
+                    <div
+                        style={{ marginLeft: '11%'  }}
+                    >
+                        <img src={Line5} alt="Line 5" />
 
-                    <TextField
-                        color='secondary'
-                        type='number'
-                        hintText="Maximum Potential Yearly Bonus"
-                        label="Yearly Bonus"
-                        onChange={handleChange('bench_bonus')}
-                        defaultValue={values.bench_bonus}
-                    />
+                        <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
 
-                    <p> Is it based on company performance or the potential hires performance? </p>
-                    <br />
+                        <TextField
+                            color='secondary'
+                            type='number'
+                            hintText="Maximum Potential Yearly Bonus"
+                            label="Yearly Bonus"
+                            onChange={handleChange('bench_bonus')}
+                            defaultValue={values.bench_bonus}
+                        />
 
-                    <div style={myStyle.boxContainerLink}>
+                        <p> Is it based on company performance or the potential hires performance? </p>
+                    </div>
+
+                    <div
+                        style={myStyle.boxContainerLink}
+                    >
 
                         <p
-
-                            style={{ 
+                            style={{
                                 fontWeight: "bold",
-                                paddingRight: "1%"
+                                fontSize: '2vw',
+                                paddingRight: "2.5%"
                             }}
                             onMouseOver={this.handleHoverOn}
                             onMouseLeave={this.handleHoverOff}
@@ -124,28 +142,57 @@ export class AnnualBonus extends Component {
                         >
                             COMPANY PERFORMANCE</p>
 
-                            <br/>
+                        <br />
 
                         <p
-                            style={{ fontWeight: "bold" }}
+                            style={{
+                                fontWeight: "bold",
+                                fontSize: '2vw',
+                                paddingLeft: "2.5%"
+                            }}
                             onMouseOver={this.handleHoverOn}
                             onMouseLeave={this.handleHoverOff}
                             onClick={this.handleNewHireClick}
                         >
                             NEW HIRE PERFORMANCE</p>
 
-                       
-                    </div>
-                    
 
+                    </div>
+
+                    <div
+                     style={{ transform: 'translate(200%, 0%)' }}
+                    >
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
+                    </Button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
+                    </Button>
+                    </div>
+                </div>
+                <div className="ov1-SubCategory" style={myStyle.boxContainer}>
                     {this.state.company &&
-                        <div>
+                        <div
+                            style={{ width: '53%' }}
+                        >
                             <p>In order to earn the maximum bonus, the company needs to ___
                         (be specific: increase revenue by 50%, increase the stock value by 5%, launch the next version of our product).</p>
 
                             <TextField
+                                style={{
+                                    paddingTop: '1%',
+                                    width: '100%'
+                                }}
                                 hintText="Maximum Bonus Company Needs"
-                                floatingLabelText="Maximum Bonus Company"
+                                label="Maximum Bonus Company"
                                 onChange={handleChange('comp_max_bonus')}
                                 defaultValue={values.comp_max_bonus}
                             />
@@ -153,40 +200,29 @@ export class AnnualBonus extends Component {
                     }
 
                     {this.state.newHire &&
-                        <div>
+                        <div
+                            style={{ width: '53%' }}
+                        >
 
                             <p>In order to earn the maximum bonus, the new hire needs to ___
                         (be specific: close three new deals per quarter, launch the next version of our product, recruit an engineer every month).</p>
 
                             <TextField
+                                style={{
+                                    paddingTop: '1%',
+                                    width: '100%'
+                                }}
                                 hintText="Maximum Bonus New Hire Needs"
-                                floatingLabelText="Maximum Bonus New Hire"
+                                label="Maximum Bonus New Hire"
                                 onChange={handleChange('nhire_max_bonus')}
                                 defaultValue={values.nhire_max_bonus}
                             />
                         </div>
                     }
 
-                    
 
 
                     <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>
-
-                    <br />
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
-                    </Button>
                 </div>
             </div>
 
