@@ -60,8 +60,6 @@ export class Benefits extends Component {
         const myStyle = {
             container: {
                 background: "#fdce16",
-                width: "100%",
-                height: "100%"
             },
             box: {
                 //    background: "blue"
