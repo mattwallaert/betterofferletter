@@ -21,8 +21,6 @@ export class AnnualBonus extends Component {
         e.preventDefault();
         e.target.style.color = 'white';
         e.target.style.cursor = 'pointer';
-        // e.target.style.fontWeight = 'bold';
-
     }
     handleHoverOff = e => {
         e.preventDefault();
@@ -114,12 +112,18 @@ export class AnnualBonus extends Component {
                     <div style={myStyle.boxContainerLink}>
 
                         <p
-                            style={{ fontWeight: "bold" }}
+
+                            style={{ 
+                                fontWeight: "bold",
+                                paddingRight: "1%"
+                            }}
                             onMouseOver={this.handleHoverOn}
                             onMouseLeave={this.handleHoverOff}
                             onClick={this.handleCompanyClick}
                         >
                             COMPANY PERFORMANCE</p>
+
+                            <br/>
 
                         <p
                             style={{ fontWeight: "bold" }}
@@ -129,10 +133,9 @@ export class AnnualBonus extends Component {
                         >
                             NEW HIRE PERFORMANCE</p>
 
-                        {/* <a href="#" onMouseOver="this.style.color='red'"
-                                    onMouseOut="this.style.color='green'" >GeeksforGeeks</a> */}
+                       
                     </div>
-                    <br />
+                    
 
                     {this.state.company &&
                         <div>
@@ -163,7 +166,7 @@ export class AnnualBonus extends Component {
                         </div>
                     }
 
-                    <br />
+                    
 
 
                     <p>Benchmark = {values.bench_bonus}, Your Offer = {values.benchBonusOffer}</p>

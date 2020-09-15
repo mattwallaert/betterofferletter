@@ -4,21 +4,43 @@ import TextField from '@material-ui/core/TextField'
 
 // Buttons
 import Button from '@material-ui/core/Button'
-import ButtonGroup from '@material-ui/core/ButtonGroup'
+import Line3 from '../images/lines/Line3.png'
+// import ButtonGroup from '@material-ui/core/ButtonGroup'
 
 
 export class DirectComp3 extends Component {
     state = {
         salary: false,
         hourly: false,
+        // clickColor: ""
+    }
+
+    handleHoverOn = e => {
+        e.preventDefault();
+        e.target.style.color = "#fdce16";
+        e.target.style.cursor = 'pointer';
+    }
+    handleHoverOff = e => {
+        e.preventDefault();
+        e.target.style.color = 'black';
     }
 
     handleSalaryClick = e => {
         e.preventDefault();
         this.setState({
             salary: !this.state.salary,
-            hourly: false
+            hourly: false,
+
         })
+        // if (this.state.salary===true) {
+        //     this.setState({
+        //         clickColor: "#fdce16"
+        //     })
+        // } else {
+        //     this.setState({
+        //         clickColor: "black"
+        //     })
+        // }
 
     }
 
@@ -28,6 +50,7 @@ export class DirectComp3 extends Component {
             hourly: !this.state.hourly,
             salary: false
         })
+        e.target.style.color = "#fdce16"
     }
 
     continue = e => {
@@ -52,28 +75,66 @@ export class DirectComp3 extends Component {
                 //    background: "blue"
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                width: "530px",
+                marginBottom: 0
+            },
+            boxContainer: {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
+            },
+            boxContainerLink: {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center"
+            }
         }
 
         return (
 
             <div className='ov1' style={myStyle.container}>
                 <div className="ov1-SubCategory" style={myStyle.box}>
-                    <h2>Direct Compensation cont.</h2>
-                    <p>Is this position salaried or hourly?</p><br />
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>IS THIS POSITION SALARIED OR HOURLY?</h2>
+                    </div>
 
-                    <ButtonGroup
-                        variant="contained"
-                        color="inherit"
-                        aria-label="full-width contained primary button group"
-                    >
-                        <Button
+                    <img src={Line3} alt="Line 3" />
+
+
+                    <div style={myStyle.boxContainerLink}>
+                        <p
+
+                            style={{
+                                fontWeight: "bold",
+                                paddingRight: "1%",
+                                // color: this.state.clickColor
+                            }}
+                            onMouseOver={this.handleHoverOn}
+                            onMouseLeave={this.handleHoverOff}
                             onClick={this.handleSalaryClick}
-                        >Salary</Button>
+                        >
+                            SALARY</p>
 
 
+                        <br />
 
-                        <Button onClick={this.handleHourlyClick}>Hourly</Button>
-                    </ButtonGroup><br />
+                        <p
+                            style={{ fontWeight: "bold" }}
+                            onMouseOver={this.handleHoverOn}
+                            onMouseLeave={this.handleHoverOff}
+                            onClick={this.handleHourlyClick}
+                        >
+                            HOURLY</p>
+
+                    </div>
 
                     {/* Conditional Render */}
                     {/* Salary */}
@@ -84,8 +145,8 @@ export class DirectComp3 extends Component {
 
                             <TextField
                                 type="number"
-                                hintText="Enter The Benchmark Salary"
-                                floatingLabelText="Benchmark Salary"
+                                // id="Enter The Benchmark Salary"
+                                label="Benchmark Salary"
                                 onChange={handleChange('bench_salary')}
                                 value={values.bench_salary}
                             // defaultValue=''
@@ -105,8 +166,8 @@ export class DirectComp3 extends Component {
                             <TextField
                                 type="number"
                                 id="hour_pay"
-                                hintText="Rate per Hour?"
-                                floatingLabelText="Rate per Hour"
+                                // hintText="Rate per Hour?"
+                                label="Rate per Hour"
                                 onChange={handleChange('hour_pay')}
                                 value={values.hour_pay}
                             // defaultValue=''
@@ -116,14 +177,14 @@ export class DirectComp3 extends Component {
                             <TextField
                                 type="number"
                                 id="hoursPerMo"
-                                hintText="Hours per Month?"
-                                floatingLabelText="Hours per Month"
+                                // hintText="Hours per Month?"
+                                label="Hours per Month"
                                 onChange={handleChange('hoursPerMo')}
                                 value={values.hoursPerMo}
                             // defaultValue=''
                             />
 
-                            <p>Result = (Display Benchmark and Your Offer)</p>
+                            {/* <p>Result = (Display Benchmark and Your Offer)</p> */}
 
                             <p>Benchmark = {values.bench_hourly}, Your Offer = {values.offer_hourly}</p>
                         </div>}
