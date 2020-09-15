@@ -89,8 +89,9 @@ export class EquityOrStock extends Component {
                     <p> Over how many years will the equity vest? </p>
 
                     <TextField
+                        type='number'
                         hintText="Years of Equity Vest"
-                        floatingLabelText="Years of Equity Vest"
+                        label="Years of Equity Vest"
                         onChange={handleChange('vest_years')}
                         defaultValue={values.vest_years}
                     />
@@ -137,8 +138,9 @@ export class EquityOrStock extends Component {
                             <p> -Public- What is the current price of a share of stock? </p>
 
                             <TextField
+                                type='number'
                                 hintText="Stock Share Price"
-                                floatingLabelText="Stock Share Price"
+                                label="Stock Share Price"
                                 onChange={handleChange('if_public_price')}
                                 defaultValue={values.if_public_price}
                             />
@@ -146,8 +148,9 @@ export class EquityOrStock extends Component {
                             <p> -Public- How many shares of stock are you offering in total? </p>
 
                             <TextField
+                                type='number'
                                 hintText="Stock Share Offer"
-                                floatingLabelText="Stock Share Offer"
+                                label="Stock Share Offer"
                                 onChange={handleChange('if_public_shares')}
                                 defaultValue={values.if_public_shares}
                             />
@@ -169,8 +172,9 @@ export class EquityOrStock extends Component {
                             </p>
 
                             <TextField
+                                type='number'
                                 hintText="If Private Value"
-                                floatingLabelText="If Private Value"
+                                label="If Private Value"
                                 onChange={handleChange('if_private_value')}
                                 defaultValue={values.if_private_value}
                                 disabled={this.state.ifUnpricedCheck}
@@ -179,8 +183,9 @@ export class EquityOrStock extends Component {
                             <p> What percentage of the current outstanding shares are you offering in total? </p>
 
                             <TextField
+                                type='number'
                                 hintText="Outstanding Share Offer"
-                                floatingLabelText="Outstanding Share Offer"
+                                label="Outstanding Share Offer"
                                 onChange={handleChange('pct_share_offer')}
                                 defaultValue={values.pct_share_offer}
                                 disabled={this.state.ifUnpricedCheck}

@@ -96,7 +96,8 @@ export class DirectComp2 extends Component {
                             paddingTop: '1%',
                             width: '45%'
                         }}
-                        id="Compensation Manager Full Name"
+                        // id="Compensation Manager Full Name"
+                        type="text"
                         label="Compensation Manager Full Name"
                         onChange={handleChange('comp_person_name')}
                         defaultValue={values.comp_person_name}
@@ -110,7 +111,8 @@ export class DirectComp2 extends Component {
                             paddingTop: '1%',
                             width: '45%'
                         }}
-                        id="Compensation Manager Email"
+                        // id="Compensation Manager Email"
+                        type='email'
                         label="Compensation Manager Email"
                         onChange={handleChange('comp_person_email')}
                         defaultValue={values.comp_person_email}

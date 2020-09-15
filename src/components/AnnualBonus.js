@@ -100,8 +100,9 @@ export class AnnualBonus extends Component {
 
                     <TextField
                         color='secondary'
+                        type='number'
                         hintText="Maximum Potential Yearly Bonus"
-                        floatingLabelText="Yearly Bonus"
+                        label="Yearly Bonus"
                         onChange={handleChange('bench_bonus')}
                         defaultValue={values.bench_bonus}
                     />
