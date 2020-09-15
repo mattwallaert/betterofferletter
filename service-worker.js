@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/betterofferletter/precache-manifest.dff0b8a6c0f0171c19eb7e166e2e8d97.js"
+  "/betterofferletter/precache-manifest.eb5387d1e7931060f2e795167b95c55f.js"
 );
 
 self.addEventListener('message', (event) => {
