@@ -26,27 +26,38 @@ export class Overview1 extends Component {
         // const overviewText = overview;
         // const { values, handleBenefitsCheck, handleChange } = this.props;
         const myStyle = {
-            // background: "#fdce16",
-            width: "100%",
-            height: "100%",
-            // marginTop: "30px",
-            // justify: "center"
+            container: {
+                // background: "#fdce16",
 
+            },
+            box: {
+                fontSize: '5vw',
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyItems: "center"
+
+            },
         }
         return (
 
-            <div className='ov1' style={myStyle}>
+            <div className='ov1' style={myStyle.container}>
                 {/* <AppBar title="Overview" /> */}
-                <div className="ov1-SubCategory" >
+                <div className="ov1-SubCategory" style={myStyle.box} >
 
-                    <h2>ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
-                    <br />
-                    <p>OfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
-                    Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
+                    <h2
+                    >ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
+
+                    <p
+                        style={{ width: '57%' }}
+                    >OfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
+                        Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
                     In order to continue, please certify that the following is true. </p>
-                    <br />
 
-                    <p>“I am committed to increasing pay equity through a transparent and direct compensation process.”
+                    {/* <br/> */}
+                    <p
+                        style={{ width: '62%' }}
+                    >“I am committed to increasing pay equity through a transparent and direct compensation process.”
 
                     <Checkbox
                             checked={this.state.overviewCheck}
@@ -58,7 +69,6 @@ export class Overview1 extends Component {
                         />
                     </p>
 
-                    <br />
 
                     <Button
                         variant="contained"
