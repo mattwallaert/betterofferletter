@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/betterofferletter/static/css/main.902fd335.chunk.css",
-    "main.js": "/betterofferletter/static/js/main.44a1cb49.chunk.js",
-    "main.js.map": "/betterofferletter/static/js/main.44a1cb49.chunk.js.map",
+    "main.js": "/betterofferletter/static/js/main.c621df86.chunk.js",
+    "main.js.map": "/betterofferletter/static/js/main.c621df86.chunk.js.map",
     "runtime-main.js": "/betterofferletter/static/js/runtime-main.5776e4a8.js",
     "runtime-main.js.map": "/betterofferletter/static/js/runtime-main.5776e4a8.js.map",
-    "static/js/2.d505a80b.chunk.js": "/betterofferletter/static/js/2.d505a80b.chunk.js",
-    "static/js/2.d505a80b.chunk.js.map": "/betterofferletter/static/js/2.d505a80b.chunk.js.map",
+    "static/js/2.3bc1a100.chunk.js": "/betterofferletter/static/js/2.3bc1a100.chunk.js",
+    "static/js/2.3bc1a100.chunk.js.map": "/betterofferletter/static/js/2.3bc1a100.chunk.js.map",
     "index.html": "/betterofferletter/index.html",
-    "precache-manifest.7f14beae036dd9730fd13ff730fdb1fb.js": "/betterofferletter/precache-manifest.7f14beae036dd9730fd13ff730fdb1fb.js",
+    "precache-manifest.fdcc51490e200c2a602af79dab0aa8d3.js": "/betterofferletter/precache-manifest.fdcc51490e200c2a602af79dab0aa8d3.js",
     "service-worker.js": "/betterofferletter/service-worker.js",
     "static/css/main.902fd335.chunk.css.map": "/betterofferletter/static/css/main.902fd335.chunk.css.map",
     "static/media/Shape3_crop.png": "/betterofferletter/static/media/Shape3_crop.f0341f85.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5776e4a8.js",
-    "static/js/2.d505a80b.chunk.js",
+    "static/js/2.3bc1a100.chunk.js",
     "static/css/main.902fd335.chunk.css",
-    "static/js/main.44a1cb49.chunk.js"
+    "static/js/main.c621df86.chunk.js"
   ]
 }
