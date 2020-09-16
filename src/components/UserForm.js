@@ -107,7 +107,7 @@ export class UserForm extends Component {
         co_name: 'My Company',
         hman_first_name: 'Jane',
         hman_phone: '888-888-8888',
-        hman_email: 'test@test.com'
+        hman_email: 'test2@test.com'
 
     }
 
