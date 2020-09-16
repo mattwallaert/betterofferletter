@@ -74,9 +74,9 @@ export class UserForm extends Component {
         publicValueAsSalary: 0,
         //B
         benefitOptions: [
-            "Health Insurance", 
-            "Dental Insurance", 
-            "Vision Insurance", 
+            "Health Insurance",
+            "Dental Insurance",
+            "Vision Insurance",
             "Pre-Tax Spending Accounts",
             "Retirement Matching",
             "Tuition Reimbursement",
@@ -217,12 +217,12 @@ export class UserForm extends Component {
     };
 
     handleAddOtherBenefits = () => {
-            this.setState({
-                otherBenefits: [...this.state.otherBenefits, this.state.other_benefit]
-            })
+        this.setState({
+            otherBenefits: [...this.state.otherBenefits, this.state.other_benefit]
+        })
     };
-   
-    
+
+
 
     // Fix setState Delay
     componentDidUpdate(prevProps, prevState) {
@@ -290,7 +290,7 @@ export class UserForm extends Component {
     // Handle benefit array map
     printBenefits = () => {
         const convertBenefits = this.state.benefits.map((item, i) => {
-           return item.replace(/_/gi, ' ')
+            return item.replace(/_/gi, ' ')
         })
 
         const convertOtherBenefits = this.state.otherBenefits.map((item, i) => {
@@ -298,8 +298,12 @@ export class UserForm extends Component {
         })
 
         const stringValues = convertBenefits.join(', ') + ", " + convertOtherBenefits.join(', ')
-        return stringValues
-        
+            return stringValues
+
+        //Consider if only other benefits are added
+        //Consider comma
+
+
     }
 
     render() {
