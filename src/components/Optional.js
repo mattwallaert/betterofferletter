@@ -71,7 +71,7 @@ export class Optional extends Component {
                             alt="Line 5"
                             style={{
                                 paddingLeft: '65%',
-                                
+
                                 alignSelf: 'center'
                             }}
                         />
@@ -79,8 +79,8 @@ export class Optional extends Component {
                             style={{
                                 // width: '60%',
                                 position: 'absolute',
-                                paddingLeft: '5%',
-                                paddingRight: '5%'
+                                paddingLeft: '1%',
+                                // paddingRight: '5%'
                             }}
                         >As a reminder, no data is collected in this tool and all processing is done on your browser and not sent back to a server.</p>
                         <br />
@@ -92,8 +92,12 @@ export class Optional extends Component {
                         <p>What is the date of the offer?</p>
 
                         <TextField
+                            style={{
+                                paddingTop: '1%',
+                                width: '45%'
+                            }}
                             hintText="Offer Date"
-                            floatingLabelText="Offer Date"
+                            label="Offer Date"
                             onChange={handleChange('offer_date')}
                             defaultValue={values.offer_date}
                         />
@@ -101,8 +105,12 @@ export class Optional extends Component {
                         <p>What is the first name of the candidate?</p>
 
                         <TextField
+                            style={{
+                                paddingTop: '1%',
+                                width: '45%'
+                            }}
                             hintText="Candidate Name"
-                            floatingLabelText="Candidate Name"
+                            label="Candidate Name"
                             onChange={handleChange('nhire_first_name')}
                             defaultValue={values.nhire_first_name}
                         />
@@ -110,8 +118,12 @@ export class Optional extends Component {
                         <p>What would be the title of the candidate?</p>
 
                         <TextField
+                            style={{
+                                paddingTop: '1%',
+                                width: '45%'
+                            }}
                             hintText="Candidate Title"
-                            floatingLabelText="Candidate Title"
+                            label="Candidate Title"
                             onChange={handleChange('nhire_title')}
                             defaultValue={values.nhire_title}
                         />
@@ -121,7 +133,7 @@ export class Optional extends Component {
 
                     <br />
                     <div
-                    style={{ transform: 'translate(200%, 250%)' }}
+                        style={{ transform: 'translate(200%, 250%)' }}
                     >
                         <Button
                             variant="contained"
@@ -152,8 +164,12 @@ export class Optional extends Component {
                     <p>What is the name of the company?</p>
 
                     <TextField
+                        style={{
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
                         hintText="Company Name"
-                        floatingLabelText="Company Name"
+                        label="Company Name"
                         onChange={handleChange('co_name')}
                         defaultValue={values.co_name}
                     />
@@ -162,8 +178,12 @@ export class Optional extends Component {
 
 
                     <TextField
+                        style={{
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
                         hintText="Hiring Manager's First Name"
-                        floatingLabelText="Hiring Manager's First Name"
+                        label="Hiring Manager's First Name"
                         onChange={handleChange('hman_first_name')}
                         defaultValue={values.hman_first_name}
                     />
@@ -171,8 +191,12 @@ export class Optional extends Component {
                     <p>What is the hiring manager’s phone number?</p>
 
                     <TextField
+                        style={{
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
                         hintText="Hiring Manager's Phone Number"
-                        floatingLabelText="Hiring Manager's Phone Number"
+                        label="Hiring Manager's Phone Number"
                         onChange={handleChange('hman_phone')}
                         defaultValue={values.hman_phone}
                     />
@@ -181,8 +205,12 @@ export class Optional extends Component {
                     <p>What is the hiring manager’s email address?</p>
 
                     <TextField
+                        style={{
+                            paddingTop: '1%',
+                            width: '45%'
+                        }}
                         hintText="Hiring Manager's Email"
-                        floatingLabelText="Hiring Manager's Email"
+                        label="Hiring Manager's Email"
                         onChange={handleChange('hman_email')}
                         defaultValue={values.hman_email}
                     />
