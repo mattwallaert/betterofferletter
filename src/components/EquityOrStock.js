@@ -119,7 +119,10 @@ export class EquityOrStock extends Component {
                     </div>
 
                     <div
-                        style={{ marginLeft: '7%' }}
+                        style={{ 
+                            marginLeft: '7%',
+                            width: '85%'
+                        }}
                     >
 
                         <img src={Line3} alt="Line 3" />
