@@ -292,7 +292,12 @@ export class UserForm extends Component {
         const convertBenefits = this.state.benefits.map((item, i) => {
            return item.replace(/_/gi, ' ')
         })
-        const stringValues = convertBenefits.join(', ')
+
+        const convertOtherBenefits = this.state.otherBenefits.map((item, i) => {
+            return item
+        })
+
+        const stringValues = convertBenefits.join(', ') + ", " + convertOtherBenefits.join(', ')
         return stringValues
         
     }
