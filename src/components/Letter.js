@@ -169,30 +169,50 @@ export class Letter extends Component {
                                     <Text style={styles.text}>
                                         (OPTIONAL) Part of your compensation is also equity-based, which means you’ll directly own a portion of
                                      {values.co_name}.  At our current market value, which is defined as (PUBLIC OR PRIVATE OR UNPRICED),
+<<<<<<< HEAD
                                     this equity is worth (EQUITY) and you’ll receive it over the course of ({values.vest_years}) years, every ({values.vest_rate_mos}) 
                                     months, so long as you continue to work at ({values.co_name}).  So you can think of it as worth about $(X) per year; as with
+=======
+                                    this equity is worth (EQUITY) and you’ll receive it over the course of (values.vest_years) years, every (values.vest_rate_mos) 
+                                    months, so long as you continue to work at {values.co_name}.  So you can think of it as worth about $(X) per year; as with
+>>>>>>> d4b7c41892201ad9f6a16ca4f84e9b7b738b4df9
                                     your benefits, happy to chat through the details at any time.
                                 </Text>}
 
                                 <Text style={styles.text}>
                                     Once you accept this offer, we’ll have to do some paperwork to do before you can begin working at
+<<<<<<< HEAD
                                      ({values.co_name}).  But for the moment, let me end by thanking you. I know how intense our application
+=======
+                                     {values.co_name}.  But for the moment, let me end by thanking you. I know how intense our application
+>>>>>>> d4b7c41892201ad9f6a16ca4f84e9b7b738b4df9
                                     process is and I’m looking forward to the great good we will do together.  This will be work worth doing.
                                 </Text>
 
                                 <Text style={styles.text}>
+<<<<<<< HEAD
                                     If you have any questions or need to talk, feel free to call me at ({values.hman_phone}) or email me at ({values.hman_email}).
                                     Otherwise, please take the day to consult friends and family and sleep on the decision, then send your
                                     acceptance or withdrawal so we can move forward.  And remember, if you feel that this offer is incorrect
                                     based on either data about the market or your experience, please let ({values.comp_person_name}) know; it is important
+=======
+                                    If you have any questions or need to talk, feel free to call me at (values.hman_phone) or email me at (values.hman_email).
+                                    Otherwise, please take the day to consult friends and family and sleep on the decision, then send your
+                                    acceptance or withdrawal so we can move forward.  And remember, if you feel that this offer is incorrect
+                                    based on either data about the market or your experience, please let (comp_person_name) know; it is important
+>>>>>>> d4b7c41892201ad9f6a16ca4f84e9b7b738b4df9
                                     that we start from a place we both believe is fair.
                                 </Text>
 
                                 <Text style={styles.text}>
                                     Looking forward to next steps,
+<<<<<<< HEAD
                                 </Text>
                                 <Text style={styles.text}>
                                     ({values.hman_first_name})
+=======
+                                    (values.hman_first_name)
+>>>>>>> d4b7c41892201ad9f6a16ca4f84e9b7b738b4df9
                                 </Text>
                                 <Text style={styles.pageNumber} render={({ pageNumber, totalPages }) => (
                                     `${pageNumber} / ${totalPages}`
