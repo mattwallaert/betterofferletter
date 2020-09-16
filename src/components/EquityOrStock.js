@@ -108,7 +108,7 @@ export class EquityOrStock extends Component {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
-                width: '90%'
+                width: '57%'
             },
         }
         return (
@@ -176,7 +176,7 @@ export class EquityOrStock extends Component {
                                 onMouseLeave={this.handleHoverOff}
                                 onClick={this.handlePublicClick}
                             >
-                                COMPANY PERFORMANCE</p>
+                                PUBLIC</p>
 
                             <br />
 
@@ -190,7 +190,7 @@ export class EquityOrStock extends Component {
                                 onMouseLeave={this.handleHoverOff}
                                 onClick={this.handlePrivateClick}
                             >
-                                NEW HIRE PERFORMANCE</p>
+                                PRIVATE</p>
                         </div>
                     </div>
 
