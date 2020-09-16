@@ -20,6 +20,7 @@ export class Letter extends Component {
         this.props.prevStep();
     }
 
+    // Was AB Slide Checked
     mapSlidesAB = (values) => {
         var i = 0
         for (i = 0; i < values.step.length; i++) {
@@ -28,6 +29,7 @@ export class Letter extends Component {
             }
         }
     }
+    // Was Eos Slide Checked
     mapSlidesEoS = (values) => {
         var i = 0
         for (i = 0; i < values.step.length; i++) {
@@ -36,6 +38,7 @@ export class Letter extends Component {
             }
         }
     }
+    // Was Benefit Slide Checked
     mapSlidesB = (values) => {
         var i = 0
         for (i = 0; i < values.step.length; i++) {
@@ -44,6 +47,7 @@ export class Letter extends Component {
             }
         }
     }
+    // Was OP Slide Checked
     mapSlidesOP = (values) => {
         var i = 0
         for (i = 0; i < values.step.length; i++) {
