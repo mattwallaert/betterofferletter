@@ -159,7 +159,7 @@ export class Letter extends Component {
 
                                 {this.mapSlidesAB(values) &&
                                     <Text style={styles.text}>
-                                        (OPTIONAL) You will also be eligible for bonuses of up to (BONUS), based (on your performance throughout
+                                        (OPTIONAL) You will also be eligible for bonuses of up to (values.bench_bonus), based (on your performance throughout
                                         the year) (the performance of the company throughout the year).  Specifically, your bonus is based on
                                         (BONUS CRITERIA).  You’ll receive regular feedback during your 1:1s with me and should feel free to ask
                                         about what you need to do in order to earn that bonus as you settle into your work.
@@ -168,29 +168,29 @@ export class Letter extends Component {
                                 {this.mapSlidesEoS(values) &&
                                     <Text style={styles.text}>
                                         (OPTIONAL) Part of your compensation is also equity-based, which means you’ll directly own a portion of
-                                    {values.co_name}.  At our current market value, which is defined as (PUBLIC OR PRIVATE OR UNPRICED),
-                                    this equity is worth (EQUITY) and you’ll receive it over the course of X years, every X months, so long
-                                    as you continue to work at {values.co_name}.  So you can think of it as worth about $X per year; as with
+                                     {values.co_name}.  At our current market value, which is defined as (PUBLIC OR PRIVATE OR UNPRICED),
+                                    this equity is worth (EQUITY) and you’ll receive it over the course of (values.vest_years) years, every (values.vest_rate_mos) 
+                                    months, so long as you continue to work at {values.co_name}.  So you can think of it as worth about $(X) per year; as with
                                     your benefits, happy to chat through the details at any time.
                                 </Text>}
 
                                 <Text style={styles.text}>
                                     Once you accept this offer, we’ll have to do some paperwork to do before you can begin working at
-                                    {values.co_name}.  But for the moment, let me end by thanking you.  I know how intense our application
+                                     {values.co_name}.  But for the moment, let me end by thanking you. I know how intense our application
                                     process is and I’m looking forward to the great good we will do together.  This will be work worth doing.
                                 </Text>
 
                                 <Text style={styles.text}>
-                                    If you have any questions or need to talk, feel free to call me at XXX.XXX.XXXX or email me.
+                                    If you have any questions or need to talk, feel free to call me at (values.hman_phone) or email me at (values.hman_email).
                                     Otherwise, please take the day to consult friends and family and sleep on the decision, then send your
                                     acceptance or withdrawal so we can move forward.  And remember, if you feel that this offer is incorrect
-                                    based on either data about the market or your experience, please let (comp_person_name); it is important
+                                    based on either data about the market or your experience, please let (comp_person_name) know; it is important
                                     that we start from a place we both believe is fair.
                                 </Text>
 
                                 <Text style={styles.text}>
                                     Looking forward to next steps,
-                                    (hman_first_name)
+                                    (values.hman_first_name)
                                 </Text>
                                 <Text style={styles.pageNumber} render={({ pageNumber, totalPages }) => (
                                     `${pageNumber} / ${totalPages}`
@@ -199,12 +199,12 @@ export class Letter extends Component {
                         </Document>
                     </PDFViewer>
                     <br />
-                    <Button                        
+                    <Button
                         variant="contained"
                         color="secondary"
                         className={ButtonStyles.button}
                         onClick={this.back}
-                        > Back
+                    > Back
                     </Button>
                     {/* <Button                        
                         variant="contained"
