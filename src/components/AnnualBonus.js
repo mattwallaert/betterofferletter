@@ -63,8 +63,6 @@ export class AnnualBonus extends Component {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-
-
             },
             h2Container: {
                 flexDirection: 'column',
@@ -74,7 +72,6 @@ export class AnnualBonus extends Component {
                 width: '79%'
             },
             h2Box: {
-
                 marginBottom: 0
             },
             boxContainer: {
@@ -108,7 +105,7 @@ export class AnnualBonus extends Component {
                     </div>
 
                     <div
-                        style={{ marginLeft: '11%'  }}
+                        style={{ marginLeft: '11%' }}
                     >
                         <img src={Line5} alt="Line 5" />
 
@@ -160,7 +157,7 @@ export class AnnualBonus extends Component {
                     </div>
 
                     <div
-                     style={{ transform: 'translate(200%, 0%)' }}
+                        style={{ transform: 'translate(200%, 0%)' }}
                     >
                         <Button
                             variant="contained"
