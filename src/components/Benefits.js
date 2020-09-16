@@ -11,6 +11,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles } from '@material-ui/core/styles';
+import Line5 from '../images/lines/Line5.png'
 
 
 export class Benefits extends Component {
@@ -62,26 +63,49 @@ export class Benefits extends Component {
                 background: "#fdce16",
             },
             box: {
-                //    background: "blue"
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
 
             },
+            h2Container: {
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "center"
+            },
+            h2Box: {
+                // width: "530px",
+                marginBottom: 0
+            }
         }
         return (
 
             <div className='ov1' style={myStyle.container}>
                 <div className="ov1-SubCategory" style={myStyle.box}>
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>BENEFITS</h2>
+                    </div>
 
-                    <h2>Benefits</h2>
+                    <img src={Line5} alt="Line 5" />
 
-                    <p>Now for benefits.  While the full list of benefits may be too long to include in an offer letter,
+                    <div
+                        style={{ width: '56%' }}
+                    >
+
+
+                        <p>Now for benefits.  While the full list of benefits may be too long to include in an offer letter,
                     it is important to make sure your new hire has a general idea of what is available.</p>
-                    <p>
-                        Check all that apply.
+                        <p>
+                            Check all that apply.
                     </p>
+                    </div>
 
                     {/* <p><input type="checkbox" name="health-insurance" /> Health Insurance</p> */}
 
-                    <FormGroup className={classes.root}>
+                    <FormGroup 
+                    className={classes.root}
+                    style={{fontFamily: 'gilroy-medium'}}
+                    >
                         <FormControlLabel
                             control={
                                 <Checkbox
@@ -187,24 +211,28 @@ export class Benefits extends Component {
                         }
 
                     </FormGroup>
-                    <TextField
-                        hintText="Other Benefit"
-                        floatingLabelText="Other Benefit"
-                        onChange={handleChange('other_benefit')}
-                        defaultValue={values.other_benefit}
-                    />
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        size="small"
-                        onClick={handleAddOtherBenefits}
-                        className={classes.button}
-                        startIcon={<SaveIcon />}
+                    <div
                     >
-                        Save
+                        <TextField
+                            hintText="Other Benefit"
+                            label="Other Benefit"
+                            onChange={handleChange('other_benefit')}
+                            defaultValue={values.other_benefit}
+                        />
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="small"
+                            onClick={handleAddOtherBenefits}
+                            className={classes.button}
+                            startIcon={<SaveIcon />}
+                        >
+                            Save
                     </Button>
+                    </div>
 
                     <br />
+                    <div>
                     <Button
                         variant="contained"
                         color="secondary"
@@ -219,6 +247,7 @@ export class Benefits extends Component {
                         onClick={this.continue}
                     > Continue
                     </Button>
+                    </div>
                 </div>
             </div>
 
@@ -237,7 +266,9 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: "center"
+        justifyContent: "center",
+        fontFamily: 'gilroy-medium',
+        width: '47%'
 
     }
 })

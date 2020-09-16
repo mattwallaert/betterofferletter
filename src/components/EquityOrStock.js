@@ -85,6 +85,7 @@ export class EquityOrStock extends Component {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                height: '100%'
             },
             h2Container: {
                 flexDirection: 'column',

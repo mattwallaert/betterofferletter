@@ -85,7 +85,7 @@ export class UserForm extends Component {
             "Free Lunch",
             "Student Loan Assistance"
         ],
-        otherBenefits: ["test", "res2"],
+        otherBenefits: [],
         benefits: [],
         health_insurance: false,
         dental_insurance: false,
