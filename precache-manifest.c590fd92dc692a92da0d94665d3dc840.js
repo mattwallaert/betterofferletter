@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62243e7ece01889c8084bd6565fca59c",
+    "revision": "263a279f980960b7b517e918d91902db",
     "url": "/betterofferletter/index.html"
   },
   {
-    "revision": "41a996646a3f01048c22",
+    "revision": "bee3fa984e2eb0d4e88b",
     "url": "/betterofferletter/static/css/main.902fd335.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/betterofferletter/static/js/2.ff0d7016.chunk.js"
   },
   {
-    "revision": "41a996646a3f01048c22",
-    "url": "/betterofferletter/static/js/main.c5be4324.chunk.js"
+    "revision": "bee3fa984e2eb0d4e88b",
+    "url": "/betterofferletter/static/js/main.c299144a.chunk.js"
   },
   {
     "revision": "f8d4c4c5e9a958b299dd",
