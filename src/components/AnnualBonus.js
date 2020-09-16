@@ -85,7 +85,7 @@ export class AnnualBonus extends Component {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
-                width: '64%'
+                width: '77%'
             },
             boxContainerLink2: {
                 display: "flex",
@@ -130,7 +130,7 @@ export class AnnualBonus extends Component {
                         <p
                             style={{
                                 fontWeight: "bold",
-                                fontSize: '2vw',
+                                fontSize: '1.5vw',
                                 paddingRight: "2.5%"
                             }}
                             onMouseOver={this.handleHoverOn}
@@ -144,7 +144,7 @@ export class AnnualBonus extends Component {
                         <p
                             style={{
                                 fontWeight: "bold",
-                                fontSize: '2vw',
+                                fontSize: '1.5vw',
                                 paddingLeft: "2.5%"
                             }}
                             onMouseOver={this.handleHoverOn}

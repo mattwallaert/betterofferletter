@@ -107,7 +107,7 @@ export class EquityOrStock extends Component {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
-                width: '64%'
+                width: '90%'
             },
         }
         return (
