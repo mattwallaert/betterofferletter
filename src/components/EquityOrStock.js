@@ -9,9 +9,11 @@ import { withStyles } from '@material-ui/core/styles';
 import Slider from "@material-ui/core/Slider";
 import Typography from '@material-ui/core/Typography';
 // Buttons
-import ButtonGroup from '@material-ui/core/ButtonGroup'
+// import ButtonGroup from '@material-ui/core/ButtonGroup'
 //Checkbox
 import Checkbox from '@material-ui/core/Checkbox';
+//Line
+import Line3 from '../images/lines/Line3.png'
 
 export class EquityOrStock extends Component {
     state = {
@@ -21,10 +23,20 @@ export class EquityOrStock extends Component {
         ifUnpricedCheckConfirm: false
     }
 
+    handleHoverOn = e => {
+        e.preventDefault();
+        e.target.style.color = "#fdce16";
+        e.target.style.cursor = 'pointer';
+    }
+    handleHoverOff = e => {
+        e.preventDefault();
+        e.target.style.color = 'black';
+    }
+
     handlePublicClick = e => {
         e.preventDefault();
         this.setState({
-            public: !this.state.salary,
+            public: !this.state.public,
             private: false
         })
 
@@ -33,7 +45,7 @@ export class EquityOrStock extends Component {
     handlePrivateClick = e => {
         e.preventDefault();
         this.setState({
-            private: !this.state.hourly,
+            private: !this.state.private,
             public: false
         })
     }
@@ -67,70 +79,139 @@ export class EquityOrStock extends Component {
         const { values, handleChange, classes, handleSliderChange } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
-                width: "100%",
-                height: "100%"
+                textAlign: 'left',
             },
             box: {
-                //    background: "blue"
-
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+            },
+            h2Container: {
+                flexDirection: 'column',
+                display: "flex",
+                alignContent: "flex-start",
+                justifyContent: "start",
+                width: '79%'
+            },
+            h2Box: {
+                marginBottom: 0
+            },
+            boxContainer: {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
+            },
+            boxContainerLink: {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                width: '64%'
             },
         }
         return (
 
             <div className='ov1' style={myStyle.container}>
                 <div className="ov1-SubCategory" style={myStyle.box}>
+                    <div className="h2Container" style={myStyle.h2Container}>
+                        <h2 className="h2Box" style={myStyle.h2Box}>EQUITY OR STOCK</h2>
+                    </div>
 
-                    <h2>EQUITY OR STOCK</h2>
-                    {/* reformat */}
+                    <div
+                        style={{ marginLeft: '7%' }}
+                    >
 
-                    <p> Now for equity. </p>
+                        <img src={Line3} alt="Line 3" />
 
-                    <p> Over how many years will the equity vest? </p>
+                        <p> Now for equity. </p>
 
-                    <TextField
-                        type='number'
-                        hintText="Years of Equity Vest"
-                        label="Years of Equity Vest"
-                        onChange={handleChange('vest_years')}
-                        defaultValue={values.vest_years}
-                    />
+                        <p> Over how many years will the equity vest? </p>
 
-                    <p> How often will it vest? 1 month, 3 months, 6 months, 12 months </p>
+                        <TextField
+                            type='number'
+                            hintText="Years of Equity Vest"
+                            label="Years of Equity Vest"
+                            onChange={handleChange('vest_years')}
+                            defaultValue={values.vest_years}
+                        />
 
-                    <Typography >
-                        Vest in months
+                        <p> How often will it vest? 1 month, 3 months, 6 months, 12 months </p>
+
+                        <Typography >
+                            Vest in months
                     </Typography>
 
-                    <Slider
-                        className={classes.root}
-                        value={values.vest_rate_mos}
-                        onChange={handleSliderChange('vest_rate_mos')}
-                        step={null}
-                        min={1}
-                        max={12}
-                        marks={marks}
-                        aria-labelledby="vest_rate_mos"
-                        valueLabelDisplay="auto"
-                    />
+                        <Slider
+                            className={classes.root}
+                            value={values.vest_rate_mos}
+                            onChange={handleSliderChange('vest_rate_mos')}
+                            step={null}
+                            min={1}
+                            max={12}
+                            marks={marks}
+                            aria-labelledby="vest_rate_mos"
+                            valueLabelDisplay="auto"
+                        />
 
-                    {/* Note: 4 buttons, 1 for each option (vest_rate_mos) */}
+                        {/* Note: 4 buttons, 1 for each option (vest_rate_mos) */}
 
-                    <p> Is the company public or private? </p>
+                        <p> Is the company public or private? </p>
 
-                    <ButtonGroup
-                        variant="contained"
-                        color="inherit"
-                        aria-label="full-width contained primary button group"
+                        <div
+                            style={myStyle.boxContainerLink}
+                        >
+
+                            <p
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: '1.5vw',
+                                    paddingRight: "2.5%"
+                                }}
+                                onMouseOver={this.handleHoverOn}
+                                onMouseLeave={this.handleHoverOff}
+                                onClick={this.handlePublicClick}
+                            >
+                                COMPANY PERFORMANCE</p>
+
+                            <br />
+
+                            <p
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: '1.5vw',
+                                    paddingLeft: "2.5%"
+                                }}
+                                onMouseOver={this.handleHoverOn}
+                                onMouseLeave={this.handleHoverOff}
+                                onClick={this.handlePrivateClick}
+                            >
+                                NEW HIRE PERFORMANCE</p>
+                        </div>
+                    </div>
+
+
+                    <div
+                        style={{ transform: 'translate(200%, 0%)' }}
                     >
                         <Button
-                            onClick={this.handlePublicClick}
-                        >Public</Button>
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
+                    </Button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
+                    </Button>
+                    </div>
+                </div>
+                <div className="ov1-SubCategory" style={myStyle.boxContainer}>
 
-
-
-                        <Button onClick={this.handlePrivateClick}>Private</Button>
-                    </ButtonGroup><br />
 
                     {this.state.public &&
                         <div>
@@ -194,42 +275,27 @@ export class EquityOrStock extends Component {
                             <p> *Do not estimate a future value; your employees have the same risk potential as your investors
                                 and should be compensated on the same terms.</p>
 
-
                         </div>}
 
 
                     {/* <p>
-                        <Checkbox
-                            checked={this.state.ifUnpricedCheckConfirm}
-                            onChange={this.handleCheck('ifUnpricedCheckConfirm')}
-                            // value= 'overview_check'
-                            color="primary"
-                            label="Unpriced Check Confirm"
-                            disabled={!this.state.public === true}
-                        />
-                        CHECKBOX “We have not yet received a priced investment.” </p> */}
+    <Checkbox
+        checked={this.state.ifUnpricedCheckConfirm}
+        onChange={this.handleCheck('ifUnpricedCheckConfirm')}
+        // value= 'overview_check'
+        color="primary"
+        label="Unpriced Check Confirm"
+        disabled={!this.state.public === true}
+    />
+    CHECKBOX “We have not yet received a priced investment.” </p> */}
 
-                    ((Display Value and Value As Salary))
-                    <p>Value = {this.state.public && values.if_public_price}
+((Display Value and Value As Salary))
+<p>Value = {this.state.public && values.if_public_price}
                         {this.state.private && values.if_private_value},
-                    Value as Salary = {this.state.public && values.publicValueAsSalary}
+Value as Salary = {this.state.public && values.publicValueAsSalary}
                         {this.state.private && values.privateValueAsSalary} </p>
 
                     <br />
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
-                    </Button>
                 </div>
             </div>
 
@@ -245,6 +311,7 @@ const styles = theme => ({
     },
     root: {
         width: 250,
+        color: '#fdce16',
         // alignItems: 'center',
         // justifyContent: 'center',
         // margin: theme.spacing(1)
