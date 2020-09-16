@@ -296,7 +296,7 @@ export class EquityOrStock extends Component {
 ((Display Value and Value As Salary))
 <p>Value = {this.state.public && values.if_public_price}
                         {this.state.private && values.if_private_value},
-Value as Salary = {this.state.public && values.publicValueAsSalary}
+Value as Salary per year = {this.state.public && values.publicValueAsSalary}
                         {this.state.private && values.privateValueAsSalary} </p>
 
                     <br />
