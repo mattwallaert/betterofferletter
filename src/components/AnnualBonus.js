@@ -17,6 +17,8 @@ export class AnnualBonus extends Component {
         newHire: false,
     }
 
+    // test
+
     handleHoverOn = e => {
         e.preventDefault();
         e.target.style.color = 'white';
