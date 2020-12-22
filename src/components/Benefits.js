@@ -37,7 +37,7 @@ export class Benefits extends Component {
                     control={
                         <Checkbox
                             checked={true}
-                            // onChange={}
+                            onChange={this.handleOtherBenefitsCheck}
                             color="primary"
                         />
                     } label={`${item}`}

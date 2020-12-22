@@ -216,6 +216,26 @@ export class UserForm extends Component {
 
     };
 
+    handleOtherBenefitsCheck = place => e => {
+        this.setState({ ...this.state, [place]: e.target.checked });
+        var array = [...this.state.otherBenefits]
+        var otherBenefit = place
+        var index = array.indexOf(otherBenefit)
+        console.log(otherBenefit)
+        // console.log(e.target.checked)
+        if (e.target.checked === false && index > -1) {
+
+            array.splice(index, 1);
+            console.log(e.target.checked)
+            this.setState({ otherBenefits: array })
+        } else {
+            array.splice(-2, 0, otherBenefit);
+            console.log(e.target.checked)
+            this.setState({ otherBenefits: array })
+        }
+
+    };
+
     handleAddOtherBenefits = () => {
         this.setState({
             otherBenefits: [...this.state.otherBenefits, this.state.other_benefit]
@@ -302,8 +322,6 @@ export class UserForm extends Component {
 
         //Consider if only other benefits are added
         //Consider comma
-
-
     }
 
     render() {
@@ -413,6 +431,7 @@ export class UserForm extends Component {
                                 prevStep={this.prevStep}
                                 handleChange={this.handleChange}
                                 handleBenefitsCheck={this.handleBenefitsCheck}
+                                handleOtherBenefitsCheck={this.handleOtherBenefitsCheck}
                                 handleAddOtherBenefits={this.handleAddOtherBenefits}
                                 values={values}
                             />
