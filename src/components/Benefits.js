@@ -66,6 +66,7 @@ export class Benefits extends Component {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                // width:"100%"
 
             },
             h2Container: {
@@ -81,7 +82,7 @@ export class Benefits extends Component {
         return (
 
             <div className='ov1' style={myStyle.container}>
-                <div className="ov1-SubCategory" style={myStyle.box}>
+                <div className="ov1-SubCategorySingle" style={myStyle.box}>
                     <div className="h2Container" style={myStyle.h2Container}>
                         <h2 className="h2Box" style={myStyle.h2Box}>BENEFITS</h2>
                     </div>

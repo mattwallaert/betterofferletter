@@ -82,7 +82,7 @@ export class Letter extends Component {
 
 
             <div className='ov1' style={myStyle.container}>
-                <div className="ov1-SubCategory" style={myStyle.box}>
+                <div className="ov1-SubCategorySingle" style={myStyle.box}>
                     <div className="h2Container" style={myStyle.h2Container}>
                         <h2 className="h2Box" style={myStyle.h2Box}>LETTER</h2>
                     </div>

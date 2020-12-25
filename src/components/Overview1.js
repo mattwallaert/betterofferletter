@@ -36,7 +36,7 @@ export class Overview1 extends Component {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyItems: "center",
-                width:"100%"
+                // width:"100%"
 
             },
         }
@@ -44,7 +44,7 @@ export class Overview1 extends Component {
 
             <div className='ov1' style={myStyle.container}>
                 {/* <AppBar title="Overview" /> */}
-                <div className="ov1-SubCategory" style={myStyle.box} >
+                <div className="ov1-SubCategorySingle" style={myStyle.box} >
 
                     <h2
                     >ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
