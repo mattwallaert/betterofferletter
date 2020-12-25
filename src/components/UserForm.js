@@ -470,7 +470,7 @@ export class UserForm extends Component {
                         } />
                     </Switch>
                     <div className='footer'>
-                        <p>a <span style= {{fontFamily: "gilroyextrabold"}}>work worth doing</span> project by
+                        <p style= {{fontSize: "0.75vw"}}>a <span style= {{fontFamily: "gilroyextrabold"}}>work worth doing</span> project by
                             {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/pamccombs/">p. reese mccombs</a>,
                             {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elicelly-melendez/">elicelly melendez</a>, and
                             {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mattwallaert/">matt wallaert</a>

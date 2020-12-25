@@ -27,7 +27,7 @@ export class Overview1 extends Component {
         // const { values, handleBenefitsCheck, handleChange } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
+                background: "#fdce16",
 
             },
             box: {
@@ -51,7 +51,7 @@ export class Overview1 extends Component {
 
                     <p
                         style={{ width: '57%' }}
-                    >BetterOfferLetter is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
+                    ><span style= {{fontFamily: "gilroyextrabold"}}>BetterOfferLetter</span> is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
                         Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
                     In order to continue, please certify that the following is true. </p>
 

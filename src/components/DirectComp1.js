@@ -29,7 +29,7 @@ export class DirectComp1 extends Component {
         const { values, handleChange, classes, handleSliderChange, handleBlur } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
+                background: "#fdce16",
                 width: "100%",
                 height: "100%"
             },

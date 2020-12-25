@@ -19,7 +19,7 @@ export class OnboardingPay extends Component {
         const { values, handleChange } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
+                background: "#fdce16",
                 width: "100%",
                 height: "100%"
             },

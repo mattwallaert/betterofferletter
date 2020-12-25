@@ -67,7 +67,7 @@ export class DirectComp3 extends Component {
         const { values, handleChange } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
+                background: "#fdce16",
                 width: "100%",
                 height: "100%"
             },

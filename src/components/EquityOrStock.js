@@ -79,6 +79,7 @@ export class EquityOrStock extends Component {
         const { values, handleChange, classes, handleSliderChange } = this.props;
         const myStyle = {
             container: {
+                background: "#fdce16",
                 textAlign: 'left',
             },
             box: {

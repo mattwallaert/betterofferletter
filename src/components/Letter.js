@@ -61,7 +61,7 @@ export class Letter extends Component {
         const { values, printBenefits } = this.props;
         const myStyle = {
             container: {
-                // background: "#fdce16",
+                background: "#fdce16",
                 flexDirection: 'column'
             },
             box: {
