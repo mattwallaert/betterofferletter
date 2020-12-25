@@ -142,14 +142,14 @@ p {
   /* height: 100%; */
   width: 100%;
   /* height: 50%; */
-  /* flex: 2 1 auto; */
+  flex: 2 1 0%;
 }
 
 
 .links {
   /* justify-content: center; */
   display: flexbox;
-  flex: 1;
+  flex: 1 1 0%;
   /* align-items:flex-start; */
 }
 
@@ -160,6 +160,7 @@ p {
   /* align-items: flex-end; */
   /* top: 90%; */
   /* font-size: .75vw; */
+  flex: 1 1 0%;
   
 
 
