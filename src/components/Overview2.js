@@ -65,64 +65,65 @@ export class Overview2 extends Component {
                     </div>
 
                     <div
-                    style={{marginLeft: '9%'}}
+                        style={{ marginLeft: '9%' }}
                     >
-                    <img src={Line2} alt="Line 2" />
-                    {/* Checkboxes add slides to queue */}
+                        <img src={Line2} alt="Line 2" />
+                        {/* Checkboxes add slides to queue */}
 
-                    <p
-                    style={{color: 'white'}}
-                    >(Non optional) Direct Compensation (hourly or salaried wages)</p>
+                        <p
+                            style={{ color: 'white' }}
+                        >(Non optional) Direct Compensation (hourly or salaried wages)</p>
 
-                    <FormGroup className={classes.root}>
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={values.annual_bonus_slide}
-                                    onChange={handleSlideCheck('annual_bonus_slide')}
-                                    // value='/annual_bonus'
-                                    color="primary"
-                                />
-                            } label="Annual Bonus"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={values.equity_or_stock_slide}
-                                    onChange={handleSlideCheck('equity_or_stock_slide')}
-                                    // value='/equity_or_stock'
-                                    color="primary"
-                                />
-                            } label="Equity or Stock"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={values.benefits_slide}
-                                    onChange={handleSlideCheck('benefits_slide')}
-                                    // value='/benefits'
-                                    color="primary"
-                                />
-                            } label="Benefits"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={values.onboarding_pay_slide}
-                                    onChange={handleSlideCheck('onboarding_pay_slide')}
-                                    // value='/onboarding_pay'
-                                    color="primary"
-                                />
-                            } label="Relocation/Onboarding Payment"
-                        />
-                    </FormGroup >
+                        <FormGroup className={classes.root}>
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={values.annual_bonus_slide}
+                                        onChange={handleSlideCheck('annual_bonus_slide')}
+                                        // value='/annual_bonus'
+                                        color="primary"
+                                    />
+                                } label="Annual Bonus"
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={values.equity_or_stock_slide}
+                                        onChange={handleSlideCheck('equity_or_stock_slide')}
+                                        // value='/equity_or_stock'
+                                        color="primary"
+                                    />
+                                } label="Equity or Stock"
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={values.benefits_slide}
+                                        onChange={handleSlideCheck('benefits_slide')}
+                                        // value='/benefits'
+                                        color="primary"
+                                    />
+                                } label="Benefits"
+                            />
+                            <FormControlLabel
+                                control={
+                                    <Checkbox
+                                        checked={values.onboarding_pay_slide}
+                                        onChange={handleSlideCheck('onboarding_pay_slide')}
+                                        // value='/onboarding_pay'
+                                        color="primary"
+                                    />
+                                } label="Relocation/Onboarding Payment"
+                            />
+                        </FormGroup >
                     </div>
 
                     <br />
                     <div
-                    style= {{ transform: 'translate(200%, 0%)' }}
+                        style={{ transform: 'translate(200%, 0%)' }}
                     >
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -130,6 +131,7 @@ export class Overview2 extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}

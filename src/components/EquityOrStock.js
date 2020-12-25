@@ -121,7 +121,7 @@ export class EquityOrStock extends Component {
                     </div>
 
                     <div
-                        style={{ 
+                        style={{
                             marginLeft: '7%',
                             width: '85%'
                         }}
@@ -200,6 +200,7 @@ export class EquityOrStock extends Component {
                         style={{ transform: 'translate(200%, 0%)' }}
                     >
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -207,6 +208,7 @@ export class EquityOrStock extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}

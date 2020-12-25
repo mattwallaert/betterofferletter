@@ -103,9 +103,9 @@ export class Benefits extends Component {
 
                     {/* <p><input type="checkbox" name="health-insurance" /> Health Insurance</p> */}
 
-                    <FormGroup 
-                    className={classes.root}
-                    style={{fontFamily: 'gilroy-medium'}}
+                    <FormGroup
+                        className={classes.root}
+                        style={{ fontFamily: 'gilroy-medium' }}
                     >
                         <FormControlLabel
                             control={
@@ -234,19 +234,21 @@ export class Benefits extends Component {
 
                     <br />
                     <div>
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        className={styles.button}
-                        onClick={this.back}
-                    > Back
+                        <Button
+                            style={{ right: "5%" }}
+                            variant="contained"
+                            color="secondary"
+                            className={styles.button}
+                            onClick={this.back}
+                        > Back
                     </Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={styles.button}
-                        onClick={this.continue}
-                    > Continue
+                        <Button
+                            style={{ left: "5%" }}
+                            variant="contained"
+                            color="primary"
+                            className={styles.button}
+                            onClick={this.continue}
+                        > Continue
                     </Button>
                     </div>
                 </div>

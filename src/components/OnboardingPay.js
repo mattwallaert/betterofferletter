@@ -61,7 +61,7 @@ export class OnboardingPay extends Component {
                     </div>
 
                     <div
-                      style={{width: '57%'}}
+                        style={{ width: '57%' }}
                     >
 
                         <img src={Line3} alt="Line 3" />
@@ -85,6 +85,7 @@ export class OnboardingPay extends Component {
                     <br />
                     <div>
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -92,6 +93,7 @@ export class OnboardingPay extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}

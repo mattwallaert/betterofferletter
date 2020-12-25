@@ -64,7 +64,7 @@ export class DirectComp2 extends Component {
                         <p>Avoid biasing the hiring manager. You need to name someone that the candidate can submit additional information to
                             if they believe the benchmark or experience assessment are incorrect.</p>
                         <p>This could be someone in HR, another hiring manager, or the hiring manager’s manager (sometimes called a “skip level”).</p>
-                        
+
                         <p>What is the first and last name of the person to whom the candidate can submit additional information? (text validation)</p>
 
                     </div>
@@ -73,6 +73,7 @@ export class DirectComp2 extends Component {
                         style={{ transform: 'translate(200%, 0%)' }}
                     >
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -80,6 +81,7 @@ export class DirectComp2 extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}
@@ -92,7 +94,7 @@ export class DirectComp2 extends Component {
 
                     <p>First and last name?</p>
                     <TextField
-                        style={{ 
+                        style={{
                             paddingTop: '1%',
                             width: '45%'
                         }}
@@ -107,7 +109,7 @@ export class DirectComp2 extends Component {
                     <p>What is their email? (email validation)</p>
 
                     <TextField
-                        style={{ 
+                        style={{
                             paddingTop: '1%',
                             width: '45%'
                         }}

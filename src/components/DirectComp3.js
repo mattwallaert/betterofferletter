@@ -195,6 +195,7 @@ export class DirectComp3 extends Component {
 
                     <br />
                     <Button
+                        style={{ right: "0.5%" }}
                         variant="contained"
                         color="secondary"
                         className={styles.button}
@@ -202,6 +203,8 @@ export class DirectComp3 extends Component {
                     > Back
                     </Button>
                     <Button
+                        style={{ left: "0.5%" }}
+                        // style={{ left: "1%" }}
                         variant="contained"
                         color="primary"
                         className={styles.button}

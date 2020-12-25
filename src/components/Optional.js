@@ -21,6 +21,8 @@ export class Optional extends Component {
             container: {
                 background: "#fdce16",
                 textAlign: 'left',
+                // height:"92%"
+                flex: "1 2 0%"
             },
             box: {
                 display: "flex",
@@ -136,6 +138,7 @@ export class Optional extends Component {
                         style={{ transform: 'translate(200%, 250%)' }}
                     >
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -143,6 +146,7 @@ export class Optional extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}

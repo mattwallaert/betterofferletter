@@ -61,7 +61,7 @@ export class DirectComp1 extends Component {
                     <img src={Line3} alt="Line 3" />
 
                     <div
-                    style={{width: '56%'}}
+                        style={{ width: '56%' }}
                     >
 
                         <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the
@@ -74,7 +74,7 @@ export class DirectComp1 extends Component {
                     <Typography
                         id="input-slider"
                         gutterBottom
-                        style={{ 
+                        style={{
                             lineHeight: 3,
                             fontFamily: "gilroy-medium"
                         }}
@@ -104,7 +104,7 @@ export class DirectComp1 extends Component {
                                 margin="dense"
                                 onChange={handleChange('pct_slider')}
                                 onBlur={handleBlur}
-                                
+
                                 inputProps={{
                                     step: 5,
                                     min: -25,
@@ -122,6 +122,7 @@ export class DirectComp1 extends Component {
                     <br />
                     <div>
                         <Button
+                            style={{ right: "5%" }}
                             variant="contained"
                             color="secondary"
                             className={styles.button}
@@ -129,6 +130,7 @@ export class DirectComp1 extends Component {
                         > Back
                     </Button>
                         <Button
+                            style={{ left: "5%" }}
                             variant="contained"
                             color="primary"
                             className={styles.button}
