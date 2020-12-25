@@ -337,10 +337,10 @@ export class UserForm extends Component {
                 history={history}
                 basename={process.env.PUBLIC_URL}
             >
-                <div className= "userForm">
+                <div className="userForm">
 
-                    
-                    <div className = 'links'>
+
+                    <div className='links'>
                         <NavLink to="/intro">  Intro    |</NavLink>
                         <NavLink to="/overview/1">  OV1    |</NavLink>
                         <NavLink to="/overview/2">  OV2     |</NavLink>
@@ -470,7 +470,12 @@ export class UserForm extends Component {
                         } />
                     </Switch>
                     <div className='footer'>
-                        <p>"testing!!"</p>
+                        <p>a <span>work worth doing</span> project by
+                            {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/pamccombs/">p. reese mccombs</a>,
+                            {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/elicelly-melendez/">elicelly melendez</a>, and
+                            {" "}<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mattwallaert/">matt wallaert</a>
+                        </p>
+
                     </div>
                 </div>
             </Router>
