@@ -6,6 +6,8 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Line3 from '../images/lines/Line3.png'
 // import ButtonGroup from '@material-ui/core/ButtonGroup'
+//Currency Transfer
+// import CurrencyFormat from 'react-currency-format';
 
 
 export class DirectComp3 extends Component {
@@ -17,7 +19,7 @@ export class DirectComp3 extends Component {
 
     handleHoverOn = e => {
         e.preventDefault();
-        e.target.style.color = "#fdce16";
+        e.target.style.color = "white";
         e.target.style.cursor = 'pointer';
     }
     handleHoverOff = e => {

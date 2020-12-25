@@ -25,7 +25,7 @@ export class EquityOrStock extends Component {
 
     handleHoverOn = e => {
         e.preventDefault();
-        e.target.style.color = "#fdce16";
+        e.target.style.color = "white";
         e.target.style.cursor = 'pointer';
     }
     handleHoverOff = e => {
