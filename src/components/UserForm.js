@@ -216,6 +216,8 @@ export class UserForm extends Component {
 
     };
 
+    // Fix delete capabilities.
+
     handleOtherBenefitsCheck = place => e => {
         this.setState({ ...this.state, [place]: e.target.checked });
         var array = [...this.state.otherBenefits]
@@ -318,7 +320,7 @@ export class UserForm extends Component {
         })
 
         const stringValues = convertBenefits.join(', ') + ", " + convertOtherBenefits.join(', ')
-            return stringValues
+        return stringValues
 
         //Consider if only other benefits are added
         //Consider comma
@@ -330,12 +332,15 @@ export class UserForm extends Component {
 
         return (
 
+
             <Router
                 history={history}
                 basename={process.env.PUBLIC_URL}
             >
-                <div>
-                    <div >
+                <div className= "userForm">
+
+                    
+                    <div className = 'links'>
                         <NavLink to="/intro">  Intro    |</NavLink>
                         <NavLink to="/overview/1">  OV1    |</NavLink>
                         <NavLink to="/overview/2">  OV2     |</NavLink>
@@ -464,9 +469,13 @@ export class UserForm extends Component {
                             />
                         } />
                     </Switch>
+                    <div className='footer'>
+                        <p>"testing!!"</p>
+                    </div>
                 </div>
             </Router>
         )
+
     }
 }
 

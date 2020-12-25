@@ -35,7 +35,8 @@ export class Overview1 extends Component {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyItems: "center"
+                justifyItems: "center",
+                width:"100%"
 
             },
         }
