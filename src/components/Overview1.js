@@ -50,16 +50,30 @@ export class Overview1 extends Component {
                     >ONE OF THE BEST WAYS TO FIGHT BIAS IS STANDARDIZATION</h2>
 
                     <p
-                        style={{ width: '57%' }}
-                    ><span style= {{fontFamily: "gilroyextrabold"}}>BetterOfferLetter</span> is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.
-                        Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.
-                    In order to continue, please certify that the following is true. </p>
+                        style={{
+                            width: '57%',
+                        }}
+                    ><span style={{ fontFamily: "gilroyextrabold" }}>BetterOfferLetter</span> is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.</p>
+
+                    <p
+                        style={{
+                            width: '57%',
+                            fontSize: '1vw'
+
+                        }}
+                    > Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.</p>
+                    <p
+                        style={{
+                            width: '57%',
+                            fontFamily: "gilroyextrabold"
+
+                        }}
+                    >In order to continue, please certify that the following is true. </p>
 
                     {/* <br/> */}
                     <p
                         style={{ width: '62%' }}
-                    >“I am committed to increasing pay equity through a transparent and direct compensation process.”
-
+                    >
                     <Checkbox
                             checked={this.state.overviewCheck}
                             // checked={this.handleOverviewCheck}
@@ -67,7 +81,10 @@ export class Overview1 extends Component {
                             // value= 'overview_check'
                             color="primary"
                             label="Overview Check"
-                        />
+                        />“I am committed to increasing pay equity through a transparent and direct compensation process.”
+                        {/* Need Italics */}
+
+
                     </p>
 
 
