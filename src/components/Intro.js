@@ -7,6 +7,8 @@ const Intro = () => {
                 style = {{background: "#fdce16"}}
                 >
                 <h1>BETTER OFFER LETTER</h1>
+
+                {/* prepare transition */}
                 
             </div>
     )
