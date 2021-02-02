@@ -94,7 +94,7 @@ export class Benefits extends Component {
                     >
 
 
-                        <p>Now for benefits.  While the full list of benefits may be too long to include in an offer letter,
+                        <p>While the full list of benefits may be too long to include in an offer letter,
                     it is important to make sure your new hire has a general idea of what is available.</p>
                         <p>
                             Check all that apply.

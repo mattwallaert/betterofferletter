@@ -111,7 +111,7 @@ export class AnnualBonus extends Component {
                     >
                         <img src={Line5} alt="Line 5" />
 
-                        <p> Now for annual bonus.  What is the benchmark’s maximum potential yearly bonus? </p>
+                        <p> What is the benchmark’s maximum potential yearly bonus? </p>
 
                         <TextField
                             color='secondary'

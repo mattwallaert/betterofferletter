@@ -67,8 +67,7 @@ export class OnboardingPay extends Component {
                         <img src={Line3} alt="Line 3" />
 
 
-                        <p>Now for onboarding payment.</p>
-
+                       
                         <p>This should not be based on a benchmark but rather on the amount of money needed to help your candidate be initially productive.</p>
 
                         <p>How much are you offering to assist with onboarding?</p>

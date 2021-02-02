@@ -129,8 +129,7 @@ export class EquityOrStock extends Component {
 
                         <img src={Line3} alt="Line 3" />
 
-                        <p> Now for equity. </p>
-
+                        
                         <p> Over how many years will the equity vest? </p>
 
                         <TextField
