@@ -69,7 +69,7 @@ export class OnboardingPay extends Component {
 
                         <p>Now for onboarding payment.</p>
 
-                        <p>This should not be based on a benchmark but rather on the amount of money needed to help your new hire be initially productive.</p>
+                        <p>This should not be based on a benchmark but rather on the amount of money needed to help your candidate be initially productive.</p>
 
                         <p>How much are you offering to assist with onboarding?</p>
 
