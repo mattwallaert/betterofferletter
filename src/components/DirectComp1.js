@@ -64,7 +64,7 @@ export class DirectComp1 extends Component {
                         style={{ width: '56%' }}
                     >
 
-                        <p>Based on the new hire’s skills and experience, how much more or less business value will they create compared to the
+                        <p>Based on the candidate’s skills and experience, how much more or less business value will they create compared to the
                                 average hire for this role?</p>
                         <p>Remember, the offer should be firmly tied to the business value the hire will create
                             and you should be prepared to justify the comparison to the skills and experience expected by the market.</p>
