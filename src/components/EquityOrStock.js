@@ -317,7 +317,8 @@ const styles = theme => ({
     },
     root: {
         width: 250,
-        color: '#fdce16',
+        // color: '#fdce16',
+        color: 'black',
         // alignItems: 'center',
         // justifyContent: 'center',
         // margin: theme.spacing(1)
