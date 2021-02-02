@@ -112,7 +112,7 @@ export class DirectComp1 extends Component {
                                     type: 'number',
                                     'aria-labelledby': 'input-slider',
                                 }}
-                            />
+                            /> %
                         </Grid>
                     </Grid>
 
