@@ -129,16 +129,20 @@ export class EquityOrStock extends Component {
 
                         <img src={Line3} alt="Line 3" />
 
-                        
+
                         <p> Over how many years will the equity vest? </p>
 
-                        <TextField
-                            type='number'
-                            hintText="Years of Equity Vest"
-                            label="Years of Equity Vest"
-                            onChange={handleChange('vest_years')}
-                            defaultValue={values.vest_years}
-                        />
+                        <p>
+                            <TextField
+                                type='number'
+                                hintText="Years of Equity Vest"
+                                label="Years of Equity Vest"
+                                onChange={handleChange('vest_years')}
+                                defaultValue={values.vest_years}
+                            /> <span>
+                                year(s)
+                        </span>
+                        </p>
 
                         <p> How often will it vest? 1 month, 3 months, 6 months, 12 months </p>
 
