@@ -14,7 +14,7 @@ export class DirectComp3 extends Component {
     state = {
         salary: false,
         hourly: false,
-        // clickColor: ""
+        clickColor: ""
     }
 
     handleHoverOn = e => {
@@ -27,23 +27,26 @@ export class DirectComp3 extends Component {
         e.target.style.color = 'black';
     }
 
+    handleClickColor = e => {
+        e.preventDefault();
+        e.target.style.color = this.state.clickColor
+        if (this.state.salary===true) {
+            this.setState({
+                clickColor: "white"
+            })
+        } else {
+            this.setState({
+                clickColor: "black"
+            })
+        }
+    }
+
     handleSalaryClick = e => {
         e.preventDefault();
         this.setState({
             salary: !this.state.salary,
             hourly: false,
-
-        })
-        // if (this.state.salary===true) {
-        //     this.setState({
-        //         clickColor: "#fdce16"
-        //     })
-        // } else {
-        //     this.setState({
-        //         clickColor: "black"
-        //     })
-        // }
-
+        })    
     }
 
     handleHourlyClick = e => {
