@@ -1,0 +1,339 @@
+# npm audit report
+
+node-fetch  <=2.6.0 || 3.0.0-beta.1 - 3.0.0-beta.8
+Denial of Service - https://npmjs.com/advisories/1556
+No fix available
+node_modules/node-fetch
+  isomorphic-fetch  2.0.0 - 2.2.1
+  Depends on vulnerable versions of node-fetch
+  node_modules/isomorphic-fetch
+    fbjs  0.7.0 - 1.0.0
+    Depends on vulnerable versions of isomorphic-fetch
+    node_modules/fbjs
+      recompose  >=0.18.0
+      Depends on vulnerable versions of fbjs
+      node_modules/recompose
+        material-ui  >=0.15.1
+        Depends on vulnerable versions of recompose
+        node_modules/material-ui
+      styled-components  <=4.0.0-beta.9-macro2
+      Depends on vulnerable versions of fbjs
+      node_modules/styled-components
+        @react-pdf/styled-components  *
+        Depends on vulnerable versions of styled-components
+        node_modules/@react-pdf/styled-components
+
+postcss  7.0.0 - 8.2.9
+Severity: moderate
+Regular Expression Denial of Service - https://npmjs.com/advisories/1693
+fix available via `npm audit fix --force`
+Will install react-scripts@2.1.8, which is a breaking change
+node_modules/postcss
+node_modules/resolve-url-loader/node_modules/postcss
+  autoprefixer  9.0.0 - 9.8.6
+  Depends on vulnerable versions of postcss
+  node_modules/autoprefixer
+  css-blank-pseudo  *
+  Depends on vulnerable versions of postcss
+  node_modules/css-blank-pseudo
+    postcss-preset-env  >=6.0.0
+    Depends on vulnerable versions of css-blank-pseudo
+    Depends on vulnerable versions of css-prefers-color-scheme
+    Depends on vulnerable versions of postcss
+    Depends on vulnerable versions of postcss-color-gray
+    Depends on vulnerable versions of postcss-double-position-gradients
+    node_modules/postcss-preset-env
+  css-declaration-sorter  4.0.0 - 5.1.2
+  Depends on vulnerable versions of postcss
+  node_modules/css-declaration-sorter
+    cssnano-preset-default  <=4.0.0-rc.2 || 4.0.1 - 4.0.8
+    Depends on vulnerable versions of css-declaration-sorter
+    Depends on vulnerable versions of cssnano-util-raw-cache
+    Depends on vulnerable versions of postcss
+    node_modules/cssnano-preset-default
+  css-has-pseudo  *
+  Depends on vulnerable versions of postcss
+  node_modules/css-has-pseudo
+  css-loader  2.0.0 - 4.3.0
+  Depends on vulnerable versions of postcss
+  node_modules/css-loader
+    react-scripts  >=2.0.0-next.03604a46
+    Depends on vulnerable versions of css-loader
+    Depends on vulnerable versions of postcss-flexbugs-fixes
+    Depends on vulnerable versions of resolve-url-loader
+    node_modules/react-scripts
+  css-prefers-color-scheme  *
+  Depends on vulnerable versions of postcss
+  node_modules/css-prefers-color-scheme
+  cssnano  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.1.1 - 4.1.11
+  Depends on vulnerable versions of postcss
+  node_modules/cssnano
+    optimize-css-assets-webpack-plugin  3.2.1 || 5.0.2 - 5.0.6
+    Depends on vulnerable versions of cssnano
+    node_modules/optimize-css-assets-webpack-plugin
+  cssnano-util-raw-cache  >=4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/cssnano-util-raw-cache
+  icss-utils  4.0.0 - 4.1.1
+  Depends on vulnerable versions of postcss
+  node_modules/icss-utils
+    postcss-modules-local-by-default  2.0.0 - 4.0.0-rc.4
+    Depends on vulnerable versions of icss-utils
+    Depends on vulnerable versions of postcss
+    node_modules/postcss-modules-local-by-default
+    postcss-modules-values  2.0.0 - 4.0.0-rc.5
+    Depends on vulnerable versions of icss-utils
+    Depends on vulnerable versions of postcss
+    node_modules/postcss-modules-values
+  postcss-attribute-case-insensitive  4.0.0 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-attribute-case-insensitive
+  postcss-browser-comments  2.0.0 - 3.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-browser-comments
+    postcss-normalize  7.0.0 - 9.0.0
+    Depends on vulnerable versions of postcss
+    Depends on vulnerable versions of postcss-browser-comments
+    node_modules/postcss-normalize
+  postcss-calc  6.0.2 - 7.0.5
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-calc
+  postcss-color-functional-notation  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-color-functional-notation
+  postcss-color-gray  >=5.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-color-gray
+  postcss-color-hex-alpha  4.0.0 - 6.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-color-hex-alpha
+  postcss-color-mod-function  >=3.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-color-mod-function
+  postcss-color-rebeccapurple  >=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-color-rebeccapurple
+  postcss-colormin  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.2 - 4.0.3
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-colormin
+  postcss-convert-values  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-convert-values
+  postcss-custom-media  7.0.0 - 7.0.8
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-custom-media
+  postcss-custom-properties  8.0.0 - 10.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-custom-properties
+  postcss-custom-selectors  5.0.0 - 5.1.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-custom-selectors
+  postcss-dir-pseudo-class  >=5.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-dir-pseudo-class
+  postcss-discard-comments  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-comments
+  postcss-discard-duplicates  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-duplicates
+  postcss-discard-empty  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-empty
+  postcss-discard-overridden  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-discard-overridden
+  postcss-double-position-gradients  *
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-double-position-gradients
+  postcss-env-function  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-env-function
+  postcss-flexbugs-fixes  4.0.0 - 4.2.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-flexbugs-fixes
+  postcss-focus-visible  >=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-focus-visible
+  postcss-focus-within  >=3.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-focus-within
+  postcss-font-variant  4.0.0 - 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-font-variant
+  postcss-gap-properties  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-gap-properties
+  postcss-image-set-function  >=3.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-image-set-function
+  postcss-initial  3.0.0 - 3.0.4
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-initial
+  postcss-lab-function  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-lab-function
+  postcss-loader  3.0.0 - 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-loader
+  postcss-logical  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-logical
+  postcss-media-minmax  4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-media-minmax
+  postcss-merge-longhand  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.6 - 4.0.11
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-merge-longhand
+  postcss-merge-rules  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.2 - 4.0.3
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-merge-rules
+  postcss-minify-font-values  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-font-values
+  postcss-minify-gradients  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-gradients
+  postcss-minify-params  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-params
+  postcss-minify-selectors  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-minify-selectors
+  postcss-modules-extract-imports  2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-extract-imports
+  postcss-modules-scope  2.0.0 - 2.2.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-modules-scope
+  postcss-nesting  7.0.0 - 7.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-nesting
+  postcss-normalize-charset  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-charset
+  postcss-normalize-display-values  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-display-values
+  postcss-normalize-positions  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-positions
+  postcss-normalize-repeat-style  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-repeat-style
+  postcss-normalize-string  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-string
+  postcss-normalize-timing-functions  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-timing-functions
+  postcss-normalize-unicode  <=4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-unicode
+  postcss-normalize-url  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-url
+  postcss-normalize-whitespace  <=4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-normalize-whitespace
+  postcss-ordered-values  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.1.1 - 4.1.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-ordered-values
+  postcss-overflow-shorthand  >=2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-overflow-shorthand
+  postcss-page-break  2.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-page-break
+  postcss-place  >=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-place
+  postcss-pseudo-class-any-link  >=6.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-pseudo-class-any-link
+  postcss-reduce-initial  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.2 - 4.0.3
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-reduce-initial
+  postcss-reduce-transforms  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.2
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-reduce-transforms
+  postcss-replace-overflow-wrap  3.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-replace-overflow-wrap
+  postcss-selector-matches  >=4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-selector-matches
+  postcss-selector-not  4.0.0 - 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-selector-not
+  postcss-svgo  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1 - 4.0.3
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-svgo
+  postcss-unique-selectors  4.0.0-nightly.2020.1.9 - 4.0.0-rc.2 || 4.0.1
+  Depends on vulnerable versions of postcss
+  node_modules/postcss-unique-selectors
+  resolve-url-loader  3.0.0-alpha.1 - 4.0.0
+  Depends on vulnerable versions of postcss
+  node_modules/resolve-url-loader
+
+86 vulnerabilities (7 low, 79 moderate)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+
+
+##
+
+pamccombs@OneOhLT2:~/dev/clients/betterofferletter$ npm start
+
+> betterofferletter@0.1.0 start
+> react-scripts start
+
+
+There might be a problem with the project dependency tree.
+It is likely not a bug in Create React App, but something you need to fix locally.
+
+The react-scripts package provided by Create React App requires a dependency:
+
+  "babel-jest": "^26.6.0"
+
+Don't try to install it manually: your package manager does it automatically.
+However, a different version of babel-jest was detected higher up in the tree:
+
+  /home/pamccombs/dev/clients/betterofferletter/node_modules/babel-jest (version: 20.0.3) 
+
+Manually installing incompatible versions is known to cause hard-to-debug issues.
+
+If you would prefer to ignore this check, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That will permanently disable this message but you might encounter other issues.
+
+To fix the dependency tree, try following the steps below in the exact order:
+
+  1. Delete package-lock.json (not package.json!) and/or yarn.lock in your project folder.
+  2. Delete node_modules in your project folder.
+  3. Remove "babel-jest" from dependencies and/or devDependencies in the package.json file in your project folder.
+  4. Run npm install or yarn, depending on the package manager you use.
+
+In most cases, this should be enough to fix the problem.
+If this has not helped, there are a few other things you can try:
+
+  5. If you used npm, install yarn (http://yarnpkg.com/) and repeat the above steps with it instead.
+     This may help because npm has known issues with package hoisting which may get resolved in future versions.
+
+  6. Check if /home/pamccombs/dev/clients/betterofferletter/node_modules/babel-jest is outside your project directory.
+     For example, you might have accidentally installed something in your home folder.
+
+  7. Try running npm ls babel-jest in your project folder.
+     This will tell you which other package (apart from the expected react-scripts) installed babel-jest.
+
+If nothing else helps, add SKIP_PREFLIGHT_CHECK=true to an .env file in your project.
+That would permanently disable this preflight check in case you want to proceed anyway.
+
+P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
