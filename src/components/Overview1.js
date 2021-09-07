@@ -53,7 +53,7 @@ export class Overview1 extends Component {
                         style={{
                             width: '57%',
                         }}
-                    ><span style={{ fontFamily: "gilroyextrabold" }}>BetterOfferLetter</span> is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about what is fair.</p>
+                    ><span style={{ fontFamily: "gilroyextrabold" }}>BetterOfferLetter</span> is designed to help you make equitable offers that are easy for people of every background to understand, with a clear, data-driven process for resolving disagreements about fair pay.</p>
 
                     <p
                         style={{
@@ -61,14 +61,14 @@ export class Overview1 extends Component {
                             fontSize: '1vw'
 
                         }}
-                    > Please note that this is a free tool and is not designed to be monetized.  No data is collected (all processing is done on your browser and not sent back to a server) and the goal is to increase pay equity.</p>
+                    > Please note that this is a free tool and the authors don’t make any money from it. No data is collected (all processing is done on your browser and not sent back to a server) and the explicit goal is to increase pay equity.</p>
                     <p
                         style={{
                             width: '57%',
                             fontFamily: "gilroyextrabold"
 
                         }}
-                    >In order to continue, please certify that the following is true. </p>
+                    >In order to continue, please indicate your agreement with the following:</p>
 
                     {/* <br/> */}
                     <p
